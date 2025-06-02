@@ -1,0 +1,45 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{aafc65d8-7a5a-4e01-bd8d-3ac118422503} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 4
+	m_flConstantRadius = 180.000000
+	m_flConstantLifespan = 0.500000
+	m_ConstantColor = 
+	[
+		123,
+		179,
+		255,
+		90,
+	]
+	m_flStopSimulationAfterTime = 10000000000.000000
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/arena/units/heroes/hero_sara/fragment_of_armor_cast.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/arena/units/heroes/hero_sara/fragment_of_armor_spiral02.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/arena/units/heroes/hero_sara/fragment_of_armor_oval_highlight.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/arena/units/heroes/hero_sara/fragment_of_armor_shell.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/arena/units/heroes/hero_sara/fragment_of_armor_oval.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/arena/units/heroes/hero_sara/fragment_of_armor_oval2.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/arena/units/heroes/hero_sara/fragment_of_armor_oval_highlight2.vpcf"
+		},
+		{
+			m_bEndCap = true
+			m_ChildRef = resource:"particles/arena/units/heroes/hero_sara/fragment_of_armor_end.vpcf"
+		},
+	]
+	m_nBehaviorVersion = 9
+}

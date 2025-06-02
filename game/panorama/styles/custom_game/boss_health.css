@@ -1,0 +1,35 @@
+#BossHealth {
+    height: 100%;
+    width: 100%;
+}
+
+.BossHealth {
+    color: #FFF;
+    width: 600px;
+    height: 32px;
+    visibility: collapse;
+}
+
+.BarContainer {
+    background-image: url("file://{images}/custom_game/boss_health_bar_container.png");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+#Bar {
+    background-image: url("file://{images}/custom_game/boss_health_bar.png");
+    background-repeat: no-repeat;
+    width: 98%;
+    height: 100%;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.hidden {
+    visibility: collapse;
+}
+
+.visible {
+    visibility: visible;
+}

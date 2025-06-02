@@ -1,0 +1,255 @@
+"DOTAAbilities"
+{
+    "follower_skafian_overpower"
+    {
+        "BaseClass" "ursa_overpower"
+        "AbilityTextureName" "ursa_overpower"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+        "AbilitySound"                  "Hero_Ursa.Overpower"
+        "MaxLevel" "3"
+
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastAnimation"          "ACT_DOTA_OVERRIDE_ABILITY_3"
+        "AbilityCastGestureSlot"        "DEFAULT"
+        "AbilityCastRange"              "0"
+        "AbilityCastPoint"              "0"
+
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "15"
+        "AbilityDuration"               "10"
+
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "0"
+        
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+                "max_attacks"               "4"
+                "LinkedSpecialBonus"        "special_bonus_unique_ursa_7"
+                "attack_speed_bonus_pct"    "400"
+        }
+    }
+
+    "follower_skafian_filth"
+    {
+        "BaseClass" "ability_lua"
+        "ScriptFile" "units/follower_skafian_filth"
+        "AbilityTextureName" "meepo_ransack"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+        "AbilitySound"                  "Hero_Meepo.Geostrike"
+        "MaxLevel" "3"
+
+        "precache"
+        {
+            "particle" "particles/units/heroes/hero_meepo/meepo_geostrike.vpcf"
+        }
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+                "slow_pct"            "-20 -30 -40"
+                "duration"              "5"
+        }
+        "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_3"
+    }
+
+    "follower_skafian_earthshock"
+    {
+        "BaseClass" "ability_lua"
+        "ScriptFile" "units/follower_skafian_earthshock"
+        "AbilityTextureName" "ursa_earthshock"
+        "FightRecapLevel"               "1"
+        "MaxLevel"                      "3"
+        "precache"
+        {
+            "soundfile" "soundevents/game_sounds_heroes/game_sounds_ursa.vsndevts"
+            "particle"  "particles/units/heroes/hero_ursa/ursa_earthshock.vpcf"
+            "particle"  "particles/units/heroes/hero_ursa/ursa_earthshock_modifier.vpcf"
+        }
+        
+        // Ability General
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityType"                   "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+
+        // Ability Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange"              "385"
+        "AbilityCastPoint"              "0.3"
+        "AbilityDuration"               "4.0"
+
+        // Ability Resource
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "5"
+        "AbilityManaCost"               "0"
+
+        // Damage
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityDamage"                 "350"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+                "shock_radius"              "385"
+                "movement_slow"             "-55"
+        }
+    }
+
+    "follower_skafian_mushroom_attack"
+    {
+        "BaseClass" "venomancer_poison_sting"
+        "AbilityTextureName" "venomancer_poison_sting"
+        "AbilityType"                   "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"   
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+        "MaxLevel" "5"
+        
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+                "duration"              "5"
+                "damage"                    "33 66 99 132 165"
+                "movement_speed"            "-30"
+        }
+        "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_2"
+    }
+
+    "follower_skafian_healing"
+    {
+        "BaseClass" "ability_lua"
+        "ScriptFile" "creeps/follower_skafian_healing"
+        "AbilityTextureName" "witch_doctor_voodoo_restoration"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ALLIES_YES"
+        "AbilitySound"                  "Hero_WitchDoctor.Voodoo_Restoration"
+        "MaxLevel" "5"
+
+        "precache"
+        {
+            "particle" "particles/dazzle/wd_ti10_immortal_voodoo.vpcf"
+        }
+
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "0.0"
+
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "0"       
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+                "mana_per_second"           "1"
+                "radius"                    "500"
+                "heal"                      "15 30 45 60 75"
+                "heal_pct"                      "0.25 0.50 0.75 1.0 1.25"
+                "heal_interval"             "0.33"
+        }
+        "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_2"
+    }
+
+    "follower_skafian_overgrowth"
+    {
+        "BaseClass" "treant_overgrowth"
+        "AbilityTextureName" "treant_overgrowth"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"    
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"        
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+        "AbilitySound"                  "Hero_Treant.Overgrowth.Cast"
+        "MaxLevel" "5"
+        "AbilityCastPoint"              "0.5 0.5 0.5 0.5"
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_5"
+
+        "FightRecapLevel"               "2"
+
+        "HasScepterUpgrade"             "0"
+        "AbilityDraftUltScepterAbility"     "treant_eyes_in_the_forest"
+        
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "12"
+
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "0"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+                "duration"                      "3"
+                "radius"                        "800"
+                "LinkedSpecialBonus"            "special_bonus_unique_treant_5"
+                "eyes_radius"                   "800"
+                "LinkedSpecialBonus"            "special_bonus_unique_treant_5"
+                "damage"            "30 60 90 120 150"
+                "LinkedSpecialBonus"        "special_bonus_unique_treant_11"
+        }
+    }
+
+    "follower_skafian_leech_seed"
+    {
+        "BaseClass" "treant_leech_seed"
+        "AbilityTextureName" "treant_leech_seed"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"    
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"   
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+        "AbilitySound"                  "Hero_Treant.LeechSeed.Cast"
+        "AbilityCastPoint"              "0.4"
+        "AbilityCastRange"              "400"
+        "FightRecapLevel"               "1"
+        "MaxLevel" "5"
+        
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCharges"                "1"
+        "AbilityChargeRestoreTime"      "6"
+        "AbilityCooldown" "0"
+
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "0"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+                "damage_interval"               "0.55"
+                "leech_damage"                  "45 95 145 195 245"
+                "LinkedSpecialBonus"            "special_bonus_unique_treant_2"
+                "movement_slow"                 "-15 -20 -25 -30 -35"
+                "LinkedSpecialBonus"            "special_bonus_unique_treant_3"
+                "LinkedSpecialBonusOperation"   "SPECIAL_BONUS_SUBTRACT"
+                "radius"                        "650"
+                "duration"                      "5"
+                "projectile_speed"              "250"
+        }
+        "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_2"
+    }
+}

@@ -1,0 +1,221 @@
+"DOTAAbilities"
+{
+    "follower_spider_sticky_snare"
+    {
+        "BaseClass" "broodmother_sticky_snare"
+        "AbilityTextureName" "broodmother_sticky_snare"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_VECTOR_TARGETING | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_SHOW_IN_GUIDES | DOTA_ABILITY_BEHAVIOR_CHANNELLED "
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"   
+        "FightRecapLevel"               "1"
+        "MaxLevel"                      "3"
+        "HasScepterUpgrade"             "0"
+        "IsGrantedByScepter"            "0"
+
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange"              "600"
+        "AbilityCastPoint"              "0"
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_4"
+
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCharges"                "1"
+        "AbilityChargeRestoreTime"      "20 15 10"   
+
+        "AbilityCooldown" "20 15 10"     
+
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "0"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+            "formation_delay"       "0.1"
+            "root_duration"         "0.50 0.75 1.0"
+            "damage_per_second"     "250 500 1000"
+            "count"                 "1"
+            "width"                 "150"
+            
+        }
+    }
+
+    "spider_bite"
+    {
+        "BaseClass" "broodmother_incapacitating_bite"
+        "AbilityTextureName" "broodmother_incapacitating_bite"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "MaxLevel" "5"
+            
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+                "miss_chance"           "15 30 45 60 75"
+                "bonus_movespeed"       "-10 -15 -20 -25 -30"
+                "duration"          "3.0"
+        }
+    }
+
+    "follower_spider_sandstorm"
+    {
+          "BaseClass"                                           "ability_lua"
+          "ScriptFile"                                          "heroes/bosses/spider/follower_spider_sandstorm"
+          "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+          "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+          "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL" 
+          "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP | DOTA_UNIT_TARGET_BASIC"
+          "AbilityTextureName" "sandking_sand_storm"
+          "MaxLevel" "5"
+
+          "precache"
+          {
+              "soundfile" "soundevents/game_sounds_heroes/game_sounds_sandking.vsndevts"
+              "particle"          "particles/units/heroes/hero_sandking/sandking_sandstorm.vpcf"
+          }
+
+          // Casting
+          //-------------------------------------------------------------------------------------------------------------
+          "AbilityCastPoint"              "0"
+
+          // Cost
+          //-------------------------------------------------------------------------------------------------------------
+          "AbilityManaCost"               "0"    
+
+          // Time     
+          //-------------------------------------------------------------------------------------------------------------
+          "AbilityCooldown"               "7"
+          
+          // Cast Range
+          //-------------------------------------------------------------------------------------------------------------
+          "AbilityCastRange"              "600"
+
+          // Special
+          //-------------------------------------------------------------------------------------------------------------
+          "AbilityValues"
+          {
+              "radius"          "275"
+
+              "slow"          "-75"
+
+              "damage"          "1080 2160 3240 4320 5400"
+
+              "duration"          "5"
+
+              "interval"          "0.7"
+          }
+    }
+
+    "follower_spider_burrow"
+    {
+          "BaseClass"                                           "ability_lua"
+          "ScriptFile"                                          "heroes/bosses/spider/follower_spider_burrow"
+          "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+          "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
+          "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL" 
+          "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP | DOTA_UNIT_TARGET_BASIC"
+          "AbilityTextureName" "sandking_burrowstrike"
+          "MaxLevel" "5"
+
+          "precache"
+          {
+              "soundfile" "soundevents/game_sounds_heroes/game_sounds_sandking.vsndevts"
+              "particle"          "particles/units/heroes/hero_sandking/sandking_burrowstrike.vpcf"
+          }
+
+          // Casting
+          //-------------------------------------------------------------------------------------------------------------
+          "AbilityCastPoint"              "0"
+
+          // Cost
+          //-------------------------------------------------------------------------------------------------------------
+          "AbilityManaCost"               "0"    
+
+          // Time     
+          //-------------------------------------------------------------------------------------------------------------
+          "AbilityCooldown"               "5"
+          
+          // Cast Range
+          //-------------------------------------------------------------------------------------------------------------
+          "AbilityCastRange"              "600"
+
+          // Special
+          //-------------------------------------------------------------------------------------------------------------
+          "AbilityValues"
+          {
+
+              "radius"          "600"
+
+              "damage"          "750 1500 2250 3000 3750"
+
+                "burrow_width"      "150"
+
+                "burrow_duration"   "1.6 1.8 2.0 2.2 2.4"
+
+                "burrow_speed"      "2000"
+
+                "burrow_anim_time"  "0.52"
+          }
+    }
+
+    "follower_spider_earthquake"
+    {
+        "BaseClass"                                           "ability_lua"
+        "ScriptFile"                                          "heroes/bosses/spider/follower_spider_earthquake"
+        "AbilityTextureName" "sandking_epicenter"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "MaxLevel" "5"
+
+        "precache"
+        {
+            "particle" "particles/units/heroes/hero_sandking/sandking_epicenter.vpcf"
+        }
+            
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+                "radius"           "150"
+                "damage"       "950 1700 2450 3200 3950"
+
+                "speed"          "-30"
+
+                "interval"          "1"
+        }
+    }
+
+    "large_mine_ogre_bash"
+    {
+        "BaseClass"                                           "ability_lua"
+        "ScriptFile"                                          "creeps/large_mine_ogre_bash"
+        "AbilityTextureName" "ogre_bruiser_ogre_smash"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "MaxLevel" "5"
+
+        "precache"
+        {
+            "particle" "particles/neutral_fx/ogre_bruiser_smash.vpcf"
+        }
+            
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+            "chance" "18"
+            "stun_duration" "2"
+            "damage_pct" "8 16 24 32 40"
+            "radius" "230"
+        }
+    }
+}

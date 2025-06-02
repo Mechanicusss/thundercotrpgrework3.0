@@ -1,0 +1,10 @@
+<root>
+    <scripts>
+        <include src="s2r://panorama/scripts/custom_game/hero_pick.js" />
+    </scripts>
+    <styles>
+        <include src="s2r://panorama/styles/custom_game/hero_pick.vcss_c" />
+    </styles>
+    <Panel>
+    </Panel>
+</root>

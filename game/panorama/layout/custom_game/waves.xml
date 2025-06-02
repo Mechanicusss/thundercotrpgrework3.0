@@ -1,0 +1,40 @@
+<root>
+    <styles>
+        <include src="s2r://panorama/styles/custom_game/waves.css" />
+    </styles>
+
+    <scripts>
+        <include src="s2r://panorama/scripts/custom_game/waves.js" />
+    </scripts>
+
+    <snippets>
+        <snippet name="WavesSnippet">
+            <Panel class="Waves">
+                <Panel class="Label">
+                    <Label id="waves-label" text="Waves" />
+                </Panel>
+                <Panel class="Progress">
+                    <Panel class="Count">
+                        <Panel class="CountLabel">
+                            <Label id="waves-count-label" text="" />
+                        </Panel>
+
+                        <Panel class="CountInformation">
+                            <Label id="waves-count-current" text="" />
+                            <Label id="waves-count-max" text="" />
+                        </Panel>
+                    </Panel>
+
+                    <Panel class="Bar">
+                        <Label id="waves-bar-info" text="" />
+                        <Label id="waves-bar" text="" />
+                    </Panel>
+                </Panel>
+            </Panel>
+        </snippet>
+    </snippets>
+
+    <Panel hittest="false" style="width: 100%; height: 100%;">
+        <Panel id="Waves" />
+    </Panel>
+</root>

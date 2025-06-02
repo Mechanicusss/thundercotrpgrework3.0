@@ -1,0 +1,126 @@
+#Leaderboard {
+    horizontal-align: left;
+    vertical-align: top;
+    background-color: gradient( linear, 100% 0%, 100% 100%, from( #111111 ), color-stop( 0.01, #202327 ), color-stop( 0.2, #141619 ), to( #000000 ) );
+    width: 400px;
+    box-shadow: black 0px 0px 8px 0px ;
+    margin-left: 308px;
+    padding: 12px 0 0 0;
+    flow-children: down-wrap;
+    color: #FFF;
+    height: 100%;
+    max-height: 100%;
+    overflow: squish scroll;
+    z-index: 1;
+}
+
+.Header {
+    color: #FFF;
+    background-image: url("file://{images}/custom_game/inventory_panel_png.png");
+    background-size: cover;
+    horizontal-align: left;
+    vertical-align: top;
+    font-family: defaultFont;
+    border-bottom: 1px solid #1f2023;
+    border-top: 1px solid #000;
+    border-radius: 2px 2px 0 0;
+    width: 600px;
+    padding: 12px 0;
+    layout-position: fixed;
+    z-index: 2;
+    background-color: #000;
+    margin-top: -13px;
+    margin-bottom: 12px;
+}
+
+#Caption {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0px 2.0 #000000;
+    horizontal-align: center;
+    z-index: 3;
+    layout-position: fixed;
+}
+
+.PlayerPortrait {
+    color: #FFF;
+    flow-children: right-wrap;
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 0 12px 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.01);
+}
+
+.LastPlayer {
+    border-style: none;
+    margin-bottom: 0;
+}
+
+#PlayerAvatar {
+    height:30px;
+    width:30px; 
+    border-radius: 6px;
+    margin: 0 12px 0 0px;
+    vertical-align: center;
+}
+
+#PlayerName {
+    vertical-align: center;
+    text-shadow: 1px 1px 0px 2.0 #000000;
+    font-weight: bold;
+    font-size: 18px;
+    max-width: 150px;
+}
+
+#PlayerRank {
+    vertical-align: center;
+    font-size: 18px;
+    text-shadow: 1px 1px 0px 2.0 #000000;
+    font-weight: bold;
+    padding: 0 12px;
+    text-align: center;
+    width: 70px;
+}
+
+#PlayerPoints {
+    vertical-align: center;
+    horizontal-align: right;
+    font-size: 24px;
+    text-shadow: 1px 1px 0px 2.0 #000000;
+    font-weight: bold;
+    margin: 0 12px;
+    font-family: monospace;
+}
+
+#PlayerPoints.Positive {
+    color: green;
+}
+
+#PlayerPoints.Negative {
+    color: red;
+}
+
+.First {
+    color: gold;
+}
+
+.SelfPortrait {
+    padding: 12px;
+    margin: 36px 0 -12px 0;
+    background-image: url("file://{images}/custom_game/bg_item_build_psd.png");
+    background-size: cover;
+    z-index:4;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.01);
+    border-top: 1px solid #000;
+    color: lightblue;
+    layout-position: fixed;
+}
+
+.SelfPortrait #PlayerName, .SelfPortrait #PlayerName Label, .SelfPortrait #PlayerRank, .SelfPortrait #PlayerPoints {
+    layout-position: fixed;
+}
+
+.SelfPortrait #PlayerAvatar {
+    visibility: collapse;
+}

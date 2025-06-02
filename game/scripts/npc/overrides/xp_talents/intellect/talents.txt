@@ -1,0 +1,227 @@
+"DOTAAbilities"
+{
+    // Intellect
+    "xp_intellect_talent_1"
+    {
+        "BaseClass"                                           "ability_lua"
+        "ScriptFile"                                          "abilities/talents/intellect/xp_intellect_talent_1"
+        "AbilityType"                                         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"                                     "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+
+        "AbilityTextureName" "talents/xp_intellect_talent_1"
+
+        "AbilityValues"
+        {
+        }
+    }
+
+    "xp_intellect_talent_2"
+    {
+        "BaseClass"                                           "ability_lua"
+        "ScriptFile"                                          "abilities/talents/intellect/xp_intellect_talent_2"
+        "AbilityType"                                         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"                                     "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+
+        "AbilityTextureName" "talents/xp_intellect_talent_2"
+
+        "AbilityValues"
+        {
+        }
+    }
+
+    "xp_intellect_talent_3"
+    {
+        "BaseClass"                                           "ability_lua"
+        "ScriptFile"                                          "abilities/talents/intellect/xp_intellect_talent_3"
+        "AbilityType"                                         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"                                     "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+
+        "AbilityTextureName" "talents/xp_intellect_talent_3"
+
+        "AbilityValues"
+        {
+        }
+    }
+
+    "xp_intellect_talent_4"
+    {
+        "BaseClass"                                           "ability_lua"
+        "ScriptFile"                                          "abilities/talents/intellect/xp_intellect_talent_4"
+        "AbilityType"                                         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"                                     "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+
+        "AbilityTextureName" "talents/xp_intellect_talent_4"
+
+        "AbilityValues"
+        {
+        }
+    }
+
+    "xp_intellect_talent_7"
+    {
+        "BaseClass"                                           "ability_lua"
+        "ScriptFile"                                          "abilities/talents/intellect/xp_intellect_talent_7"
+        "AbilityType"                                         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"                                     "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+
+        "AbilityTextureName" "talents/xp_intellect_talent_7"
+
+        "AbilityValues"
+        {
+        }
+    }
+
+    "xp_intellect_talent_8"
+    {
+        "BaseClass"                                           "ability_lua"
+        "ScriptFile"                                          "abilities/talents/intellect/xp_intellect_talent_8"
+        "AbilityType"                                         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"                                     "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+
+        "AbilityTextureName" "talents/xp_intellect_talent_8"
+
+        "AbilityValues"
+        {
+        }
+    }
+
+    "xp_intellect_talent_9"
+    {
+        "BaseClass"                                           "ability_lua"
+        "ScriptFile"                                          "abilities/talents/intellect/xp_intellect_talent_9"
+        "AbilityType"                                         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"                                     "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+
+        "AbilityTextureName" "talents/xp_intellect_talent_9"
+
+        "AbilityValues"
+        {
+        }
+    }
+
+    "xp_intellect_talent_10"
+    {
+        "BaseClass"                                           "ability_lua"
+        "ScriptFile"                                          "abilities/talents/intellect/xp_intellect_talent_10"
+        "AbilityType"                                         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"                                     "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+
+        "AbilityTextureName" "talents/xp_intellect_talent_10"
+
+        "AbilityValues"
+        {
+        }
+    }
+
+    "xp_intellect_talent_12"
+    {
+        "BaseClass"                                           "ability_lua"
+        "ScriptFile"                                          "abilities/talents/intellect/xp_intellect_talent_12"
+        "AbilityType"                                         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"                                     "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+
+        "AbilityTextureName" "talents/xp_intellect_talent_12"
+
+        "AbilityValues"
+        {
+        }
+    }
+
+    "xp_intellect_talent_13"
+    {
+        "BaseClass"                                           "ability_lua"
+        "ScriptFile"                                          "abilities/talents/intellect/xp_intellect_talent_13"
+        "AbilityType"                                         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"                                     "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+
+        "AbilityTextureName" "talents/xp_intellect_talent_13"
+
+        "AbilityValues"
+        {
+        }
+    }
+
+    "xp_intellect_talent_14"
+    {
+        "BaseClass"                                           "ability_lua"
+        "ScriptFile"                                          "abilities/talents/intellect/xp_intellect_talent_14"
+        "AbilityType"                                         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"                                     "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+
+        "AbilityTextureName" "talents/xp_intellect_talent_14"
+
+        "AbilityValues"
+        {
+        }
+    }
+
+    "xp_intellect_talent_15"
+    {
+        "BaseClass"                                           "ability_lua"
+        "ScriptFile"                                          "abilities/talents/intellect/xp_intellect_talent_15"
+        "AbilityType"                                         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"                                     "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+
+        "AbilityTextureName" "talents/xp_intellect_talent_15"
+
+        "AbilityValues"
+        {
+        }
+    }
+
+    "xp_intellect_talent_17"
+    {
+        "BaseClass"                                           "ability_lua"
+        "ScriptFile"                                          "abilities/talents/intellect/xp_intellect_talent_17"
+        "AbilityType"                                         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"                                     "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+
+        "AbilityTextureName" "talents/xp_intellect_talent_17"
+
+        "AbilityValues"
+        {
+        }
+    }
+
+    "xp_intellect_talent_18"
+    {
+        "BaseClass"                                           "ability_lua"
+        "ScriptFile"                                          "abilities/talents/intellect/xp_intellect_talent_18"
+        "AbilityType"                                         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"                                     "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+
+        "AbilityTextureName" "talents/xp_intellect_talent_18"
+
+        "AbilityValues"
+        {
+        }
+    }
+
+    "xp_intellect_talent_20"
+    {
+        "BaseClass"                                           "ability_lua"
+        "ScriptFile"                                          "abilities/talents/intellect/xp_intellect_talent_20"
+        "AbilityType"                                         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"                                     "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+
+        "AbilityTextureName" "talents/xp_intellect_talent_20"
+
+        "AbilityValues"
+        {
+        }
+    }
+
+    "xp_intellect_talent_23"
+    {
+        "BaseClass"                                           "ability_lua"
+        "ScriptFile"                                          "abilities/talents/intellect/xp_intellect_talent_23"
+        "AbilityType"                                         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"                                     "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+
+        "AbilityTextureName" "talents/xp_intellect_talent_23"
+
+        "AbilityValues"
+        {
+        }
+    }
+}

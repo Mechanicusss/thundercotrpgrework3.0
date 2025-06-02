@@ -1,0 +1,23 @@
+<root>
+    <styles>
+        <include src="s2r://panorama/styles/custom_game/ability_selection.css" />
+    </styles>
+
+    <scripts>
+        <include src="s2r://panorama/scripts/custom_game/ability_selection_container.js" />
+        <include src="s2r://panorama/scripts/custom_game/ability_selection.js" />
+    </scripts>
+
+    <snippets>
+        <snippet name="AbilitySelection">
+            <Panel class="AbilitySelection" hittest="false">
+                <Panel class="AbilitySelectionAbilities">
+                </Panel>
+            </Panel>
+        </snippet>
+    </snippets>
+
+    <Panel hittest="false" style="width: 100%; height: 100%;">
+        <Panel id="AbilitySelection" />
+    </Panel>
+</root>

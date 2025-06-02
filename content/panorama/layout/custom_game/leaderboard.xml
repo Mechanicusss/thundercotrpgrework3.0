@@ -1,0 +1,31 @@
+<root>
+    <styles>
+        <include src="s2r://panorama/styles/custom_game/leaderboard.css" />
+    </styles>
+
+    <scripts>
+        <include src="s2r://panorama/scripts/custom_game/leaderboard_player.js" />
+        <include src="s2r://panorama/scripts/custom_game/leaderboard.js" />
+    </scripts>
+
+    <snippets>
+        <snippet name="PlayerPortrait">
+            <Panel class="PlayerPortrait" hittest="false">
+                <Label id="PlayerRank" />
+                <DOTAAvatarImage steamid="" id="PlayerAvatar" />
+                <DOTAUserName steamid="" id="PlayerName" />
+                <Label id="PlayerPoints" />
+            </Panel>
+        </snippet>
+
+        <snippet name="LeaderbordHeader">
+            <Panel class="Header" hittest="false">
+                <Label id="Caption" text="Leaderboard" />
+            </Panel>
+        </snippet>
+    </snippets>
+
+    <Panel hittest="false" style="width: 100%; height: 100%;z-index:-1;">
+        <Panel id="Leaderboard" />
+    </Panel>
+</root>

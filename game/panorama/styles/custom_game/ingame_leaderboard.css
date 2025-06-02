@@ -1,0 +1,111 @@
+#InGameLeaderboard {
+    vertical-align: top;
+    flow-children: down-wrap;
+    color: #FFF;
+    overflow: squish scroll;
+    horizontal-align: right;
+}
+
+.InGameLeaderboardButton {
+    background-repeat: no-repeat;
+    color: #FFF;
+    horizontal-align: right;
+    vertical-align: top;
+    margin-right: 300px;
+    margin-bottom: -10px;
+    background-image: url("file://{images}/custom_game/inventory_bg_psd.png");
+    background-position: top;
+    border-radius: 0 0 4px 4px;
+    padding: 0;
+    box-shadow: rgba(0,0,0,0.75) 2px 2px 2px;
+}
+
+#Activator {
+    color: red;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 20px;
+    text-shadow: 1px 1px 0px 2.0 #000000;
+    vertical-align: center;
+    text-align: center;
+    width: 132px;
+    height: 69px;
+    line-height: 1.5;
+    background-image: url("file://{images}/custom_game/red_med_button_off_png.png");
+    border-radius: 4px;
+    margin: -5px -15px;
+}
+
+#Activator.on {
+    color: lightgreen;
+    background-image: url("file://{images}/custom_game/green_med_button_off_png.png");
+}
+
+#Activator.off {
+    color: red;
+    background-image: url("file://{images}/custom_game/red_med_button_off_png.png");
+}
+
+.InGameLeaderboardContainer {
+    visibility: collapse;
+    horizontal-align: center;
+    vertical-align: top;
+    background-image: url("file://{images}/custom_game/background3.jpg");
+    background-position: top;
+    flow-children: right-wrap;
+    text-align: center;
+}
+
+.InGameLeaderboardContainerVisible {
+    visibility: visible;
+}
+
+.PlayerPortrait {
+    color: #FFF;
+    flow-children: down-wrap;
+    text-align: center;
+    border-right: 1px solid #FFFFFF05;
+    padding: 12px 0;
+}
+
+.First {
+    background-color: rgba(255, 215, 0, 0.05);
+}
+
+.Second {
+    background-color: rgba(211,211,211, 0.05);
+}
+
+.Third {
+    background-color: rgba(205, 127, 50, 0.05);
+}
+
+#PlayerAvatar {
+    height:48px;
+    width:48px; 
+    border-radius: 50%;
+    margin: 12px 0;
+    horizontal-align: center;
+    box-shadow: black 0px 0px 4px 0px ;
+}
+
+#PlayerRank {
+    vertical-align: center;
+    font-size: 16px;
+    text-shadow: 1px 1px 0px 2.0 #000000;
+    font-weight: bold;
+    text-align: center;
+    width: 70px;
+    text-shadow: 1px 1px 0px 2.0 #000000;
+}
+
+#PlayerPoints {
+    horizontal-align: center;
+    font-size: 16px;
+    text-shadow: 1px 1px 0px 2.0 #000000;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 1px 1px 0px 2.0 #000000;
+    color: rgba(255, 255, 255, 0.75);
+}

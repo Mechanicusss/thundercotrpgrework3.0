@@ -1,0 +1,175 @@
+#EndGameScreen {
+    background-color: gradient( linear, 100% 0%, 100% 100%, from( #111111 ), color-stop( 0.01, #202327 ), color-stop( 0.2, #141619ff ), to( #000000dd ) );
+    box-shadow: black 0px 0px 8px 0px ;
+    border-radius: 2px;
+    width: 50%;
+    height: 50%;
+    horizontal-align: center;
+    vertical-align: center;
+    flow-children: down-wrap;
+}
+
+.PlayersContainerRadiant {
+    width: 100%;
+    height: 50%;
+    flow-children: down-wrap;
+    max-height: 50%;
+}
+
+.PlayerPortrait {
+    color: #FFF;
+    flow-children: right-wrap;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.01);
+    background-image: url("file://{images}/custom_game/statbranch_background_description_psd.png");
+}
+
+#PlayerAvatar {
+    height:30px;
+    width:30px; 
+    border-radius: 6px;
+    margin: 0 12px 0 12px;
+    vertical-align: center;
+}
+
+#PlayerName {
+    vertical-align: center;
+    text-shadow: 1px 1px 0px 2.0 #000000;
+    font-weight: bold;
+    font-size: 18px;
+    max-width: 150px;
+    margin-right: 24px;
+    text-shadow: 1px 1px 0px 2.0 #000000;
+    width: 100%;
+    max-width: 180px;
+}
+
+#PlayerPointChanges {
+    vertical-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    horizontal-align: right;
+    text-shadow: 1px 1px 0px 2.0 #000000;
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 12px 24px;
+    width: 80px;
+    text-align: center;
+}
+
+#PlayerPointChanges.Pos {
+    color: lightgreen;
+}
+
+#PlayerPointChanges.Neg {
+    color: red;
+}
+
+#PlayerKills {
+    vertical-align: center;
+    font-size: 18px;
+    color: lightgreen;
+    padding-right: 6px;
+    font-weight: bold;
+    text-shadow: 1px 1px 0px 2.0 #000000;
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 12px 6px 12px 24px;
+    width: 50px;
+    text-align: center;
+}
+
+#PlayerDeaths {
+    vertical-align: center;
+    font-size: 18px;
+    color: red;
+    font-weight: bold;
+    padding-right: 6px;
+    text-shadow: 1px 1px 0px 2.0 #000000;
+    padding: 12px 6px;
+    width: 50px;
+    text-align: center;
+}
+
+#PlayerAssists {
+    vertical-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: lightblue;
+    padding-right: 24px;
+    text-shadow: 1px 1px 0px 2.0 #000000;
+    padding: 12px 24px 12px 6px;
+    width: 50px;
+    text-align: center;
+}
+
+#PlayerNetWorth {
+    vertical-align: center;
+    font-size: 18px;
+    color: gold;
+    font-weight: bold;
+    background-image: url("file://{images}/custom_game/icon_gold_psd.png");
+    background-repeat: no-repeat;
+    background-position: 18px;
+    background-size: 20px 20px;
+    text-shadow: 1px 1px 0px 2.0 #000000;
+    border-left: 1px solid rgba(0, 0, 0, 0.3);
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 12px 12px 12px 48px;
+    margin-right: -12px;
+    width: 125px;
+    max-width: 125px;
+}
+
+.PlayerItem {
+    height: 30px;
+    width: 45px;
+    margin-left: 6px;
+    border-radius: 2px;
+    margin-top: 8px;
+}
+
+.EndGameScreenHeader {
+    color: #FFF;
+    font-weight: bold;
+    padding:12px;
+    background-position: center;
+    background-size: cover;
+    horizontal-align: left;
+    vertical-align: top;
+    font-family: defaultFont;
+    border-bottom: 1px solid #1f2023;
+    border-top: 1px solid #000;
+    border-radius: 2px 2px 0 0;
+    width: 100%;
+    z-index: 2;
+    flow-children: right-wrap;
+    text-transform: uppercase;
+    border-radius: 2px 2px 0 0;
+}
+
+.EndGameScreenHeader #Kills {
+    margin-left: 294px;
+    text-shadow: 1px 1px 0px 2.0 #000000;
+}
+
+.EndGameScreenHeader #Deaths, .EndGameScreenHeader #Assists {
+    text-shadow: 1px 1px 0px 2.0 #000000;
+}
+
+.EndGameScreenHeader #NetWorth {
+    margin-left: 72px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0px 2.0 #000000;
+}
+
+.EndGameScreenHeader #Items {
+    margin-left: 32px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0px 2.0 #000000;
+}
+
+.EndGameScreenHeader #Points {
+    horizontal-align: right;
+    text-transform: uppercase;
+    margin-right: 12px;
+    text-shadow: 1px 1px 0px 2.0 #000000;
+}

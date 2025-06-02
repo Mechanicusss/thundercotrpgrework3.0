@@ -1,0 +1,101 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc32:version{c5dcef98-b629-46ab-88e3-a17c005c935e} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "Skeleton"
+				children = 
+				[
+					{
+						_class = "Bone"
+						name = "cube"
+						origin = [ 0.0, 0.0, 0.0 ]
+						angles = [ -0.0, 90.0, 90.0 ]
+						do_not_discard = true
+					},
+				]
+			},
+			{
+				_class = "HitboxSetList"
+				children = 
+				[
+					{
+						_class = "HitboxSet"
+						name = "default"
+						children = 
+						[
+							{
+								_class = "Hitbox"
+								name = "Cube_1"
+								parent_bone = "cube"
+								surface_property = "default"
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -99.077301, -101.523003, -99.740303 ]
+								hitbox_maxs = [ 97.340401, 101.523003, 104.445 ]
+							},
+						]
+					},
+				]
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						name = "spidersack"
+						filename = "models/spidersack.dmx"
+						import_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+				]
+			},
+			{
+				_class = "AnimationList"
+				children = 
+				[
+					{
+						_class = "AnimFile"
+						name = "cube_6adcea5510cba432b357c9f99c6fd3d4"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = "default"
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/cube-6adcea5510cba432b357c9f99c6fd3d4.fbx"
+						import_bone_scales = false
+						start_frame = 0
+						end_frame = 23
+						framerate = 24.0
+						reverse = false
+					},
+				]
+				default_root_bone_name = ""
+			},
+		]
+		model_archetype = ""
+		primary_associated_entity = ""
+		anim_graph_name = ""
+		importer_notes = """
+Imported from VMDL
+==Warnings==
+Changed incompatible animation name 'cube-6adcea5510cba432b357c9f99c6fd3d4' to 'cube_6adcea5510cba432b357c9f99c6fd3d4'
+
+"""
+	}
+}

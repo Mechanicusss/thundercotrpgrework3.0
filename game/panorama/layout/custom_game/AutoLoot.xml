@@ -1,0 +1,19 @@
+<root>
+    <styles>
+        <include src="file://{resources}/styles/custom_game/AutoLoot.css" />
+    </styles>
+
+    <scripts>
+        <include src="file://{resources}/scripts/custom_game/AutoLoot.js" />
+    </scripts>
+
+    <snippets>
+        <snippet name="AutoLootContainer">
+            <Panel class="AutoLootContainer" hittest="false"></Panel>
+        </snippet>
+    </snippets>
+
+    <Panel class="AutoLoot" hittest="false" style="width: 100%; height: 100%;">
+    <Image src="file://{resources}/images/custom_game/icon_auto_style_png.png" style="visibility: collapse;" />
+    </Panel>
+</root>

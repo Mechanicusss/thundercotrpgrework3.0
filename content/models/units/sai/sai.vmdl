@@ -1,0 +1,676 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc31:version{165d48dd-8adc-4f1d-abf7-4992e04ad577} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "MaterialGroupList"
+				children = 
+				[
+					{
+						_class = "DefaultMaterialGroup"
+						remaps = 
+						[
+							{
+								from = "imported material 010.vmat"
+								to = "materials/models/units/sai/roztex_buki.vmat"
+							},
+							{
+								from = "imported material 02.vmat"
+								to = "materials/models/units/sai/rozeye00.vmat"
+							},
+							{
+								from = "imported material 04.vmat"
+								to = "materials/models/units/sai/rozmouth00.vmat"
+							},
+							{
+								from = "imported material 05.vmat"
+								to = "materials/models/units/sai/roztex_fase.vmat"
+							},
+							{
+								from = "imported material 06.vmat"
+								to = "materials/models/units/sai/text.vmat"
+							},
+							{
+								from = "imported material 07.vmat"
+								to = "materials/models/units/sai/roztex02.vmat"
+							},
+						]
+						use_global_default = false
+						global_default_material = ""
+					},
+				]
+			},
+			{
+				_class = "AttachmentList"
+				children = 
+				[
+					{
+						_class = "Attachment"
+						name = "attach_hitloc"
+						parent_bone = "Chest"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_head"
+						parent_bone = "Head"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_weapon"
+						parent_bone = "Blade"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+				]
+			},
+			{
+				_class = "HitboxSetList"
+				children = 
+				[
+					{
+						_class = "HitboxSet"
+						name = "default"
+						children = 
+						[
+							{
+								_class = "Hitbox"
+								parent_bone = "Default"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -12.498393, -8.046383, -6.295792 ]
+								hitbox_maxs = [ 13.287982, 8.585716, 10.414932 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Chest"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -10.338153, -5.033042, -0.835037 ]
+								hitbox_maxs = [ 10.243482, 6.836574, 12.998947 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Chest2"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -12.687791, -6.159544, -1.232605 ]
+								hitbox_maxs = [ 10.650727, 8.233908, 15.469536 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "R_arm"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -8.452769, -4.046306, -23.005379 ]
+								hitbox_maxs = [ -1.320237, 3.940722, 3.136703 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "R_elbow"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -4.34527, -3.097233, -16.377411 ]
+								hitbox_maxs = [ 2.610985, 3.74464, 0.26799 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "R_hand"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -3.889502, -8.641623, -12.126499 ]
+								hitbox_maxs = [ 3.680332, 11.428995, 3.705978 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Whip1"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -0.035177, -3.000771, -2.983072 ]
+								hitbox_maxs = [ 10.128006, 2.981113, 3.001225 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Whip2"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ 0.067695, -3.001286, -2.99003 ]
+								hitbox_maxs = [ 10.230863, 2.980598, 2.994266 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Whip3"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ 0.107638, -3.001957, -2.787046 ]
+								hitbox_maxs = [ 10.314248, 2.979927, 3.19725 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Whip4"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ 0.065443, -3.002705, -2.989747 ]
+								hitbox_maxs = [ 10.228678, 2.979179, 2.994549 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Whip5"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -0.315907, -3.003578, -2.759661 ]
+								hitbox_maxs = [ 9.982887, 2.978306, 3.224635 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Whip6"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ 0.031944, -3.004585, -2.71868 ]
+								hitbox_maxs = [ 10.195129, 2.977299, 3.265616 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Whip7"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ 0.18906, -3.005745, -2.767813 ]
+								hitbox_maxs = [ 10.395664, 2.976139, 3.216483 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Whip8"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ 0.143456, -3.007133, -2.822086 ]
+								hitbox_maxs = [ 10.306648, 2.974751, 3.16221 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Whip9"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -0.356682, -3.008812, -2.727942 ]
+								hitbox_maxs = [ 10.673241, 2.973072, 3.256354 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Whip10"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -0.427452, -3.010864, -2.737263 ]
+								hitbox_maxs = [ 9.73568, 2.97102, 3.247033 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Whip11"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -0.226753, -3.013447, -2.736745 ]
+								hitbox_maxs = [ 9.979851, 2.968437, 3.247551 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Whip12"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -0.253914, -3.016781, -2.736072 ]
+								hitbox_maxs = [ 9.909203, 2.965103, 3.248224 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Whip13"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -0.267502, -3.021259, -2.735167 ]
+								hitbox_maxs = [ 10.031342, 2.960625, 3.249129 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Head"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -9.522815, -7.577079, -5.63208 ]
+								hitbox_maxs = [ 9.526673, 8.818119, 13.819359 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "L_arm"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ 1.151109, -4.026988, -23.113663 ]
+								hitbox_maxs = [ 8.304864, 3.960041, 4.041061 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Whip14"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ 0.118744, -3.027622, -2.73388 ]
+								hitbox_maxs = [ 10.281937, 2.954262, 3.250416 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Hair1"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -10.141094, -2.74639, -4.413948 ]
+								hitbox_maxs = [ 9.641689, 3.967095, 0.309769 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "R_leg"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -4.51051, -5.223903, -27.556782 ]
+								hitbox_maxs = [ 4.592658, 4.880193, 0.583656 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "L_leg"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -4.322437, -5.186104, -27.398594 ]
+								hitbox_maxs = [ 4.780729, 4.917992, 0.741844 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "L_elbow"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -2.54844, -3.090732, -16.58844 ]
+								hitbox_maxs = [ 4.407806, 3.75114, 0.056946 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Whip15"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -0.017441, -3.037365, -2.731905 ]
+								hitbox_maxs = [ 10.189117, 2.944519, 3.25239 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Hair2"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -9.089815, -1.898686, -5.739113 ]
+								hitbox_maxs = [ 8.537378, 2.760711, 0.363464 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "R_knee"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -5.260006, -6.937407, -36.443035 ]
+								hitbox_maxs = [ 4.020027, 5.99615, 0.026875 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "L_knee"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -4.020032, -6.937407, -36.442993 ]
+								hitbox_maxs = [ 5.26, 5.99615, 0.026917 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "L_hand"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -3.704431, -4.149535, -12.163315 ]
+								hitbox_maxs = [ 3.8654, 5.861278, 3.872345 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Whip16"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -0.236923, -17.949177, -16.450264 ]
+								hitbox_maxs = [ 40.977448, 12.500553, 17.390583 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Blade"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -1.60062, -56.144135, -15.377144 ]
+								hitbox_maxs = [ 0.395521, 1.035828, 1.055866 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Hair3"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -7.456903, -3.312737, -13.5812 ]
+								hitbox_maxs = [ 7.508405, 1.929943, 0.051758 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "R_foot"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -3.453049, -18.780128, -5.58321 ]
+								hitbox_maxs = [ 3.4473, 4.144617, 0.947779 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "L_foot"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -3.447313, -18.78013, -5.583199 ]
+								hitbox_maxs = [ 3.453051, 4.144617, 0.94779 ]
+							},
+						]
+					},
+				]
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						name = "sai"
+						filename = "models/units/sai/sai.fbx"
+						import_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+				]
+			},
+			{
+				_class = "AnimationList"
+				children = 
+				[
+					{
+						_class = "AnimFile"
+						name = "Stand"
+						activity_name = "ACT_DOTA_IDLE_RARE"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/units/sai/sai.fbx"
+						import_bone_scales = false
+						start_frame = 10
+						end_frame = 70
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Walk"
+						activity_name = "ACT_DOTA_RUN"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/units/sai/sai.fbx"
+						import_bone_scales = false
+						start_frame = 90
+						end_frame = 120
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Stand_Ready"
+						activity_name = "ACT_DOTA_IDLE"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/units/sai/sai.fbx"
+						import_bone_scales = false
+						start_frame = 140
+						end_frame = 170
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Death"
+						activity_name = "ACT_DOTA_DIE"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/units/sai/sai.fbx"
+						import_bone_scales = false
+						start_frame = 190
+						end_frame = 300
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Attack___1"
+						activity_name = "ACT_DOTA_ATTACK"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/units/sai/sai.fbx"
+						import_bone_scales = false
+						start_frame = 320
+						end_frame = 350
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Attack___2"
+						activity_name = "ACT_DOTA_ATTACK2"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/units/sai/sai.fbx"
+						import_bone_scales = false
+						start_frame = 370
+						end_frame = 400
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Spell_Slam"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/units/sai/sai.fbx"
+						import_bone_scales = false
+						start_frame = 420
+						end_frame = 450
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Spell_Channel"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/units/sai/sai.fbx"
+						import_bone_scales = false
+						start_frame = 470
+						end_frame = 500
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Spell"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/units/sai/sai.fbx"
+						import_bone_scales = false
+						start_frame = 520
+						end_frame = 550
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Spell_Throw"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/units/sai/sai.fbx"
+						import_bone_scales = false
+						start_frame = 570
+						end_frame = 600
+						framerate = 30.0
+						reverse = false
+					},
+				]
+				default_root_bone_name = ""
+			},
+		]
+		model_archetype = ""
+		primary_associated_entity = ""
+		anim_graph_name = ""
+		importer_notes = """
+Imported from VMDL
+==Warnings==
+Changed incompatible animation name 'Stand Ready' to 'Stand_Ready'
+Changed incompatible animation name 'Attack - 1' to 'Attack___1'
+Changed incompatible animation name 'Attack - 2' to 'Attack___2'
+Changed incompatible animation name 'Spell Slam' to 'Spell_Slam'
+Changed incompatible animation name 'Spell Channel' to 'Spell_Channel'
+Changed incompatible animation name 'Spell Throw' to 'Spell_Throw'
+
+"""
+	}
+}

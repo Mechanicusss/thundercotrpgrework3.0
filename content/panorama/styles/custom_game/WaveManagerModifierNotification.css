@@ -1,0 +1,76 @@
+#WaveManagerModifierNotificationContainer {
+  width: 378px;
+  height: 343px;
+  background-image: url("file://{resources}/images/custom_game/smoke_bg_psd.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  horizontal-align: center;
+  vertical-align: top;
+  flow-children: down-wrap;
+  border-radius: 4px;
+  transition-property: opacity;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-in-out;
+  z-index: 10;
+  padding: 24px;
+  margin-top: 100px;
+}
+
+#WaveManagerModifierNotificationContainer_Secondary_C {
+  flow-children: down-wrap;
+  vertical-align: center;
+  horizontal-align: center;
+}
+
+#WaveManagerModifierNotificationContainer_C {
+  flow-children: down-wrap;
+  horizontal-align: center;
+  vertical-align: center;
+  text-align: center;
+  width: 300px;
+}
+
+#WaveManagerModifierNotificationContainer_Image {
+  border-radius: 4px;
+  horizontal-align: center;
+  box-shadow: 0 0 12px black;
+  height: 64px;
+  width: 64px;
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+#WaveManagerModifierNotificationContainer_Name {
+  font-size: 22px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px black;
+  border-radius: 4px 4px 0 0;
+  margin: 0;
+  text-align: center;
+  horizontal-align: center;
+  z-index: 2;
+  padding: 12px 0;
+  line-height: 1.5;
+  color: white;
+  font-family: RadianceM,Radiance,FZLanTingHei-R-GBK,TH Sarabun New,YDYGO 540,Gulim,MingLiU;
+}
+
+#WaveManagerModifierNotificationContainer_Desc {
+  color: white;
+  font-size: 15px;
+  text-shadow: 2px 2px 2px black;
+  font-family: RadianceM,Radiance,FZLanTingHei-R-GBK,TH Sarabun New,YDYGO 540,Gulim,MingLiU;
+  width: 300px;
+  horizontal-align: center;
+  text-align: center;
+  font-weight: bold;
+  line-height: 1.5;
+  text-overflow: shrink;
+  overflow: squish;
+}
+
+#WaveManagerModifierNotificationContainer_Desc_C {
+  flow-children: down-wrap;
+  horizontal-align: center;
+}

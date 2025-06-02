@@ -1,0 +1,325 @@
+"DOTAAbilities"
+{
+	"poseidon_wave"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"arena/poseidon_wave"
+		"MaxLevel" 						"7"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+
+		"AbilityCooldown"				"16"
+		"AbilityManaCost"				"90"
+		"AbilityDamage"					"100 150 200 250 300 350 450"
+
+		"AbilityCastRange"				"%range"
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3 0.3 0.2 0.1"
+		
+		"AbilityUnitDamageSubType"	"DAMAGE_SUBTYPE_WATER"
+
+		"AbilityValues"
+		{
+				"stun_duration"		"0.8 1.0 1.2 1.4 1.6 1.8 2.0"
+				"range"				"950"
+				"projectile_speed"	"1000"
+				"projectile_width"	"100"
+		}
+
+		"precache"
+		{
+			"particle"  "particles/units/heroes/hero_morphling/morphling_waveform.vpcf"
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_morphling.vsndevts"
+		}
+
+		"OnSpellStart"
+		{
+			"FireSound"
+			{
+				"EffectName"	"Hero_Morphling.Waveform"
+				"Target" 		"CASTER"
+			}
+			"LinearProjectile"
+			{
+			    "Target"      	 "POINT"
+				"EffectName"	 "particles/units/heroes/hero_morphling/morphling_waveform.vpcf"
+				"MoveSpeed"		 "%projectile_speed"
+				"StartRadius"	 "%projectile_width"
+				"StartPosition"  "attach_attack1"
+				"EndRadius"      "%projectile_width"
+				"HasFrontalCone" "0"
+				"FixedDistance"  "%range"
+				"TargetTeams"	 "DOTA_UNIT_TARGET_TEAM_ENEMY"
+				"TargetTypes"	 "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+			}
+		}
+
+		"OnProjectileHitUnit"
+		{
+			"DeleteOnHit"	"0"
+			"ApplyModifier"
+			{
+				"ModifierName"	"modifier_stunned"
+				"Target" 		"TARGET"
+				"Duration"		"%stun_duration"
+			}
+			"Damage"
+			{
+				"Target"		"TARGET"
+				"Type"			"DAMAGE_TYPE_MAGICAL"
+				"Damage"		"%AbilityDamage"
+			}
+		}
+	}
+
+	"poseidon_trident"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"arena/poseidon_trident"
+		"MaxLevel" 						"7"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+
+		"AbilityCooldown"				"20"
+		"AbilityManaCost"				"80"
+		"AbilityDamage"					"20 40 60 80 100 120 140"
+		
+		"AbilityUnitDamageSubType"	"DAMAGE_SUBTYPE_WATER"
+
+		"AbilityValues"
+		{
+				"duration"			"10 15 20 25 30 35 40"
+				"movement_speed_pct" "5 7 9 11 13 15 18"
+				"cleave_damage_pct"	"10.0 12.5 15.0 17.5 20.0 22.5 25.0"
+				"cleave_radius"		"400"
+		}
+
+		"precache"
+		{
+			"particle"  "particles/units/heroes/hero_sven/sven_spell_great_cleave.vpcf"
+			"particle"  "particles/units/heroes/hero_abaddon/abaddon_ambient_glow.vpcf"
+		}
+
+		"OnSpellStart"
+		{
+			"ApplyModifier"
+			{
+				"ModifierName"	"modifier_poseidon_trident"
+				"Target" 		"CASTER"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_poseidon_trident"
+			{
+				"Duration"			"%duration"
+
+				"EffectName"		"particles/units/heroes/hero_abaddon/abaddon_ambient_glow.vpcf"
+				"EffectAttachType"	"follow_origin"
+
+				"Properties"
+				{
+				    "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"%movement_speed_pct"
+				}
+
+				"OnAttackLanded"
+				{
+					"CleaveAttack"
+					{
+						"CleavePercent"         "%cleave_damage_pct"
+						"CleaveRadius"          "%cleave_radius"
+						"CleaveEffect"          "particles/units/heroes/hero_sven/sven_spell_great_cleave.vpcf"
+					}
+				}
+
+				"OnAttack"
+				{
+					"Damage"
+					{
+						"Target"		"TARGET"
+						"Type"			"DAMAGE_TYPE_MAGICAL"
+						"Damage"		"%AbilityDamage"
+					}
+				}
+			}
+		}
+	}
+
+	"poseidon_sea_hole"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"arena/poseidon_sea_hole"
+		"MaxLevel" 						"7"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AOERadius"						"%aoe_radius"
+
+		"AbilityCooldown"				"25"
+		"AbilityManaCost"				"80 90 100 110 120 130 140"
+		"AbilityCastRange"				"900"
+		
+		"AbilityUnitDamageSubType"	"DAMAGE_SUBTYPE_WATER"
+
+		"precache"
+		{
+			"particle"  "particles/arena/units/heroes/hero_poseidon/sea_hole.vpcf"
+		}
+
+		"AbilityValues"
+		{
+				"duration"			"1.0 1.5 2.0 2.5 3.0 3.5 4.0"
+				"aoe_radius"		"400"
+				"pull_per_second"	"200"
+
+				"slow_min_pct"		"-20"
+
+				"slow_max_pct"		"-40 -45 -50 -55 -60 -65 -70"
+
+				"mute_radius"		"128"
+
+				"think_interval"	"0.03"
+		}
+
+		"OnSpellStart"
+		{
+			"CreateThinker"
+			{
+				"ModifierName"	"modifier_poseidon_sea_hole_dummy"
+				"Target" 		"POINT"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_poseidon_sea_hole_dummy"
+			{
+				"IsHidden"			"1"
+				"IsPurgable"		"0"
+				"Duration"			"%duration"
+
+				"OnCreated"
+				{
+					"FireSound"
+					{
+						"EffectName"	"Arena.Hero_Poseidon.SeaHole"
+						"Target" 		"TARGET"
+					}
+					"AttachEffect"
+					{
+						"EffectName"        "particles/arena/units/heroes/hero_poseidon/sea_hole.vpcf"
+						"EffectAttachType"  "follow_origin"
+						"Target"            "TARGET"
+						"ControlPoints"
+						{
+							"01"	"%aoe_radius 0 0"
+						}
+					}
+				}
+
+				"OnDestroy"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"kv"
+						"Function"		"StopEndableSound"
+						"sound"			"Arena.Hero_Poseidon.SeaHole"
+					}
+				}
+
+				"ThinkInterval"  "%think_interval"
+				"OnIntervalThink"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"heroes/hero_poseidon/sea_hole"
+						"Function"		"DummyThink"
+						"think_interval"	"%think_interval"
+					}
+				}
+
+				"Aura"          	"modifier_poseidon_sea_hole_mute"
+				"Aura_Radius"   	"%mute_radius"
+				"Aura_Teams"    	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+				"Aura_Types"    	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+			}
+
+			"modifier_poseidon_sea_hole_mute"
+			{
+				"IsHidden"			"0"
+				"IsDebuff"			"1"
+				"IsPurgable"		"0"
+
+				"States"
+				{
+					"MODIFIER_STATE_MUTED"		"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+
+			"modifier_poseidon_sea_hole_slow"
+			{
+				"IsHidden"			"0"
+				"IsDebuff"			"1"
+				"IsPurgable"		"0"
+				"Duration"			"0.25"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE" "-1"
+				}
+			}
+		}
+	}
+
+	"poseidon_dark_whale"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"arena/poseidon_dark_whale"
+		"MaxLevel" 						"7"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AOERadius"						"%aoe_radius"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+
+		"AbilityCooldown"				"100"
+		"AbilityManaCost"				"100 200 300 400 500 600 700"
+		"AbilityCastPoint"				"0.4 0.4 0.4 0.4 0.4 0.35 0.3"
+		"AbilityCastRange"				"800 900 1000 1100 1200 1300 1400"
+		
+		"AbilityUnitDamageSubType"	"DAMAGE_SUBTYPE_WATER"
+
+		"precache"
+		{
+			"particle"  "particles/arena/units/heroes/hero_poseidon/dark_whale.vpcf"
+		}
+
+		"AbilityValues"
+		{
+				"aoe_radius"		"410"
+
+				"damage_min"		"150 225 300 375 450 625 700"
+
+				"damage_max"		"250 350 450 550 650 750 850"
+
+				"stun_min"			"0 0.25 0.5 0.75 1.0 1.25 1.5"
+				"stun_max"			"1.0 1.25 1.5 1.75 2.0 2.25 2.5"
+		}
+
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"heroes/hero_poseidon/dark_whale"
+				"Function"		"DarkWhale"
+				"Target"		"POINT"
+			}
+		}
+	}
+}

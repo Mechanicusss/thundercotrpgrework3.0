@@ -1,0 +1,337 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vpcf54:version{326b1595-45e8-4004-aa5a-3e08655ff51f} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 128
+	m_Renderers = 
+	[
+		{
+			_class = "C_OP_RenderRopes"
+			m_flRadiusScale = 0.5
+			m_flFinalTextureOffsetU = 1.0
+			m_flTextureVWorldSize = 250.0
+			m_flTextureVScrollRate = -50.0
+			m_nMaxTesselation = 2
+			m_nMinTesselation = 2
+			m_nOrientationType = "PARTICLE_ORIENTATION_ALIGN_TO_PARTICLE_NORMAL"
+			m_vecTexturesInput = 
+			[
+				{
+					m_hTexture = resource:"materials/particle/beam_noise05.vtex"
+					m_TextureControls = 
+					{
+						m_flFinalTextureScaleU = 
+						{
+							m_nType = "PF_TYPE_LITERAL"
+							m_flLiteralValue = -1.0
+						}
+					}
+				},
+			]
+			m_nOutputBlendMode = "PARTICLE_OUTPUT_BLEND_MODE_ALPHA"
+			m_nFogType = "PARTICLE_FOG_GAME_DEFAULT"
+		},
+	]
+	m_Operators = 
+	[
+		{
+			_class = "C_OP_Decay"
+			m_nOpEndCapState = "PARTICLE_ENDCAP_ENDCAP_ON"
+		},
+		{
+			_class = "C_OP_BasicMovement"
+			m_fDrag = 0.08
+		},
+		{
+			_class = "C_OP_MovementRotateParticleAroundAxis"
+			m_flRotRate = 10.0
+			m_bLocalSpace = true
+			m_TransformInput = 
+			{
+				m_nType = "PT_TYPE_CONTROL_POINT"
+				m_nControlPoint = 0
+			}
+		},
+		{
+			_class = "C_OP_PositionLock"
+			m_TransformInput = 
+			{
+				m_nType = "PT_TYPE_CONTROL_POINT"
+				m_nControlPoint = 0
+			}
+		},
+		{
+			_class = "C_OP_FadeInSimple"
+		},
+		{
+			_class = "C_OP_FadeOutSimple"
+		},
+		{
+			_class = "C_OP_RampScalarLinearSimple"
+			m_Rate = -15.0
+			m_flEndTime = 100000000376832.0
+			m_nField = "16"
+			m_nOpEndCapState = "PARTICLE_ENDCAP_ENDCAP_ON"
+		},
+	]
+	m_Initializers = 
+	[
+		{
+			m_bDisableOperator = false
+			m_nOpEndCapState = "PARTICLE_ENDCAP_ALWAYS_ON"
+			m_flOpStartFadeInTime = 0.0
+			m_flOpEndFadeInTime = 0.0
+			m_flOpStartFadeOutTime = 0.0
+			m_flOpEndFadeOutTime = 0.0
+			m_flOpFadeOscillatePeriod = 0.0
+			m_bNormalizeToStopTime = false
+			m_flOpTimeOffsetMin = 0.0
+			m_flOpTimeOffsetMax = 0.0
+			m_nOpTimeOffsetSeed = 0
+			m_nOpTimeScaleSeed = 0
+			m_flOpTimeScaleMin = 1.0
+			m_flOpTimeScaleMax = 1.0
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 0.0
+				m_flRandomMax = 360.0
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+				m_bHasRandomSignFlip = true
+			}
+			m_nOutputField = 4
+		},
+		{
+			m_bDisableOperator = false
+			m_nOpEndCapState = "PARTICLE_ENDCAP_ALWAYS_ON"
+			m_flOpStartFadeInTime = 0.0
+			m_flOpEndFadeInTime = 0.0
+			m_flOpStartFadeOutTime = 0.0
+			m_flOpEndFadeOutTime = 0.0
+			m_flOpFadeOscillatePeriod = 0.0
+			m_bNormalizeToStopTime = false
+			m_flOpTimeOffsetMin = 0.0
+			m_flOpTimeOffsetMax = 0.0
+			m_nOpTimeOffsetSeed = 0
+			m_nOpTimeScaleSeed = 0
+			m_flOpTimeScaleMin = 1.0
+			m_flOpTimeScaleMax = 1.0
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 3.0
+			}
+			m_nOutputField = 1
+		},
+		{
+			_class = "C_INIT_RingWave"
+			m_bEvenDistribution = true
+			m_flParticlesPerOrbit = 16.0
+			m_flInitialRadius = 
+			{
+				m_nType = "PF_TYPE_CONTROL_POINT_COMPONENT"
+				m_nControlPoint = 1
+				m_nVectorComponent = 0
+				m_nMapType = "PF_MAP_TYPE_MULT"
+				m_flMultFactor = 0.95
+			}
+			m_flThickness = 
+			{
+				m_nType = "PF_TYPE_CONTROL_POINT_COMPONENT"
+				m_nControlPoint = 1
+				m_nVectorComponent = 1
+				m_nMapType = "PF_MAP_TYPE_MULT"
+				m_flMultFactor = 0.0
+			}
+			m_flInitialSpeedMin = 
+			{
+				m_nType = "PF_TYPE_CONTROL_POINT_COMPONENT"
+				m_nControlPoint = 1
+				m_nVectorComponent = 2
+				m_nMapType = "PF_MAP_TYPE_MULT"
+				m_flMultFactor = 0.0
+			}
+			m_flInitialSpeedMax = 
+			{
+				m_nType = "PF_TYPE_CONTROL_POINT_COMPONENT"
+				m_nControlPoint = 1
+				m_nVectorComponent = 2
+				m_nMapType = "PF_MAP_TYPE_MULT"
+				m_flMultFactor = 0.0
+			}
+			m_flRoll = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 0.0
+			}
+			m_flPitch = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 0.0
+			}
+			m_flYaw = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 0.0
+			}
+			m_TransformInput = 
+			{
+				m_nType = "PT_TYPE_CONTROL_POINT"
+				m_nControlPoint = 0
+			}
+		},
+		{
+			m_bDisableOperator = false
+			m_nOpEndCapState = "PARTICLE_ENDCAP_ALWAYS_ON"
+			m_flOpStartFadeInTime = 0.0
+			m_flOpEndFadeInTime = 0.0
+			m_flOpStartFadeOutTime = 0.0
+			m_flOpEndFadeOutTime = 0.0
+			m_flOpFadeOscillatePeriod = 0.0
+			m_bNormalizeToStopTime = false
+			m_flOpTimeOffsetMin = 0.0
+			m_flOpTimeOffsetMax = 0.0
+			m_nOpTimeOffsetSeed = 0
+			m_nOpTimeScaleSeed = 0
+			m_flOpTimeScaleMin = 1.0
+			m_flOpTimeScaleMax = 1.0
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 50.0
+				m_flRandomMax = 150.0
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+			m_nOutputField = 3
+		},
+		{
+			_class = "C_INIT_CreationNoise"
+			m_flOutputMax = 0.55
+			m_flOutputMin = 0.2
+			m_nFieldOutput = "7"
+		},
+		{
+			_class = "C_INIT_RandomColor"
+			m_ColorMin = [ 22, 7, 14, 255 ]
+			m_ColorMax = [ 62, 10, 31, 255 ]
+		},
+		{
+			m_bDisableOperator = false
+			m_nOpEndCapState = "PARTICLE_ENDCAP_ALWAYS_ON"
+			m_flOpStartFadeInTime = 0.0
+			m_flOpEndFadeInTime = 0.0
+			m_flOpStartFadeOutTime = 0.0
+			m_flOpEndFadeOutTime = 0.0
+			m_flOpFadeOscillatePeriod = 0.0
+			m_bNormalizeToStopTime = false
+			m_flOpTimeOffsetMin = 0.0
+			m_flOpTimeOffsetMax = 0.0
+			m_nOpTimeOffsetSeed = 0
+			m_nOpTimeScaleSeed = 0
+			m_flOpTimeScaleMin = 1.0
+			m_flOpTimeScaleMax = 1.0
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 0.078431
+				m_flRandomMax = 0.392157
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+			m_nOutputField = 7
+		},
+		{
+			_class = "C_INIT_RemapParticleCountToScalar"
+			m_bActiveRange = true
+			m_bScaleInitialRange = true
+			m_nFieldOutput = "7"
+			m_nSetMethod = "PARTICLE_SET_SCALE_INITIAL_VALUE"
+		},
+		{
+			_class = "C_INIT_PositionPlaceOnGround"
+			m_flOffset = 4.0
+			m_CollisionGroupName = "DEBRIS"
+			m_bIncludeWater = true
+			m_bSetNormal = true
+			m_nTraceMissBehavior = "PARTICLE_TRACE_MISS_BEHAVIOR_TRACE_END"
+		},
+	]
+	m_Emitters = 
+	[
+		{
+			_class = "C_OP_ContinuousEmitter"
+			m_bDisableOperator = true
+			m_flEmissionDuration = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 0.0
+			}
+			m_flStartTime = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 0.0
+			}
+			m_flEmitRate = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 20.0
+			}
+		},
+		{
+			_class = "C_OP_InstantaneousEmitter"
+			m_flStartTime = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 0.0
+			}
+			m_nParticlesToEmit = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 24.0
+			}
+		},
+	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = [ 0.0, 0.0, 0.0 ]
+					m_angOffset = [ null, null, null ]
+					m_entityName = "self"
+				},
+				{
+					m_iControlPoint = 1
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = [ 0.0, 0.0, 0.0 ]
+					m_angOffset = [ null, null, null ]
+					m_entityName = "self"
+				},
+				{
+					m_iControlPoint = 15
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = [ 255.0, 255.0, 255.0 ]
+					m_angOffset = [ null, null, null ]
+					m_entityName = "self"
+				},
+				{
+					m_iControlPoint = 16
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = [ 1.0, 0.0, 0.0 ]
+					m_angOffset = [ null, null, null ]
+					m_entityName = "self"
+				},
+			]
+		},
+	]
+	m_vControlPoint1DefaultOffsetRelativeToControlPoint0 = [ 24.0, 0.0, 0.0 ]
+	m_PreEmissionOperators = [  ]
+	m_nBehaviorVersion = 4
+	m_nFirstMultipleOverride_BackwardCompat = 7
+}

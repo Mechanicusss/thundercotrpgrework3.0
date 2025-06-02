@@ -1,0 +1,104 @@
+#WaveManagerCounterContainer {
+  horizontal-align: right;
+  vertical-align: top;
+  flow-children: down-wrap;
+  background-color: rgba(0,0,0,0.5);
+  background-image: url("file://{resources}/images/custom_game/inventory_bg_psd.png");
+  background-size: cover;
+  padding: 12px 12px 6px 12px;
+  font-family: RadianceM,Radiance,FZLanTingHei-R-GBK,TH Sarabun New,YDYGO 540,Gulim,MingLiU;
+  font-size: 15px;
+  width: 300px;
+  text-shadow: 1px 1px 1px black;
+  box-shadow: 0 0 6px black;
+  border-radius: 0 0 0 4px;
+}
+
+#WaveManagerCounterList {
+  flow-children: right-wrap;
+  background-image: url("file://{resources}/images/custom_game/statbranch_background_description_psd.png");
+  box-shadow: 0 0 3px rgba(0,0,0,0.5) inset;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  border-radius: 4px;
+  padding: 6px 12px;
+  margin-bottom: 6px;
+}
+
+#WaveManagerCounterListLabel {
+  font-weight: bold;
+  color: #FFF;
+}
+
+#WaveManagerCounterListInfo {
+  color: #FFF;
+  horizontal-align: right;
+}
+
+#WaveManagerCounterListLabel_Text {
+  text-shadow: 1px 1px 1px black;
+  text-transform: uppercase;
+}
+
+#WaveManagerCounterListInfo_Text {
+  text-shadow: 1px 1px 1px black;
+  font-weight: bold;
+  color: lightblue;
+}
+
+#WaveManagerCounterFlashing {
+  animation-duration: 1s;
+  animation-name: blinker;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px black;
+  border-radius: 4px 4px 0 0;
+  margin: 0;
+  text-align: center;
+  horizontal-align: center;
+  margin-top:6px;
+  z-index: 2;
+  line-height: 1.5;
+  color: red;
+  font-family: RadianceM,Radiance,FZLanTingHei-R-GBK,TH Sarabun New,YDYGO 540,Gulim,MingLiU;
+  background-color: rgba(0,0,0,0.5);
+  width: 100%;
+}
+
+@keyframes 'blinker' {
+    50% { opacity: 0; }
+}
+
+#SeasonalUIContainer {
+  background-image: url("file://{images}/custom_game/relic_rare_button_psd.png");
+  background-size: cover;
+  box-shadow: 0 0 6px black;
+  padding: 5px;
+  border-radius:4px;
+  horizontal-align: center;
+  margin-top: 60px;
+}
+
+#SeasonalUIContainer Label {
+  background-image: url("file://{images}/custom_game/frenzy.png");
+  background-repeat: no-repeat;
+  background-size: 24px;
+  background-position: left center;
+  border-radius: 4px;
+  vertical-align: center;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 6px 0 5px 36px;
+  font-family: RadianceM,Radiance,FZLanTingHei-R-GBK,TH Sarabun New,YDYGO 540,Gulim,MingLiU;
+  text-align: left;
+  horizontal-align: left;
+  text-shadow: 1px 1px 1px black;
+  text-transform: uppercase;
+  tooltip-position: bottom;
+}

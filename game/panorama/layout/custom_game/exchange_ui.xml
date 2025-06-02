@@ -1,0 +1,28 @@
+<root>
+    <styles>
+        <include src="s2r://panorama/styles/custom_game/exchange_ui.css" />
+    </styles>
+
+    <scripts>
+        <include src="s2r://panorama/scripts/custom_game/exchange_item_ui.js" />
+        <include src="s2r://panorama/scripts/custom_game/exchange_ui.js" />
+    </scripts>
+
+    <snippets>
+        <snippet name="ExchangeItemUI">
+            <Panel class="ExchangeItemUI" hittest="false">
+                <Image id="ItemImage" hittest="false" />
+                <Label id="ItemName" html="true" />
+                <Button id="ExampleButton2ID" class="ExampleButton2Class">
+                  <Panel class="Contents">
+                    <Label id="ExampleButton2Label" text="#BUY"/>
+                  </Panel>
+                </Button>
+            </Panel>
+        </snippet>
+    </snippets>
+
+    <Panel hittest="false" style="width: 100%; height: 100%;">
+        <Panel id="Exchange" />
+    </Panel>
+</root>

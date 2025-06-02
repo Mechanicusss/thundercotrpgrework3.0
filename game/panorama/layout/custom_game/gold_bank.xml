@@ -1,0 +1,23 @@
+<root>
+    <styles>
+        <include src="s2r://panorama/styles/custom_game/gold_bank.css" />
+    </styles>
+
+    <scripts>
+        <include src="s2r://panorama/scripts/custom_game/gold_bank_container.js" />
+        <include src="s2r://panorama/scripts/custom_game/gold_bank.js" />
+    </scripts>
+
+    <snippets>
+        <snippet name="GoldBank">
+            <Panel class="GoldBank" hittest="false">
+                <Label id="GoldBankIcon" />
+                <Label id="GoldBankText" />
+            </Panel>
+        </snippet>
+    </snippets>
+
+    <Panel hittest="false" style="width: 100%; height: 100%;">
+        <Panel id="GoldBank" />
+    </Panel>
+</root>

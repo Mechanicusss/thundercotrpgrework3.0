@@ -1,0 +1,84 @@
+<root>
+	<styles>
+		<include
+			src="s2r://panorama/styles/custom_game/multiteam_end_screen_custom.css" />
+	</styles>
+
+	<scripts>
+		<include
+			src="s2r://panorama/scripts/custom_game/multiteam_end_screen.js" />
+	</scripts>
+
+	<Panel class="es-root">
+		<Panel id="es-end-screen" class="hideXP">
+			<Panel id="es-end-screen-players">
+				<Panel id="es-victory-info">
+					<Label id="es-victory-info-text" text="" />
+				</Panel>
+
+				<Panel id="es-teams">
+					<Panel class="es-teams-columns">
+						<Panel class="es-team" id="es-radiant">
+							<Panel class="es-team-title">
+								<Label class="es-team-name" text="Angels" />
+							</Panel>
+
+							<Panel class="es-legend">
+								<Label class="es-legend-kdalevel" text="LV." />
+								<Label class="es-legend-kdalevel" text="K" />
+								<Label class="es-legend-kdalevel" text="D" />
+								<Label class="es-legend-kdalevel" text="A" />
+								<Label class="es-legend-gold" text="Gold" />
+								<Label class="es-legend-damage-done" text="Damage Done" />
+								<Label class="es-legend-damage-taken" text="Damage Taken" />
+								<Label class="es-legend-imr" text="MMR" />
+								
+							</Panel>
+
+							<Panel id="es-radiant-players" class="es-players" />
+						</Panel>
+
+						<Panel class="es-team" id="es-dire">
+							<Panel class="es-team-title">
+								<Label class="es-team-name" text="Demons" />
+							</Panel>
+
+							<Panel class="es-legend">
+								<Label class="es-legend-kdalevel" text="LV." />
+								<Label class="es-legend-kdalevel" text="K" />
+								<Label class="es-legend-kdalevel" text="D" />
+								<Label class="es-legend-kdalevel" text="A" />
+								<Label class="es-legend-gold" text="Gold" />
+								<Label class="es-legend-damage-done" text="Damage Done" />
+								<Label class="es-legend-damage-taken" text="Damage Taken" />
+								<Label class="es-legend-imr" text="MMR" />
+							</Panel>
+
+							<Panel id="es-dire-players" class="es-players" />
+						</Panel>
+					</Panel>
+				</Panel>
+
+				<Panel id="es-buttons">
+<!--				<Button id="es-buttons-stats">
+						<Label text="See detailed statistics about this Game" />
+					</Button> -->
+
+					<Button id="es-buttons-close" onactivate="Game.FinishGame();">
+						<Label text="#CustomEndScreenClose" />
+					</Button>
+				</Panel>
+			</Panel>
+
+			<Panel id="es-player-reward-container">
+				<Label id="es-player-reward-name" text="Item Name" />
+				<Label id="es-player-reward-rarity" text="Rarity" />
+				<Panel id="es-player-reward-image" />
+
+				<Button class="es-player-reward-button" onactivate="CloseBottlepassReward()">
+					<Label text="Accept" />
+				</Button>
+			</Panel>
+		</Panel>
+	</Panel>
+</root>

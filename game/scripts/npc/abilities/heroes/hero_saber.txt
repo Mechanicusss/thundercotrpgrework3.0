@@ -1,0 +1,160 @@
+"DOTAAbilities"
+{
+	"saber_mana_burst"
+	{
+		"BaseClass"						"ability_lua"
+		"AbilityTextureName"			"arena/saber_mana_burst"
+		"ScriptFile"					"heroes/hero_saber/mana_burst"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE | DOTA_ABILITY_BEHAVIOR_DONT_CANCEL_CHANNEL"
+		"AbilityCooldown"				"17 16 15 14 13 12 11 10 9 8"
+		"MaxLevel" 						"10"
+		"AbilityValues"
+		{
+			"mana_wasted_pct"	"8"
+			"damage_per_mana"	"0.5"
+			"armor_per_mana"	"0.050"
+			"duration"			"12"
+			"purge_health_pct"	"40"
+			"purge_stun_health_pct"	"20"
+			"weakness_mana_pct"	"10"
+			"weakness_disarmor"	"-30"
+		}
+
+		"precache"
+		{
+			"particle"  "particles/econ/items/outworld_devourer/od_shards_exile/od_shards_exile_prison_end_mana_flash.vpcf"
+			"particle"  "particles/arena/units/heroes/hero_saber/mana_burst_stack.vpcf"
+		}
+	}
+
+	"saber_instinct"
+	{
+		"BaseClass"						"ability_lua"
+		"AbilityTextureName"			"saber_instinct"
+		"ScriptFile"					"heroes/hero_saber/instinct"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityCooldown" "3"
+		"MaxLevel" 						"10"
+
+		"precache"
+		{
+			"particle" "particles/units/heroes/hero_antimage/antimage_spellshield_reflect_2.vpcf"
+			"soundfile" "soundevents/game_sounds_heroes/game_sounds_antimage.vsndevts"
+		}
+
+		"AbilityValues"
+		{
+			"bonus_outgoing" "1.5 3.0 4.5 6.0 7.5 9.0 10.5 12.0 13.5 15.0"
+			"max_stacks" "10"
+			"duration" "12"
+		}
+	}
+
+	"saber_invisible_air"
+	{
+		"BaseClass"						"ability_lua"
+		"AbilityTextureName"			"arena/saber_invisible_air"
+		"ScriptFile"					"heroes/hero_saber/invisible_air"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+		"MaxLevel" 						"10"
+
+		"AbilityUnitDamageSubType"	"DAMAGE_SUBTYPE_AIR"
+		"AbilityValues"
+		{
+				"damage_from_attack"	"12 14 16 18 20 22 24 26 28 30"
+				"damage_per_second"	"2"
+				"damage_max"		"10"
+				"aoe_radius"		"400"
+				"push_velocity"		"600"
+				"forward_offset"	"100"
+				"armor_shred"	"-2 -4 -6 -8"
+				"armor_shred_duration"	"12"
+				"armor_shred_max_stacks"	"10"
+				"chance"	"36"
+		}
+
+		"precache"
+		{
+			"particle"  "particles/arena/units/heroes/hero_saber/invisible_air.vpcf"
+		}
+	}
+
+	"saber_avalon"
+	{
+		"BaseClass"						"ability_lua"
+		"AbilityTextureName"			"arena/saber_avalon"
+		"ScriptFile"					"heroes/hero_saber/avalon"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		"MaxLevel" 						"4"
+		"AbilityCastPoint"				"0.1"
+		"AbilityCooldown"				"30"
+		"AbilityChannelTime"			"3"
+		"AbilityManaCost"				"50"
+		"LinkedAbility" "saber_excalibur"
+		"AbilityValues"
+		{
+				"bonus_health_regen_max"	"3 5 7 9"
+				"duration"			"3"
+		}
+	}
+
+	"saber_excalibur"
+	{
+		"BaseClass"						"ability_lua"
+		"AbilityTextureName"			"arena/saber_excalibur"
+		"ScriptFile"					"heroes/hero_saber/excalibur"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+		"MaxLevel" 						"4"
+		"AbilityCastPoint"				"0.1"
+		"AbilityChannelTime"			"1.1"
+		"AbilityCooldown"				"100 90 80 70"
+		"LinkedAbility" "saber_avalon"
+		"HasScepterUpgrade"				"1"
+		"AbilityUnitDamageSubType"	"DAMAGE_SUBTYPE_ENERGY"
+
+		"AbilityValues"
+		{
+				"mana_pct"			"100"
+				"damage_per_mana"	"5 10 15 20"
+				"damage_per_mana_scepter"	"10 15 20 25"
+				"RequiresScepter" "1"
+				"cast_range"		"700 800 900 1000"
+				"cast_range_scepter"	"2000"
+				"RequiresScepter" "1"
+				"channel_time"		"1.1"
+				"width"				"200"
+				"delay"				"0.5"
+		}
+
+		"precache"
+		{
+			"particle"  "particles/arena/units/heroes/hero_saber/excalibur.vpcf"
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_phoenix.vsndevts"
+		}
+	}
+
+	"saber_alter"
+	{
+		"BaseClass"						"ability_lua"
+		"AbilityTextureName"			"saber_alter"
+		"ScriptFile"					"heroes/hero_saber/alter"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+		"MaxLevel" 						"1"
+		"AbilityCooldown"				"60"
+		"AbilityManaCost"				"300"
+		"IsGrantedByShard"          "1"
+		"AbilityValues"
+		{
+				"bonus_health_regen_max"	"3 5 7 9"
+				"duration"			"3"
+		}
+	}
+}

@@ -1,0 +1,343 @@
+#ProgressionTalentsContainer {
+    background-color: gradient( linear, 100% 0%, 100% 100%, from( #111111 ), color-stop( 0.01, #202327 ), color-stop( 0.2, #141619ff ), to( #000000dd ) );
+    background-size: 100% 100%;
+    background-position: center;
+    border-radius: 4px;
+    width: 1440px;
+    horizontal-align: center;
+    vertical-align: top;
+    margin-top: 100px;
+    font-size: 15px;
+    box-shadow: 0 0 6px black;
+    font-family: RadianceM,Radiance,FZLanTingHei-R-GBK,TH Sarabun New,YDYGO 540,Gulim,MingLiU;
+    flow-children: down;
+}
+
+#ProgressionTalentsAbilityContainer {
+    width: 100%;
+    max-height: 600px;
+    flow-children: right;
+}
+
+#ProgressionTalentsIntellectBranchContainer {
+    width: 25%;
+    border-radius: 0;
+    flow-children: right-wrap;
+}
+
+#ProgressionTalentsIntellectBranchContainerHeader {
+    flow-children: right-wrap;
+    width: 100%;
+    padding: 6px;
+    background-image: url("file://{images}/custom_game/bg_scoreboard_psd.png");
+    background-size: cover;
+    box-shadow: 0 0 6px black;
+}
+
+#ProgressionTalentsIntellectBranchContainerIcon {
+    background-image: url("file://{images}/custom_game/primary_attribute_icon_intelligence_psd.png");
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 45px;
+    width: 45px;
+}
+
+#ProgressionTalentsIntellectBranchContainerTitle {
+    color: #FFF;
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    text-shadow: 1px 1px 1px black;
+}
+
+#ProgressionTalentsTalentContainer {
+    flow-children: right-wrap;
+    width: 100%;
+    height: 600px;
+    overflow: squish scroll;
+    padding-left: 12px;
+    padding-top: 12px;
+    /*background-image: url("file://{images}/custom_game/xp_intellect_tree.png");*/
+    background-repeat: repeat;
+    background-position: 50% 0%;
+}
+
+#ProgressionTalentsTalentAbilityContainer {
+    height: 96px;
+    width: 96px;
+    margin: 6px 8px;
+}
+
+#ProgressionTalentsTalentAbilityContainer.Background {
+    background-image: url("file://{images}/custom_game/emptyability.png");
+    background-position: 50%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border: 1px solid black;
+}
+
+#ProgressionTalentsTalentAbilityLevel {
+    color: white;
+    horizontal-align: right;
+    vertical-align: bottom;
+    z-index: 2;
+    font-weight: bold;
+    font-size: 12px;
+    text-shadow: 1px 1px 1px black;
+    background-color: #1a1c1d;
+    border-radius: 4px 0 0 0;
+    padding: 6px;
+    text-align: center;
+}
+
+#ProgressionTalentsTalent {
+    height: 64px;
+    width: 64px;
+    horizontal-align: center;
+    vertical-align: center;
+    tooltip-position: top;
+    border-radius: 0;
+}
+
+#ProgressionTalentsStrengthBranchContainer {
+    width: 25%;
+    flow-children: right-wrap;
+    border-radius: 4px 0 0 0;
+}
+
+#ProgressionTalentsStrengthBranchContainerHeader {
+    flow-children: right-wrap;
+    width: 100%;
+    padding: 6px;
+    background-image: url("file://{images}/custom_game/bg_scoreboard_psd.png");
+    background-size: cover;
+    box-shadow: 0 0 6px black;
+}
+
+#ProgressionTalentsStrengthBranchContainerIcon {
+    background-image: url("file://{images}/custom_game/primary_attribute_icon_strength_psd.png");
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 45px;
+    width: 45px;
+}
+
+#ProgressionTalentsStrengthBranchContainerTitle {
+    color: #FFF;
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    text-shadow: 1px 1px 1px black;
+}
+
+
+#ProgressionTalentsAgilityBranchContainer {
+    width: 25%;
+    flow-children: right-wrap;
+}
+
+#ProgressionTalentsAgilityBranchContainerHeader {
+    flow-children: right-wrap;
+    width: 100%;
+    padding: 6px;
+    background-image: url("file://{images}/custom_game/bg_scoreboard_psd.png");
+    background-size: cover;
+    box-shadow: 0 0 6px black;
+}
+
+#ProgressionTalentsAgilityBranchContainerIcon {
+    background-image: url("file://{images}/custom_game/primary_attribute_icon_agility_psd.png");
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 45px;
+    width: 45px;
+}
+
+#ProgressionTalentsAgilityBranchContainerTitle {
+    color: #FFF;
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    text-shadow: 1px 1px 1px black;
+}
+
+
+#ProgressionTalentsUniversalBranchContainer {
+    width: 25%;
+    border-radius: 0 4px 0 0;
+    flow-children: right-wrap;
+}
+
+#ProgressionTalentsUniversalBranchContainerHeader {
+    flow-children: right-wrap;
+    width: 100%;
+    padding: 6px;
+    background-image: url("file://{images}/custom_game/bg_scoreboard_psd.png");
+    background-size: cover;
+    box-shadow: 0 0 6px black;
+}
+
+#ProgressionTalentsUniversalBranchContainerIcon {
+    background-image: url("file://{images}/custom_game/primary_attribute_icon_all_psd.png");
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 45px;
+    width: 45px;
+}
+
+#ProgressionTalentsUniversalBranchContainerTitle {
+    color: #FFF;
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    text-shadow: 1px 1px 1px black;
+}
+
+#ProgressionTalentsContainerDivider {
+    border-top: 1px solid #222;
+    width: 100%;
+    margin-bottom: 6px;
+}
+
+.TalentFaded {
+    opacity: 0.5;
+}
+
+#ProgressionTalentsPlayerXPContainer {
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    padding: 12px;
+    flow-children: down-wrap;
+}
+
+#ProgressionTalentsPlayerXPContainerInner {
+    flow-children: right;
+    horizontal-align: center;
+    vertical-align: center;
+    width: 100%;
+}
+
+#ProgressionTalentsPlayerXPContainerBackground {
+    width: 100%;
+    background-image: url("file://{images}/custom_game/gray_button_off_png.png");
+    background-position: center;
+    background-size: cover;
+    height: 48px;
+    border-radius: 4px;
+    vertical-align: center;
+    box-shadow: 0 0 3px black;
+}
+
+#ProgressionTalentsPlayerXPContainerBar {
+    width: 0%;
+    background-image: url("file://{images}/custom_game/gauntlet_btn_bg_png.png");
+    background-position: center;
+    background-size: cover;
+    height: 48px;
+    border-radius: 4px;
+}
+
+#ProgressionTalentsPlayerXPContainerCurrentLevel {
+    color: rgb(192, 192, 192);
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 1px 1px 1px black;
+    horizontal-align: left;
+    font-size: 20px;
+    padding: 12px;
+}
+
+#ProgressionTalentsPlayerXPContainerNextLevel {
+    color: rgb(192, 192, 192);
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 1px 1px 1px black;
+    horizontal-align: right;
+    font-size: 20px;
+    padding: 12px;
+}
+
+#ProgressionTalentsPlayerPersonalContainer {
+    width: 100%;
+    margin-bottom: 12px;
+    flow-children: right-wrap;
+}
+
+#ProgressionTalentsPlayerPersonalTextPlaceholder {
+    color: #FFF;
+    font-size: 18px;
+    text-shadow: 1px 1px 1px black;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.5;
+}
+
+#ProgressionTalentsPlayerButton {
+    /*background-image: url("file://{images}/custom_game/relic_rare_button_psd.png");
+    background-position: center;
+    background-size: 100%;
+    border-radius: 4px;
+    padding: 6px 12px;
+    box-shadow: 0 0 6px black;
+    color: #FFF;
+    text-shadow: 1px 1px 1px black;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 15px;
+    margin-left: 60px;
+    margin-top: 50px;*/
+    vertical-align: bottom;
+    margin-bottom: 18px;
+    margin-left: 0px;
+    margin-right: 4px;
+    z-index: 3;
+    tooltip-position: top;
+    height: 78px;
+    width: 69px;
+    saturation: 0.75;
+    brightness: 0.25;
+}
+
+#ProgressionTalentsPlayerButton:hover, #ProgressionTalentsPlayerButton.active {
+    saturation: 1.2;
+    brightness: 2;
+}
+
+#ProgressionTalentsPlayerButtonIcon {
+}
+
+#ProgressionTalentsPlayerButtonIcon:hover {
+
+}
+
+#ProgressionTalentsPlayerPersonalResetTalentButton {
+    background-color: red;
+    color: #FFF;
+    padding:6px 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px black;
+
+    background-image: url("file://{images}/custom_game/relic_str_button_psd.png");
+    background-position: center;
+    background-size: 100%;
+    text-transform: uppercase;
+
+    horizontal-align: right;
+}
+
+#ProgressionTalentsPlayerPersonalResetTalentButton:hover {
+    color: rgb(236, 151, 151);
+}

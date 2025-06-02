@@ -1,0 +1,104 @@
+#AbilitySelection {
+    horizontal-align: center;
+    vertical-align: center;
+    width: 50%;
+    font-family: RadianceM,Radiance,FZLanTingHei-R-GBK,TH Sarabun New,YDYGO 540,Gulim,MingLiU;
+    max-height: 700px;
+    flow-children: down-wrap;
+    background-color: gradient( linear, 100% 0%, 100% 100%, from( #111111 ), color-stop( 0.01, #202327 ), color-stop( 0.2, #141619ff ), to( #000000dd ) );
+    background-size: 100% 100%;
+    background-position: center;
+    box-shadow: 0 0 24px black;
+}
+
+#AbilitySelectionContainer  {
+    horizontal-align: center;
+    flow-children: right-wrap;
+    overflow: scroll;
+    border-radius: 4px;
+    animation-duration: 1s;
+    animation-name: fade;
+    animation-iteration-count: 1;
+    padding-left: 5px;
+}
+
+.ability {
+    background-image: url("file://{images}/custom_game/emptyability.png");
+    background-position: 50%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding:12px;
+    height: 95px;
+    width: 95px;
+    margin-bottom: 12px;
+}
+
+.ability_cancel {
+    border-radius: 4px;
+    box-shadow: 0 0 12px black inset;
+    height: 24px;
+    width: 24px;
+    horizontal-align: right;
+}
+
+#header {
+    color: #FFF;
+    text-shadow: 2px 2px 2px black;
+    width: fit-children;
+    horizontal-align: center;
+    vertical-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 16%;
+    animation-duration: 1s;
+    animation-name: fade;
+    animation-iteration-count: 1;
+}
+
+@keyframes 'fade' {
+    0%      { opacity: 0; }
+    100% { opacity: 1;}
+}
+
+.AbilityMaxLevel {
+    margin:0;
+}
+
+#AbilitySelectionWarningLabel {
+    background-color: #c70008;
+    color: #FFF;
+    horizontal-align: right;
+    margin: 6px 12px;
+    font-weight: bold;
+    text-align: center;
+    padding: 0 6px;
+    font-size: 16px;
+    border-radius: 4px;
+    z-index: 333;
+    box-shadow: 0 0 12px black;
+}
+
+#AbilitySelectionHeader {
+    flow-children: right-wrap;
+    width: 100%;
+    background-image: url("file://{images}/custom_game/bg_scoreboard_psd.png");
+    background-size: cover;
+    box-shadow: 0 0 6px black;
+    padding: 12px;
+    border-radius: 4px 4px 0 0;
+    margin-bottom: 12px;
+}
+
+#AbilitySelectionHeaderText {
+    horizontal-align: center;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: RadianceM,Radiance,FZLanTingHei-R-GBK,TH Sarabun New,YDYGO 540,Gulim,MingLiU;
+    text-shadow: 1px 1px 1px black;
+    color: #FFF;
+    font-size: 20px;
+}

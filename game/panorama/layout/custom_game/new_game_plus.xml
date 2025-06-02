@@ -1,0 +1,36 @@
+<root>
+    <styles>
+        <include src="s2r://panorama/styles/custom_game/new_game_plus.css" />
+    </styles>
+
+    <scripts>
+        <include src="s2r://panorama/scripts/custom_game/new_game_plus_container.js" />
+        <include src="s2r://panorama/scripts/custom_game/new_game_plus.js" />
+    </scripts>
+
+    <snippets>
+        <snippet name="HeaderSnippet">
+            <Panel class="Header" hittest="false">
+                <Label id="Header" text="VOTE FOR NEW GAME+" />
+                <Label id="Flavor" text="New Game+ is a new feature that allows you to keep playing even after beating the game. Your progress resets and enemies grow stronger, but you are given some help to continue playing.\n\nThe following will happen:\n• You will lose all items but keep abilities added with books as well as permanent attributes from abilities.\n• All enemies grow stronger, gaining bonus damage and damage resistance (all types).\n• If modifiers were previously disabled, they are now enabled, and bosses gain additional modifiers.\n• On higher difficulties with limited lives, you are given permanent attribute tomes based on your amount of remaining lives." />
+            </Panel>
+        </snippet>
+
+        <snippet name="PlayerPortrait">
+            <Panel class="PlayerPortrait" hittest="false">
+                <DOTAAvatarImage steamid="" id="PlayerAvatar" />
+            </Panel>
+        </snippet>
+
+        <snippet name="VoteButtons">
+            <Panel class="VoteButtons" hittest="false">
+                <Label class="VoteButton" id="PlayerVoteYes" text="ACCEPT (30)" />
+                <Label class="VoteButton" id="PlayerVoteNo" text="DECLINE" />
+            </Panel>
+        </snippet>
+    </snippets>
+
+    <Panel hittest="false" style="width: 100%; height: 100%;">
+        <Panel id="NewGamePlus" />
+    </Panel>
+</root>

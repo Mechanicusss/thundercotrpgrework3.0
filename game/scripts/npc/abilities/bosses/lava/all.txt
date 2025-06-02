@@ -1,0 +1,290 @@
+"DOTAAbilities"
+{
+    "lava_drake_flames"
+    {
+        "BaseClass" "ability_lua"
+        "ScriptFile" "creeps/lava_drake_flames"
+        "AbilityTextureName" "black_dragon_fireball"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
+        "FightRecapLevel"               "2"
+        "MaxLevel" "5"
+
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastPoint"              "0"
+        "AbilityCastRange"              "600"
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_1"
+        
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "10.0"
+        
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "0"
+        
+        "precache"
+        {
+            "particle" "particles/neutral_fx/black_dragon_fireball_cast.vpcf"
+            "particle" "particles/neutral_fx/black_dragon_fireball.vpcf"
+            "soundfile" "soundevents/game_sounds_heroes/game_sounds_dragon_knight.vsndevts"
+        }
+        
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+            "ground_duration" "7"
+            "radius" "300"
+            "damage" "10000 15000 20000 25000 30000"
+            "burn_duration" "3"
+            "slow" "-15"
+        }
+    }
+
+    "lava_drake_skin"
+    {
+        "BaseClass" "ability_lua"
+        "ScriptFile" "creeps/lava_drake_skin"
+        "AbilityTextureName" "black_dragon_dragonhide_aura"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "FightRecapLevel"               "2"
+        "MaxLevel" "5"
+
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastPoint"              "0"
+        "AbilityCastRange"              "600"
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_1"
+        
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+            "damage_reduction_pct" "-30"
+        }
+    }
+
+    "lava_elemental_attack"
+    {
+        "BaseClass" "ability_lua"
+        "ScriptFile" "creeps/lava_elemental_attack"
+        "AbilityTextureName" "forged_spirit_melting_strike"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "FightRecapLevel"               "2"
+        "MaxLevel" "5"
+
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastPoint"              "0"
+        "AbilityCastRange"              "600"
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_1"
+        
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+            "duration" "7"
+            "armor_reduction" "-10"
+            "magic_res_reduction" "-5"
+        }
+    }
+
+    "boss_dragon_tail_explosion"
+    {
+        "BaseClass" "ability_lua"
+        "ScriptFile" "heroes/bosses/dragon/boss_dragon_tail_explosion"
+        "AbilityTextureName" "dragon_knight_dragon_tail"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "FightRecapLevel"               "2"
+        "MaxLevel" "5"
+
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastPoint"              "0"
+        "AbilityCastRange"              "900"
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_2"
+
+        "AbilityManaCost" "0"
+        "AbilityCooldown" "7"
+        
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+            "impact_radius"      "300"
+            "impact_damage"      "100000 115000 130000 145000 160000"
+            "stun_duration"      "3"
+            "search_radius"      "900"
+        }
+    }
+
+    "boss_dragon_mythical_hide"
+    {
+        "BaseClass" "ability_lua"
+        "ScriptFile" "heroes/bosses/dragon/boss_dragon_mythical_hide"
+        "AbilityTextureName" "dragon_knight_dragon_blood"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "FightRecapLevel"               "2"
+        "MaxLevel" "5"
+        
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+            "pct_hp_to_damage" "7 6 5 4 3"
+            "bonus_damage_pct" "1"
+            "duration" "60"
+        }
+    }
+
+    "boss_dragon_sun_apocalypse"
+    {
+        "BaseClass"           "ability_lua"
+        "ScriptFile"          "heroes/bosses/dragon/boss_dragon_sun_apocalypse"
+        "AbilityTextureName"      "invoker_sun_strike"
+        "FightRecapLevel"       "1"
+        "MaxLevel"            "1"
+        "precache"
+        {
+        "soundfile" "soundevents/game_sounds_heroes/game_sounds_invoker.vsndevts"
+        "particle"  "particles/units/heroes/hero_invoker/invoker_sun_strike.vpcf"
+        "particle"  "particles/units/heroes/hero_invoker/invoker_sun_strike_team.vpcf"
+        }
+        
+        // Ability General
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityType"         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+        "AbilityUnitDamageType"     "DAMAGE_TYPE_PURE"
+        "SpellImmunityType"       "SPELL_IMMUNITY_ENEMIES_YES"
+
+        // Ability Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange"        "900"
+        "AbilityCastPoint"        "0.05"
+
+        // Ability Resource
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"       "10"
+        "AbilityManaCost"       "0"
+
+        // Damage
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+                "delay"         "1.7"
+                "area_of_effect"    "175"
+                "damage"        "25000 30000 35000 40000 45000"
+                "vision_distance"   "400"
+                "vision_duration"   "4.0"
+                "enemy_count"   "3 4 5 6 7"
+                "search_radius"   "900"
+        }
+    }
+
+    "boss_doom_infernal_blade"
+    {
+        "BaseClass"           "ability_lua"
+        "ScriptFile"          "heroes/bosses/doom/boss_doom_infernal_blade"
+        "AbilityTextureName"      "doom_bringer_infernal_blade"
+        "FightRecapLevel"       "1"
+        "MaxLevel"            "5"
+
+        "precache"
+        {
+            "particle" "particles/econ/items/doom/doom_2021_immortal_weapon/doom_2021_immortal_weapon_infernalblade_debuff.vpcf"
+            "soundfile" "soundevents/game_sounds_heroes/game_sounds_doombringer.vsndevts"
+        }
+        
+        // Ability General
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityType"         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL"
+        "SpellImmunityType"       "SPELL_IMMUNITY_ENEMIES_YES"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+            "dps_from_atk_pct"          "1 2 3 4 5"
+            "max_stacks"          "10"
+            "duration"          "7"
+        }
+    }
+
+    "boss_doom_doom_aura"
+    {
+        "BaseClass"           "ability_lua"
+        "ScriptFile"          "heroes/bosses/doom/boss_doom_doom_aura"
+        "AbilityTextureName"      "doom_bringer_doom"
+        "FightRecapLevel"       "1"
+        "MaxLevel"            "5"
+
+        "precache"
+        {
+            "particle" "particles/econ/items/doom/doom_2021_immortal_weapon/doom_2021_immortal_weapon_infernalblade_debuff.vpcf"
+            "soundfile" "soundevents/game_sounds_heroes/game_sounds_doombringer.vsndevts"
+        }
+        
+        // Ability General
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityType"         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL"
+        "SpellImmunityType"       "SPELL_IMMUNITY_ENEMIES_YES"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+            "radius"          "300"
+            "damage"          "25000 30000 35000 40000 45000"
+        }
+    }
+
+    "boss_doom_devour"
+    {
+        "BaseClass"           "ability_lua"
+        "ScriptFile"          "heroes/bosses/doom/boss_doom_devour"
+        "AbilityTextureName"      "doom_bringer_devour"
+        "FightRecapLevel"       "1"
+        "MaxLevel"            "1"
+
+        "precache"
+        {
+            "particle" "particles/econ/items/doom/doom_ti8_immortal_arms/doom_ti8_immortal_devour.vpcf"
+            "soundfile" "soundevents/game_sounds_heroes/game_sounds_doombringer.vsndevts"
+        }
+        
+        // Ability General
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityType"         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO"
+        "SpellImmunityType"       "SPELL_IMMUNITY_ENEMIES_NO"
+
+        "AbilityCastRange" "600"
+        "AbilityCooldown" "60"
+        "AbilityManaCost" "0"
+        "AbilityCastPoint" "0.3"
+
+        "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_1"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+            "hp_to_dmg_pct" "100"
+            "duration" "60"
+        }
+    }
+}

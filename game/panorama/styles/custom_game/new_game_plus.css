@@ -1,0 +1,120 @@
+#NewGamePlus {
+    horizontal-align: center;
+    vertical-align: center;
+    flow-children: down-wrap;
+    background-color: #000;
+    background-image: url("file://{images}/custom_game/bg_scoreboard_psd.png");
+    background-size: cover;
+    background-position: center;
+    width: 25%;
+    border-radius: 2px;
+    box-shadow: 0 0 12px #000;
+    padding: 24px 24px 24px;
+    visibility: collapse;
+}
+
+
+
+.PlayerPortrait {
+    margin: 0 6px;
+}
+
+#PlayerAvatar {
+    height: 62px;
+    width: 62px;
+    border-radius: 2px;
+    border: 3px solid rgba(255,255,255,0.05);
+}
+
+.avatarAccepted {
+    background-color: lime;
+}
+
+.avatarDeclined {
+    background-color: tomato;
+}
+
+#PlayerVoteNo.clicked, #PlayerVoteYes.clicked {
+    background-image: none;
+    background-color: #333;
+}
+
+#PlayerVoteNo.clicked:hover, #PlayerVoteYes.clicked:hover {
+    background-image: none;
+    background-color: #333;
+}
+
+#PlayerVoteNo {
+    background-image: url("file://{images}/custom_game/red_med_button_off_png.png");
+}
+
+#PlayerVoteNo:hover {
+    background-image: url("file://{images}/custom_game/red_med_button_on_png.png");
+}
+
+#PlayerVoteYes {
+    background-image: url("file://{images}/custom_game/green_med_button_off_png.png");
+}
+
+#PlayerVoteYes:hover {
+    background-image: url("file://{images}/custom_game/green_med_button_on_png.png");
+}
+
+.VoteButton {
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    box-shadow: 0 0 6px #000;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: RadianceM,Radiance,FZLanTingHei-R-GBK,TH Sarabun New,YDYGO 540,Gulim,MingLiU;
+    padding: 18px;
+    border-radius: 2px;
+    background-size: 250%;
+    background-position: center;
+    text-align: center;
+    margin-top: 12px;
+    width: 100%;
+    border: 3px solid transparent;
+}
+
+#Header {
+    font-size: 30px;
+    width: 100%;
+    text-align: center;
+    horizontal-align: center;
+    vertical-align: center;
+    horizontal-align: center;
+    vertical-align: center;
+    font-weight: bold;
+    font-family: RadianceM,Radiance,FZLanTingHei-R-GBK,TH Sarabun New,YDYGO 540,Gulim,MingLiU;
+    color: #FFF;
+    text-shadow: 1px 1px 1px black;
+    text-transform: uppercase;
+    margin-top: 24px;
+}
+
+#Flavor {
+    font-size: 16px;
+    horizontal-align: center;
+    vertical-align: center;
+    font-family: RadianceM,Radiance,FZLanTingHei-R-GBK,TH Sarabun New,YDYGO 540,Gulim,MingLiU;
+    color: rgba(255,255,255,0.75);
+    text-shadow: 1px 1px 1px black;
+    border-bottom: 1px solid rgba(255,255,255,0.03);
+    border-top: 1px solid rgba(255,255,255,0.03);
+    width:100%;
+    padding: 24px;
+    margin: 12px 0;
+    background-color: rgba(0,0,0,0.5);
+    line-height: 1.5;
+}
+
+.PortraitContainer {
+    background-color: rgba(0,0,0,0.5);
+    padding: 24px;
+    border-radius: 2px;
+    horizontal-align: center;
+    vertical-align: center;
+    text-align: center;
+}
+

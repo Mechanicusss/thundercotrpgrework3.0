@@ -1,0 +1,311 @@
+"DOTAAbilities"
+{
+	"freya_strike_the_ice"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityTextureName"			"arena/freya_strike_the_ice"
+		"MaxLevel"						"7"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+
+		"AbilityCastRange"				"1000"
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3 0.3 0.2 0.1"
+
+		"AbilityCooldown"				"20"
+
+		"AbilityDamage"					"600 1000 1400 1800 2200 2600 3000"
+
+		"AbilityManaCost"				"100 150 200 250 300 350 400"
+		"AOERadius"						"%radius"
+
+		"AbilityUnitDamageSubType"	"DAMAGE_SUBTYPE_ICE"
+
+		"AbilityValues"
+		{
+				"radius"				"350"
+				"magic_missile_stun"	"2.5"
+				"magic_missile_speed"	"2000"
+		}
+
+		"precache"
+		{
+			"particle"			"particles/arena/units/heroes/hero_freya/strike_the_ice.vpcf"
+		}
+
+		"OnSpellStart"
+		{
+			"FireSound"
+			{
+				"EffectName"	"Arena.Hero_Freya.StrikeTheIce.Cast"
+				"Target" 		"CASTER"
+			}
+
+			"ActOnTargets"
+			{
+				"Target"
+				{
+					"Center"  	"TARGET"
+					"Radius" 	"%radius"
+					"Teams" 	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+					"Types" 	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+				}
+
+				"Action"
+				{
+					"TrackingProjectile"
+					{
+						"Target"			"TARGET"
+						"EffectName"		"particles/arena/units/heroes/hero_freya/strike_the_ice.vpcf"
+						"Dodgeable"			"1"
+						"ProvidesVision"	"0"
+						"MoveSpeed"        	"%magic_missile_speed"
+						"SourceAttachment"	"DOTA_PROJECTILE_ATTACHMENT_ATTACK_2"
+					}
+				}
+			}
+		}
+
+		"OnProjectileHitUnit"
+		{
+			"DeleteOnHit"	"1"
+			"FireSound"
+			{
+				"EffectName"	"Arena.Hero_Freya.StrikeTheIce.Impact"
+				"Target" 		"TARGET"
+			}
+
+			"ApplyModifier"
+			{
+				"ModifierName"	"modifier_freya_strike_the_ice"
+				"Target"
+				{
+					"Center" "TARGET"
+					"Flags" "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+				}
+				"Duration"		"%magic_missile_stun"
+			}
+
+			"Damage"
+			{
+				"Target"		"TARGET"
+				"Type"			"DAMAGE_TYPE_MAGICAL"
+				"Damage"		"%AbilityDamage"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_freya_strike_the_ice"
+			{
+				"IsPurgable"		"0"
+				"IsDebuff"			"1"
+				"IsStunDebuff"		"1"
+
+				"OverrideAnimation"	"ACT_DOTA_DISABLED"
+				"EffectName"		"particles/generic_gameplay/generic_stunned.vpcf"
+				"EffectAttachType"	"follow_overhead"
+
+				"States"
+				{
+					"MODIFIER_STATE_STUNNED"		"MODIFIER_STATE_VALUE_ENABLED"
+				}
+
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_DISABLE_HEALING" "1"
+				}
+			}
+		}
+	}
+
+	"freya_ice_cage"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_datadriven"
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"FightRecapLevel"				"1"
+		"AbilityTextureName"			"arena/freya_ice_cage"
+		"MaxLevel"						"7"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_2"
+		"AbilityUnitTargetFlags" 		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+
+		"AbilityCastRange"				"600"
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3 0.3 0.2 0.1"
+
+		"AbilityCooldown"				"22"
+
+		"AbilityManaCost"				"115 125 140 150 160 170 180"
+
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"duration"			"1"
+				"damage_per_second_pct"		"5"
+				"damage_interval"	"0.2"
+				"aura_radius"		"350"
+		}
+
+		// Data driven
+		//-------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"soundfile"				"soundevents/game_sounds_heroes/game_sounds_crystalmaiden.vsndevts"
+			"particle"				"particles/units/heroes/hero_winter_wyvern/wyvern_cold_embrace_buff_model.vpcf"
+			"particle"				"particles/units/heroes/hero_winter_wyvern/wyvern_cold_embrace_buff_glow.vpcf"
+		}
+
+		"OnSpellStart"
+		{
+			"Stun"
+			{
+				"Target"			"TARGET"
+				"Duration"			"%stun_duration"
+			}
+
+			"ApplyModifier"
+			{
+				"ModifierName"	"modifier_freya_ice_cage"
+				"Target"
+				{
+				"Center" "TARGET"
+				"Flags" "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+				}
+			}
+
+			"FireSound"
+			{
+				"Target"			"TARGET"
+				"EffectName"		"Arena.Hero_Freya.IceCage"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_freya_ice_cage"
+			{
+				"Duration"		"%duration"
+				"IsPurgable"	"1"
+				"IsDebuff"		"1"
+
+				"EffectName"		"particles/units/heroes/hero_winter_wyvern/wyvern_cold_embrace_buff_glow.vpcf"
+				"EffectAttachType"	"follow_origin"
+
+				"Aura"          	"modifier_freya_ice_cage_aura_effect"
+				"Aura_Radius"   	"%aura_radius"
+				"Aura_Teams"    	"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+				"Aura_Types"    	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+				"Aura_Flags"    	"DOTA_UNIT_TARGET_FLAG_NONE"
+				"Aura_ApplyToCaster"	"1"
+
+				"OnDestroy"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"kv"
+						"Function"		"StopEndableSound"
+						"sound"			"Arena.Hero_Freya.IceCage"
+					}
+				}
+			}
+
+			"modifier_freya_ice_cage_aura_effect"
+			{
+				"IsHidden"			"0"
+				"IsDebuff"			"1"
+
+				"EffectName"		"particles/units/heroes/hero_winter_wyvern/wyvern_cold_embrace_buff_model.vpcf"
+				"EffectAttachType"	"follow_origin"
+
+				"ThinkInterval"		"%damage_interval"
+				"OnIntervalThink"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"kv"
+						"Function"		"PercentDamage"
+						"MaxHealthPercent"	"%damage_per_second_pct"
+						"multiplier"		"%damage_interval"
+						"CalculateSpellDamageTooltip"	"0"
+					}
+				}
+
+				"States"
+				{
+					"MODIFIER_STATE_STUNNED"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_INVISIBLE"	"MODIFIER_STATE_VALUE_DISABLED"
+					"MODIFIER_STATE_FROZEN"		"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}
+	}
+
+	"freya_pain_reflection"
+	{
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"heroes/hero_freya/pain_reflection"
+		"AbilityTextureName"			"arena/freya_pain_reflection"
+		"MaxLevel" 						"7"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+		"AbilityCastPoint"				"0.2 0.2 0.2 0.2 0.2 0.15 0.1"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_3"
+		"AbilityCooldown"				"30.0"
+		"AbilityManaCost"				"150"
+
+		"AbilityValues"
+		{
+				"damage_return_pct"	"100 105 110 115 120 125 130"
+				"returned_to_heal_pct"	"50"
+				"duration"			"2"
+		}
+	}
+
+	"freya_frozen_strike"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_lua"
+		"ScriptFile"					"heroes/hero_freya/frozen_strike"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_ALL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityTextureName"			"arena/freya_frozen_strike"
+		"MaxLevel"						"7"
+		"AbilityCastPoint"				"0.6 0.5 0.4 0.3 0.2 0.1 0.0"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+		"AbilityCooldown"				"90.0 80.0 70.0 60.0 50.0 40.0 30.0"
+		"AbilityManaCost"				"80 100 120 140 160 180 200"
+
+		"AbilityValues"
+		{
+				"base_crit_pct"		"150 175 200 225 250 275 300"
+				"stat_to_crit_pct"	"4 5 6 7 8 9 10"
+				"cleave_radius"		"450"
+				"knockback_range"	"150"
+				"knockback_duration"	"1.0"
+		}
+
+		"precache"
+		{
+			"particle"  "particles/units/heroes/hero_sven/sven_spell_great_cleave.vpcf"
+			"particle"  "particles/arena/units/heroes/hero_freya/frozen_strike_critical.vpcf"
+			"particle"  "particles/units/heroes/hero_tusk/tusk_rubickpunch_status.vpcf"
+		}
+	}
+}

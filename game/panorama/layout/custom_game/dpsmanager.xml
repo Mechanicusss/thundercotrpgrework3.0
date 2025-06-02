@@ -1,0 +1,15 @@
+<!-- xml reconstructed by Source 2 Viewer 11.1.0.0 - https://valveresourceformat.github.io -->
+<root>
+    <styles>
+        <include src="s2r://panorama/styles/custom_game/dpsmanager.css" />
+    </styles>
+    <scripts>
+        <include src="s2r://panorama/scripts/custom_game/dpsmanager.js" />
+    </scripts>
+    <snippets>
+        <snippet name="DpsManagerContainer">
+            <Panel class="DpsManagerContainer" hittest="false" />
+        </snippet>
+    </snippets>
+    <Panel class="DpsManager" hittest="false" style="width: 100%; height: 100%;" />
+</root>

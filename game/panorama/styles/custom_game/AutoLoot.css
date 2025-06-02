@@ -1,0 +1,33 @@
+#AutoLootContainer {
+    background-color: #000000FF;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    horizontal-align: center;
+    vertical-align: top;
+    padding: 6px;
+    padding-left: 6px;
+    border: 2px solid #393939;
+    margin-left: 10px;
+    box-shadow: 0 0 6px black;
+    z-index: 99;
+}
+
+#AutoLootContainerLabel {
+    background-image: url("file://{images}/custom_game/icon_auto_style_png.png");
+    height: 18px;
+    width: 18px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    horizontal-align: center;
+    vertical-align: center;
+    wash-color: rgb(252, 191, 112);
+}
+
+#AutoLootContainer.toggle {
+    border: 2px solid rgb(252, 191, 112);
+    box-shadow: 0 0 3px rgb(252, 191, 112);
+}
+
+/*background-color: gradient( linear, 100% 0%, 100% 100%, from( #111111 ), color-stop( 0.01, #202327 ), color-stop( 0.2, #141619ff ), to( #000000dd ) );*/

@@ -1,0 +1,405 @@
+/* Prettified by Source 2 Viewer 11.1.0.0 - https://valveresourceformat.github.io */
+
+#RuneManagerContainer
+{
+    padding: 12px;
+    width: 700px;
+    horizontal-align: center;
+    vertical-align: center;
+    flow-children: down-wrap;
+    border-radius: 4px;
+    box-shadow: 0 0 6px rgba(0,0,0,1);
+    max-height: 800px;
+    transition-property: opacity;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-in-out;
+}
+
+#runeManagerContainerBody
+{
+    background-image: url("file://{images}/custom_game/bg_scoreboard_psd.png");
+    background-color: #000000da;
+    background-position: center;
+    flow-children: right-wrap;
+    width: 100%;
+    margin: -12px;
+    padding: 12px;
+    max-height: 600px;
+}
+
+#runeManagerContainerHeader
+{
+    color: white;
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px black;
+    width: 100%;
+    padding: 12px;
+    border-radius: 4px 4px 0 0;
+    margin: -12px -12px 12px;
+    text-align: center;
+    box-shadow: #000000f5 0px 0px 8px 0px;
+    z-index: 2;
+    background-image: url("file://{images}/custom_game/bg_scoreboard_psd.png");
+    background-position: top;
+}
+
+#EquipmentContainerParent
+{
+    width: 340px;
+    flow-children: down-wrap;
+    overflow: squish scroll;
+    border-radius: 4px;
+}
+
+#EquipmentContainer
+{
+    width: 340px;
+    flow-children: down-wrap;
+    background-position: top;
+    padding: 12px 0 0 12px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    transition-property: background-color;
+    transition-duration: 0.15s;
+    transition-timing-function: ease-in-out;
+}
+
+#RuneInventoryContainer
+{
+    background-color: #0006;
+    flow-children: up-wrap;
+    padding: 12px;
+    horizontal-align: right;
+    border-radius: 0 0 4px 4px;
+}
+
+#ItemRuneContainer
+{
+    flow-children: up-wrap;
+    width: 100%;
+    margin-bottom: 12px;
+    background-color: #0006;
+    margin: -12px -12px 0;
+    padding: 12px;
+}
+
+#itemRune
+{
+    flow-children: right-wrap;
+    width: 100%;
+}
+
+#itemRuneDescContainer
+{
+    flow-children: right;
+    font-family: defaultFont;
+    font-size: 12px;
+    color: gray;
+    padding: 6px 0;
+    width: 89%;
+}
+
+#itemRuneImage
+{
+    width: 24px;
+    height: 24px;
+    margin-right: 6px;
+    margin-top: 6px;
+    border-radius: 100px;
+}
+
+#inventoryRuneImage
+{
+    width: 24px;
+    height: 24px;
+    margin-right: 6px;
+    border-radius: 100px;
+}
+
+#inventoryRune,.inventoryRune
+{
+    flow-children: right-wrap;
+    width: 300px;
+    border-radius: 4px;
+    padding: 6px;
+    box-shadow: 0 0 6px transparent;
+}
+
+.NoBorder
+{
+    background-color: rgba(0,0,0,0.5);
+}
+
+#inventoryRune:hover
+{
+    background-color: rgba(0,0,0,0.25);
+}
+
+#inventoryRune.selected
+{
+    background-color: rgba(0,0,0,0.5);
+    border-color: transparent;
+}
+
+#inventoryRune.selected #inventoryRuneDescContainer
+{
+    color: #FFF;
+}
+
+#inventoryRuneDescContainer
+{
+    flow-children: down-wrap;
+    width: 200px;
+    color: gray;
+    line-height: 1.5;
+}
+
+#runeInventoryParentContainer
+{
+    flow-children: up-wrap;
+    horizontal-align: right;
+    overflow: squish scroll;
+    background-color: rgba(0,0,0,0.1);
+}
+
+#runeInventoryButtonContainer
+{
+    flow-children: right-wrap;
+    width: 100%;
+    z-index: 2;
+    layout-position: fixed;
+    border-radius: 4px 4px 0 0;
+    background-position: center;
+    padding: 6px;
+    background-color: rgba(0,0,0,0.5);
+}
+
+#runeInventoryButtonContainer TextButton
+{
+    layout-position: fixed;
+    width: 100%;
+    z-index: 2;
+    font-weight: bold;
+    color: grey;
+    text-align: center;
+    border-radius: 4px;
+}
+
+#runeInventoryButtonContainer TextButton Label:hover
+{
+    color: #FFF;
+}
+
+#runeInventoryButtonContainer TextButton Label
+{
+    layout-position: fixed;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 12px;
+    width: 100%;
+    font-weight: bold;
+    color: rgba(255,255,255,0.75);
+    text-align: center;
+    horizontal-align: center;
+    vertical-align: middle;
+    text-shadow: 2px 2px 0px 1.0 #000000;
+    transition-property: color;
+    transition-duration: 0.35s;
+    transition-timing-function: ease-in-out;
+    font-size: 16px;
+    font-family: defaultFont;
+}
+
+.runeInventoryButtonAdd
+{
+    background-image: url("file://{images}/custom_game/relic_agi_button_psd.png");
+    background-size: cover;
+    background-position: top;
+    transition-property: box-shadow, color;
+    transition-duration: 0.15s;
+    transition-timing-function: ease-in-out;
+    box-shadow: 0 0 0 60px rgba(0, 0, 0, 0) inset;
+}
+
+.runeInventoryButtonAdd:hover
+{
+    box-shadow: 0 0 0 60px rgba(0, 255, 0, 0.05) inset;
+}
+
+.runeInventoryButtonRemove
+{
+    horizontal-align: right;
+    background-image: url("file://{images}/custom_game/redbtn.png");
+    background-size: cover;
+}
+
+#itemRuneName
+{
+    font-weight: bold;
+    line-height: 1.5;
+    text-shadow: 1px 1px 1px black;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-family: defaultFont;
+    max-width: 130px;
+    text-overflow: shrink;
+    white-space: nowrap;
+    overflow: squish;
+    color: #FFF;
+}
+
+#itemRuneName.emptySocket
+{
+    opacity: 0.5;
+    color: gray;
+    line-height: 1.5;
+    text-shadow: 1px 1px 1px black;
+}
+
+#itemRuneDesc
+{
+    text-shadow: 1px 1px 1px black;
+    line-height: 1.5;
+    margin-top:3px;
+}
+
+#ItemImage
+{
+    box-shadow: 0 0 6px rgba(0,0,0,0.25);
+    border-radius: 4px;
+    margin-right: 12px;
+    background-size: cover;
+    min-width: 85px;
+    min-height: 60px;
+}
+
+#inventoryRuneName
+{
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #FFF;
+    font-size: 13px;
+    font-family: defaultFont;
+    text-shadow: 1px 1px 1px black;
+}
+
+#inventoryRuneEmptyLabel
+{
+    font-weight: bold;
+    color: grey;
+    padding: 6px;
+}
+
+#inventoryRuneDesc
+{
+    padding-bottom: 6px;
+    font-size: 13px;
+    font-family: defaultFont;
+    text-shadow: 1px 1px 1px black;
+}
+
+#VerticalScrollBar
+{
+    background-color: red;
+}
+
+#ScrollThumb
+{
+    background-color: red;
+}
+
+#runeManagerToggleButton
+{
+    background-image: url("file://{images}/custom_game/levelup_button_2_psd.png");
+    transition-property: opacity;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-in-out;
+    background-position: top;
+    background-size: cover;
+    border-radius: 4px 4px 0 0;
+    box-shadow: 0 0 6px black;
+    color: #FFF;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px black;
+    horizontal-align: right;
+    text-align: center;
+    padding: 12px;
+    margin-top: 70px;
+    margin-right: 45px;
+    z-index: -1;
+}
+
+#runeManagerToggleButton:hover
+{
+    box-shadow: inset 0 0 30px rgba(255, 255, 209, 0.1);
+}
+
+#runeManagerToggleButtonIcon
+{
+    height: 20px;
+    width: 20px;
+}
+
+#itemRuneRemove
+{
+    height: 18px;
+    width: 18px;
+    border-radius: 4px;
+    vertical-align: center;
+    margin-top: 2px;
+    horizontal-align: right;
+}
+
+#itemRuneRemove:hover
+{
+    box-shadow: inset 0 0 30px rgba(255, 0, 0, 0.25);
+}
+
+#inventoryRuneSell
+{
+    height: 18px;
+    width: 18px;
+    border-radius: 4px;
+    horizontal-align: right;
+    margin-right: 6px;
+    margin-top: 6px;
+}
+
+#inventoryRuneSell:hover
+{
+    box-shadow: inset 0 0 30px rgba(255, 0, 0, 0.25);
+}
+
+#HeroHeaderContainer
+{
+    flow-children: right-wrap;
+    width: 100%;
+    margin-bottom: 12px;
+    background-color: #0009;
+    padding: 12px;
+    margin: -12px -12px 12px;
+}
+
+#HeroImage
+{
+    border-radius: 4px;
+    width: 85px;
+    height: 48px;
+    margin-right: 12px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.3);
+}
+
+#HeroLabel
+{
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px black;
+    vertical-align: center;
+}
+

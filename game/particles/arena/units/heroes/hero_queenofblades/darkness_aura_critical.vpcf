@@ -1,0 +1,135 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{aafc65d8-7a5a-4e01-bd8d-3ac118422503} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 100
+	m_flConstantRadius = 2.000000
+	m_ConstantColor = 
+	[
+		0,
+		0,
+		0,
+		255,
+	]
+	m_flMaxDrawDistance = 1500.000000
+	m_bShouldSort = false
+	m_Renderers = 
+	[
+		{
+			_class = "C_OP_RenderSprites"
+			m_nSequenceCombineMode = "SEQUENCE_COMBINE_MODE_USE_SEQUENCE_0"
+			m_flOverbrightFactor = 0.700000
+			m_bBlendFramesSeq0 = false
+			m_hTexture = resource:"materials/particle/impact/fleks.vtex"
+			m_flAnimationRate = 0.500000
+		},
+	]
+	m_Operators = 
+	[
+		{
+			_class = "C_OP_BasicMovement"
+			m_Gravity = 
+			[
+				0.000000,
+				0.000000,
+				30.000000,
+			]
+			m_fDrag = 0.050000
+		},
+		{
+			_class = "C_OP_Decay"
+		},
+		{
+			_class = "C_OP_LockToBone"
+			m_flLifeTimeFadeEnd = 0.600000
+		},
+		{
+			_class = "C_OP_FadeInSimple"
+		},
+		{
+			_class = "C_OP_FadeOutSimple"
+		},
+		{
+			_class = "C_OP_InterpolateRadius"
+			m_flBias = 0.450000
+			m_flEndScale = 0.000000
+		},
+		{
+			_class = "C_OP_VectorNoise"
+			m_fl4NoiseScale = 0.250000
+			m_nFieldOutput = "0"
+			m_vecOutputMin = 
+			[
+				-10.000000,
+				-10.000000,
+				-10.000000,
+			]
+			m_vecOutputMax = 
+			[
+				10.000000,
+				10.000000,
+				10.000000,
+			]
+			m_bAdditive = true
+		},
+	]
+	m_Initializers = 
+	[
+		{
+			_class = "C_INIT_RandomLifeTime"
+			m_fLifetimeMax = 1.500000
+			m_fLifetimeMin = 0.600000
+		},
+		{
+			_class = "C_INIT_RandomRadius"
+			m_flRadiusMin = 8.000000
+			m_flRadiusMax = 16.000000
+		},
+		{
+			_class = "C_INIT_RandomRotation"
+		},
+		{
+			_class = "C_INIT_CreateOnModel"
+			m_flHitBoxScale = 0.900000
+		},
+		{
+			_class = "C_INIT_RandomSequence"
+			m_nSequenceMax = 63
+		},
+		{
+			_class = "C_INIT_VelocityRandom"
+			m_LocalCoordinateSystemSpeedMax = 
+			[
+				-334.000000,
+				-334.000000,
+				-334.000000,
+			]
+			m_LocalCoordinateSystemSpeedMin = 
+			[
+				334.000000,
+				334.000000,
+				334.000000,
+			]
+		},
+	]
+	m_Emitters = 
+	[
+		{
+			_class = "C_OP_InstantaneousEmitter"
+		},
+	]
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/arena/units/heroes/hero_queenofblades/darkness_aura_critical_ring.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/arena/units/heroes/hero_queenofblades/darkness_aura_critical_body_flash.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/arena/units/heroes/hero_queenofblades/darkness_aura_critical_ray.vpcf"
+		},
+	]
+	m_nBehaviorVersion = 5
+	m_nFirstMultipleOverride_BackwardCompat = 5
+}

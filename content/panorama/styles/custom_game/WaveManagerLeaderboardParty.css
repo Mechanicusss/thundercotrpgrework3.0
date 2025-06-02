@@ -1,0 +1,244 @@
+#WaveManagerLeaderboardPartyContainer {
+  horizontal-align: center;
+  vertical-align: center;
+  background-color: red;
+  height: 700px;
+  width: 550px;
+  background-color: black;
+  background-image: url("file://{resources}/images/custom_game/bg_scoreboard_psd.png");
+  background-position: center;
+  background-size: cover;
+  padding: 0;
+  font-family: RadianceM,Radiance,FZLanTingHei-R-GBK,TH Sarabun New,YDYGO 540,Gulim,MingLiU;
+  font-size: 15px;
+  text-shadow: 1px 1px 1px black;
+  border-radius: 4px;
+  box-shadow: 0 0 48px rgba(0,0,0,0.75);
+  z-index: 11;
+  flow-children: down;
+}
+
+#WaveManagerLeaderboardPartyHeader {
+  width: 700px;
+  padding: 12px;
+  border-radius: 4px 4px 0 0;
+  margin: 0 0 0 0;
+  box-shadow: #000000f5 0px 0px 8px 0px;
+  z-index: 2;
+  background-image: url("file://{images}/custom_game/bg_scoreboard_psd.png");
+  background-size: cover;
+  background-position: top;
+  font-family: RadianceM,Radiance,FZLanTingHei-R-GBK,TH Sarabun New,YDYGO 540,Gulim,MingLiU;
+  font-size: 22px;
+  text-shadow: 2px 2px 2px black;
+  font-weight: bold;
+  color: #FFF;
+  text-transform: uppercase;
+  text-align: center;
+  horizontal-align: center;
+}
+
+#WaveManagerLeaderboardPartyButton {
+
+}
+
+#WaveManagerLeaderboardPartyButtonImage {
+  background-image: url("file://{resources}/images/custom_game/trophy_psd_party.png");
+  background-size: 27px;
+  margin-top: 2px;
+  tooltip-position: bottom;
+  width: 27px;
+  height: 27px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-bottom: 0px;
+  margin-left: 8px;
+  margin-right: 8px;
+  vertical-align: middle;
+  horizontal-align: center;
+  background-position: center;
+  opacity: 0.5;
+  wash-color: #CDF;
+  transition-property: opacity;
+  transition-duration: 0.2s;
+  img-shadow: 0px 0px 3px 3 black;
+}
+
+#WaveManagerLeaderboardPartyButtonImage:hover{
+  opacity: 1.0;
+  wash-color: white;
+}
+
+#WaveManagerLeaderboardPartyButtonImage:active{
+  opacity: 1.0;
+}
+
+#WaveManagerLeaderboardPartyItemContainer {
+  flow-children: down;
+  width: 100%;
+  height: 700px;
+  overflow: scroll;
+}
+
+#WaveManagerLeaderboardPartyItem {
+  flow-children: right;
+  width: 100%;
+  background-image: url("file://{images}/custom_game/statbranch_background_description_psd.png");
+  background-size: cover;
+  padding: 0;
+  box-shadow: 0 0 3px black;
+}
+
+#WaveManagerLeaderboardPartyItemPlayerImage {
+  width: 64px;
+  height: 36px;
+}
+
+#WaveManagerLeaderboardPartyItemPlayerRank {
+  color: lightblue;
+  font-family: RadianceM,Radiance,FZLanTingHei-R-GBK,TH Sarabun New,YDYGO 540,Gulim,MingLiU;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 6px 0 6px 12px;
+  text-shadow: 1px 1px 1px black;
+}
+
+#WaveManagerLeaderboardPartyItemPlayerName {
+  color: lightblue;
+  font-family: RadianceM,Radiance,FZLanTingHei-R-GBK,TH Sarabun New,YDYGO 540,Gulim,MingLiU;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 6px 12px;
+  max-width: 300px;
+}
+
+#WaveManagerLeaderboardPartyItemPlayerName Label {
+  text-shadow: 1px 1px 1px black;
+}
+
+#WaveManagerLeaderboardPartyItemPlayerContainer {
+  flow-children: right-wrap;
+  width: 75%;
+  text-overflow: shrink;
+  white-space: nowrap;
+  overflow: squish;
+}
+
+#WaveManagerLeaderboardPartyItemScoreContainer {
+  horizontal-align: right;
+  text-align: right;
+}
+
+#WaveManagerLeaderboardPartyItemScore {
+  color: lightgreen;
+  text-align: right;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px black;
+  padding: 6px 12px;
+  font-size: 18px;
+  font-family: RadianceM,Radiance,FZLanTingHei-R-GBK,TH Sarabun New,YDYGO 540,Gulim,MingLiU;
+}
+
+
+#WaveManagerLeaderboardPartyDifficultyContainer {
+  width: 100%;
+  background-color: #111;
+}
+
+#WaveManagerLeaderboardPartyDifficultyContainerChildren {
+  horizontal-align: center;
+  flow-children: right-wrap;
+}
+
+#WaveManagerLeaderboardPartyDifficultyButton {
+  height: 39.75px;
+  width: 41.25px;
+  background-repeat: no-repeat;
+  background-size: 75%;
+  background-position: center;
+  margin: 6px;
+  background-color: rgba(255,255,255,0.01);
+  border-radius: 4px;
+  tooltip-position: bottom;
+  border: 2px solid transparent;
+  box-shadow: 0 0 0 black;
+}
+
+#WaveManagerLeaderboardPartyDifficultyButton:hover, #WaveManagerLeaderboardPartyDifficultyButton.selected {
+  border: 2px solid lightblue;
+  box-shadow: 0 0 6px black;
+}
+
+#WaveManagerLeaderboardPartyDifficultyButton.Easy {
+  background-image: url("file://{images}/custom_game/diff_easy.png");
+}
+
+#WaveManagerLeaderboardPartyDifficultyButton.Normal {
+  background-image: url("file://{images}/custom_game/diff_normal.png");
+}
+
+#WaveManagerLeaderboardPartyDifficultyButton.Hard {
+  background-image: url("file://{images}/custom_game/diff_hard.png");
+}
+
+#WaveManagerLeaderboardPartyDifficultyButton.Impossible {
+  background-image: url("file://{images}/custom_game/diff_impossible.png");
+}
+
+#WaveManagerLeaderboardPartyDifficultyButton.Hell {
+  background-image: url("file://{images}/custom_game/diff_hell.png");
+}
+
+#WaveManagerLeaderboardPartyDifficultyButton.Hardcore {
+  background-image: url("file://{images}/custom_game/diff_hardcore.png");
+}
+
+#WaveManagerLeaderboardPartyDifficultyHeader {
+  width: 700px;
+  padding: 12px;
+  border-radius: 4px 4px 0 0;
+  margin: 0 0 0 0;
+  box-shadow: #000000f5 0px 0px 8px 0px;
+  z-index: 2;
+  background-image: url("file://{images}/custom_game/bg_scoreboard_psd.png");
+  background-size: cover;
+  background-position: top;
+  font-family: RadianceM,Radiance,FZLanTingHei-R-GBK,TH Sarabun New,YDYGO 540,Gulim,MingLiU;
+  text-shadow: 2px 2px 2px black;
+  font-weight: bold;
+  color: #FFF;
+  text-transform: uppercase;
+  text-align: center;
+  horizontal-align: center;
+}
+
+#WaveManagerLeaderboardPartyButtonImageDonation {
+  background-image: url("file://{resources}/images/custom_game/generic_treasure_icon_psd.png");
+  background-size: 27px;
+  margin-top: 2px;
+  tooltip-position: bottom;
+  width: 27px;
+  height: 27px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-bottom: 0px;
+  margin-left: 8px;
+  margin-right: 8px;
+  vertical-align: middle;
+  horizontal-align: center;
+  background-position: center;
+  opacity: 0.5;
+  wash-color: gold;
+  transition-property: opacity;
+  transition-duration: 0.2s;
+  img-shadow: 0px 0px 3px 3 black;
+}
+
+#WaveManagerLeaderboardPartyButtonImageDonation:hover{
+  opacity: 1.0;
+  wash-color: rgb(250, 235, 152);
+}
+
+#WaveManagerLeaderboardPartyButtonImageDonation:active{
+  opacity: 1.0;
+}

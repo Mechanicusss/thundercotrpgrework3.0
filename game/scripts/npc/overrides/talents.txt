@@ -1,0 +1,848 @@
+"DOTAAbilities"
+{
+    // Bristleback
+    "talent_bristleback_1"
+    {
+        "BaseClass"                                           "ability_lua"
+        "ScriptFile"                                          "heroes/hero_bristleback/talents/talent_bristleback_1"
+        "AbilityType"                                         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"                                     "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "MaxLevel" "3"
+
+        "AbilityTextureName" "bristleback_quill_spray"
+
+        "AbilityValues"
+        {
+            "hp_cost" "5.0 7.5 10.0"
+            "max_stacks" "6"
+            "interval" "0.5"
+            "duration" "5"
+        }
+    }
+
+    "talent_bristleback_2"
+    {
+        "BaseClass"                                           "ability_lua"
+        "ScriptFile"                                          "heroes/hero_bristleback/talents/talent_bristleback_2"
+        "AbilityType"                                         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"                                     "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "MaxLevel" "3"
+
+        "AbilityTextureName" "bristleback_warpath"
+
+        "AbilityValues"
+        {
+            "damage" "100 250 400"
+            "cooldown" "30"
+            "mana_cost" "100"
+        }
+    }
+
+    // Sniper
+    "talent_sniper_1"
+    {
+        "BaseClass"                                           "ability_lua"
+        "ScriptFile"                                          "heroes/hero_sniper/talents/talent_sniper_1"
+        "AbilityType"                                         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"                                     "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "MaxLevel" "3"
+
+        "AbilityTextureName" "machine_gun_talent"
+
+        "precache"
+        {
+            "particle" "particles/units/heroes/hero_phoenix/phoenix_icarus_dive_burn_debuff.vpcf"
+        }
+
+        "AbilityValues"
+        {
+            "max_stacks" "50"
+            "overheat_duration" "2"
+            "superheat_duration" "10 20 30"
+            "ignite_duration" "3"
+            "cooldown" "20 15 10"
+        }
+    }
+
+    "talent_sniper_1_sub"
+    {
+        "BaseClass"                                           "ability_lua"
+        "ScriptFile"                                          "heroes/hero_sniper/talents/talent_sniper_1"
+        "AbilityType"                                         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"                                     "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "MaxLevel" "1"
+
+        "AbilityTextureName" "machine_gun_talent"
+
+        "AbilityCooldown" "30"
+        "AbilityDuration" "30"
+        "AbilityManaCost" "100"
+
+        "precache"
+        {
+            "particle" "particles/units/heroes/hero_phoenix/phoenix_icarus_dive_burn_debuff.vpcf"
+        }
+
+        "AbilityValues"
+        {
+        }
+    }
+
+    "talent_sniper_2"
+    {
+        "BaseClass"                                           "ability_lua"
+        "ScriptFile"                                          "heroes/hero_sniper/talents/talent_sniper_2"
+        "AbilityType"                                         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"                                     "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "MaxLevel" "3"
+
+        "AbilityTextureName" "gun_joe_rifle"
+
+        "AbilityValues"
+        {
+            "chance" "100"
+            "max_targets" "4 5 6"
+            "reduction" "50 40 30"
+            "radius" "450"
+        }
+    }
+
+    // Lina
+    "talent_lina_1"
+    {
+        "BaseClass"                                           "ability_lua"
+        "ScriptFile"                                          "heroes/hero_lina/talents/talent_lina_1"
+        "AbilityType"                                         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"                                     "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "MaxLevel" "3"
+
+        "AbilityTextureName" "phoenix_sun_ray"
+
+        "AbilityValues"
+        {
+            "damage_increase_pct" "50 75 100"
+        }
+    }
+
+    "talent_lina_2"
+    {
+        "BaseClass"                                           "ability_lua"
+        "ScriptFile"                                          "heroes/hero_lina/talents/talent_lina_2"
+        "AbilityType"                                         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"                                     "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "MaxLevel" "3"
+
+        "AbilityTextureName" "lina_dragon_slave"
+
+        "AbilityValues"
+        {
+            "bonus_dmg_vs_non_heroes_pct" "16 32 48"
+            "debuff_dmg_increase_pct" "8"
+            "debuff_duration" "5"
+            "chance_to_stun_vs_non_heroes" "20"
+            "stun_duration" "2"
+        }
+    }
+
+    // Muerta
+    "talent_muerta_1"
+    {
+        "BaseClass"                                           "ability_lua"
+        "ScriptFile"                                          "heroes/hero_muerta/talents/talent_muerta_1"
+        "AbilityType"                                         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"                                     "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "MaxLevel" "3"
+
+        "AbilityTextureName" "muerta_dead_shot"
+
+        "AbilityValues"
+        {
+            "crit_dmg" "350"
+            "interval" "0.45 0.30 0.15"
+            "damage_bonus_pct" "50 75 100"
+            "bonus_damage_duration" "12"
+            "bonus_damage_pct_per_sec" "20"
+            "duration" "4"
+        }
+    }
+
+    "talent_muerta_2"
+    {
+        "BaseClass"                                           "ability_lua"
+        "ScriptFile"                                          "heroes/hero_muerta/talents/talent_muerta_2"
+        "AbilityType"                                         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"                                     "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "MaxLevel" "3"
+
+        "AbilityTextureName" "muerta_the_calling"
+
+        "AbilityValues"
+        {
+            "magic_amp_pct" "8 12 16"
+            "duration" "2"
+            "time_limit" "3"
+            "self_spell_amp" "36 72 108"
+        }
+    }
+
+    // Luna
+    "talent_luna_1"
+    {
+        "BaseClass"                                           "ability_lua"
+        "ScriptFile"                                          "heroes/hero_luna/talents/talent_luna_1"
+        "AbilityType"                                         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"                                     "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "MaxLevel" "3"
+
+        "AbilityTextureName" "luna_beam_default"
+
+        "AbilityValues"
+        {
+            "radius" "1200"
+            "damage_increase_pct" "40 80 120"
+        }
+    }
+
+    "talent_luna_2"
+    {
+        "BaseClass"                                           "ability_lua"
+        "ScriptFile"                                          "heroes/hero_luna/talents/talent_luna_2"
+        "AbilityType"                                         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"                                     "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "MaxLevel" "3"
+
+        "AbilityTextureName" "luna_motm"
+
+        "precache"
+        {
+            "particle" "particles/econ/items/phoenix/phoenix_ti10_immortal/phoenix_ti10_fire_spirit_burn.vpcf"
+        }
+
+        "AbilityValues"
+        {
+            "motm_damage_increase" "50 75 100"
+            "scorch_attack_pct" "30"
+            "pure_damage_increase" "25 40 55"
+            "duration" "7"
+        }
+    }
+
+    // Tiny
+    "talent_tiny_1"
+    {
+        "BaseClass"                                           "ability_lua"
+        "ScriptFile"                                          "heroes/hero_tiny/talents/talent_tiny_1"
+        "AbilityType"                                         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"                                     "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "MaxLevel" "3"
+
+        "AbilityTextureName" "talent_tiny_tree"
+
+        "precache"
+        {
+            "particle" "particles/units/heroes/hero_tiny/tiny_toss_impact.vpcf"
+            "soundfile" "soundevents/game_sounds_heroes/game_sounds_tiny.vsndevts"
+        }
+
+        "AbilityValues"
+        {
+            "radius" "1200"
+            "speed" "900"
+            "splash_radius" "275"
+            "tree_stored_pct" "30 50 70"
+            "magic_reduction" "-18 -24 -30"
+            "duration" "12"
+        }
+    }
+
+    "talent_tiny_2"
+    {
+        "BaseClass"                                           "ability_lua"
+        "ScriptFile"                                          "heroes/hero_tiny/talents/talent_tiny_2"
+        "AbilityType"                                         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"                                     "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "MaxLevel" "3"
+
+        "AbilityTextureName" "tiny_unleashed_fury"
+
+        "AbilityValues"
+        {
+            "duration" "10 15 20"
+        }
+    }
+
+    //Spectre
+    "talent_spectre_1"
+    {
+        "BaseClass"                                           "ability_lua"
+        "ScriptFile"                                          "heroes/hero_spectre/talents/talent_spectre_1"
+        "AbilityType"                                         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"                                     "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "MaxLevel" "3"
+
+        "AbilityTextureName" "spectre_spectral_dagger"
+
+        "precache"
+        {
+            "soundfile" "soundevents/game_sounds_heroes/game_sounds_spectre.vsndevts"
+        }
+
+        "AbilityValues"
+        {
+            "damage_buff_duration" "5"
+        }
+    }
+
+    "talent_spectre_2"
+    {
+        "BaseClass"                                           "ability_lua"
+        "ScriptFile"                                          "heroes/hero_spectre/talents/talent_spectre_2"
+        "AbilityType"                                         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"                                     "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "MaxLevel" "3"
+
+        "AbilityTextureName" "spectre_dispersion"
+
+        "precache"
+        {
+            "soundfile" "soundevents/game_sounds_heroes/game_sounds_spectre.vsndevts"
+        }
+
+        "AbilityValues"
+        {
+            "spectral_dagger_chance" "16"
+            "spectral_dagger_cooldown" "5"
+            "max_hp_pct_trigger" "2"
+            "damage_reduction_boost" "90"
+            "damage_reduction_duration" "5"
+            "damage_reduction_cooldown" "18"
+        }
+    }
+
+    //Primal Beast
+    "talent_primal_beast_1"
+    {
+        "BaseClass"                                           "ability_lua"
+        "ScriptFile"                                          "heroes/hero_primal_beast/talents/talent_primal_beast_1"
+        "AbilityType"                                         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"                                     "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "MaxLevel" "3"
+
+        "AbilityTextureName" "primal_beast_onslaught"
+
+        "precache"
+        {
+            "soundfile" "soundevents/game_sounds_heroes/game_sounds_primal_beast.vsndevts"
+        }
+
+        "AbilityValues"
+        {
+            "max_mana_drain_pct" "0.33"
+            "max_mana_drain_increase_per_sec" "0.15"
+            "time_damage_multiplier" "2.5"
+            "damage_reduction" "50"
+        }
+    }
+
+    "talent_primal_beast_2"
+    {
+        "BaseClass"                                           "ability_lua"
+        "ScriptFile"                                          "heroes/hero_primal_beast/talents/talent_primal_beast_2"
+        "AbilityType"                                         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"                                     "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "MaxLevel" "3"
+
+        "AbilityTextureName" "primal_beast_trample"
+
+        "precache"
+        {
+            "soundfile" "soundevents/game_sounds_heroes/game_sounds_primal_beast.vsndevts"
+        }
+
+        "AbilityValues"
+        {
+            "debuff_duration" "7"
+            "armor_debuff_pct" "-30"
+            "trample_interval" "0.35"
+        }
+    }
+
+    //Night Stalker
+    "talent_night_stalker_1"
+    {
+        "BaseClass"                                           "ability_lua"
+        "ScriptFile"                                          "heroes/hero_night_stalker/talents/talent_night_stalker_1"
+        "AbilityType"                                         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"                                     "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "MaxLevel" "3"
+
+        "AbilityTextureName" "nstalent1"
+
+        "precache"
+        {
+            "soundfile" "soundevents/game_sounds_heroes/game_sounds_nightstalker.vsndevts"
+        }
+
+        "AbilityValues"
+        {
+            "crit_damage" "300"
+            "crit_damage_per_str" "0.05"
+            "prey_duration" "16"
+            "prey_radius" "350"
+        }
+    }
+
+    "talent_night_stalker_2"
+    {
+        "BaseClass"                                           "ability_lua"
+        "ScriptFile"                                          "heroes/hero_night_stalker/talents/talent_night_stalker_2"
+        "AbilityType"                                         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"                                     "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "MaxLevel" "3"
+
+        "AbilityTextureName" "night_stalker_darkness"
+
+        "precache"
+        {
+            "soundfile" "soundevents/game_sounds_heroes/game_sounds_nightstalker.vsndevts"
+        }
+
+        "AbilityValues"
+        {
+            "mana_per_kill" "90"
+            "strength_per_kill" "10"
+            "spell_amp_per_strength" "0.1"
+        }
+    }
+
+    //Chicken
+    "talent_wisp_1"
+    {
+        "BaseClass"                                           "ability_lua"
+        "ScriptFile"                                          "heroes/chicken/talents/talent_wisp_1"
+        "AbilityType"                                         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"                                     "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "MaxLevel" "3"
+
+        "AbilityTextureName" "chickennewult"
+
+        "precache"
+        {
+            "particle" "particles/units/heroes/hero_techies/techies_remote_mines_detonate.vpcf"
+            "particle" "particles/units/heroes/hero_techies/techies_land_mine_explode.vpcf"
+            "soundfile" "soundevents/game_sounds_heroes/game_sounds_techies.vsndevts"
+        }
+
+        "AbilityValues"
+        {
+            "cooldown" "5"
+            "stun_duration" "1"
+            "damage_from_attack" "100"
+            "radius" "425"
+            "chicken_count" "3"
+            "burn_duration" "7"
+        }
+    }
+
+    "talent_wisp_2"
+    {
+        "BaseClass"                                           "ability_lua"
+        "ScriptFile"                                          "heroes/chicken/talents/talent_wisp_2"
+        "AbilityType"                                         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"                                     "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "MaxLevel" "3"
+
+        "AbilityTextureName" "chicken3"
+
+        "precache"
+        {
+        }
+
+        "AbilityValues"
+        {
+            "shared_magic_res" "40"
+            "shared_armor" "50"
+        }
+    }
+
+    // Drow Ranger
+    "talent_drow_ranger_1"
+    {
+        "BaseClass"                                           "ability_lua"
+        "ScriptFile"                                          "heroes/hero_drow_ranger/talents/talent_drow_ranger_1"
+        "AbilityType"                                         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"                                     "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "MaxLevel" "3"
+
+        "AbilityTextureName" "drow_ranger_multishot"
+
+        "precache"
+        {
+        }
+
+        "AbilityValues"
+        {
+            // Level 1
+            "multishot_interval_decrease" "-0.35"
+            "multi_shot_damage_increase_pct" "150"
+            // Level 2
+            "arrow_count" "2"
+            // Level 3
+            "damage_increase" "60"
+            "duration" "4"
+        }
+    }
+
+    "talent_drow_ranger_2"
+    {
+        "BaseClass"                                           "ability_lua"
+        "ScriptFile"                                          "heroes/hero_drow_ranger/talents/talent_drow_ranger_2"
+        "AbilityType"                                         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"                                     "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "MaxLevel" "3"
+
+        "AbilityTextureName" "drow_ranger_marksmanship"
+
+        "precache"
+        {
+        }
+
+        "AbilityValues"
+        {
+            // Level 1
+            "arrow_count" "2"
+            "interval" "0.65"
+            // Level 2
+            "multishot_chance" "70"
+            // Level 3
+            "crit_chance" "60"
+            "crit_damage" "450"
+        }
+    }
+
+    //Axe 
+    "talent_axe_1"
+    {
+        "BaseClass"                                           "ability_lua"
+        "ScriptFile"                                          "heroes/hero_axe/talents/talent_axe_1"
+        "AbilityType"                                         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"                                     "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "MaxLevel" "3"
+
+        "AbilityTextureName" "axe_counter_helix"
+
+        "precache"
+        {
+        }
+
+        "AbilityValues"
+        {
+            // Level 1
+            "interval" "0.25"
+            "mana_per_sec_pct" "5.0"
+            // Level 2
+            "wind_radius" "200"
+            "wind_damage" "1000"
+            "wind_interval" "0.25"
+            "wind_duration" "5"
+            // Level 3
+            "bonus_speed_pct" "100"
+            "damage_from_speed_pct" "30"
+        }
+    }
+
+    "talent_axe_2"
+    {
+        "BaseClass"                                           "ability_lua"
+        "ScriptFile"                                          "heroes/hero_axe/talents/talent_axe_2"
+        "AbilityType"                                         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"                                     "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "MaxLevel" "3"
+
+        "AbilityTextureName" "axe_culling_blade"
+
+        "precache"
+        {
+        }
+
+        "AbilityValues"
+        {
+            // Level 1
+            "radius" "300"
+            // Level 2
+            "execute_chance" "24"
+            "execute_threshold" "50"
+            // Level 3
+        }
+    }
+
+    //Tidehunter 
+    "talent_tidehunter_1"
+    {
+        "BaseClass"                                           "ability_lua"
+        "ScriptFile"                                          "heroes/hero_tidehunter/talents/talent_tidehunter_1"
+        "AbilityType"                                         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"                                     "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityUnitDamageType"                               "DAMAGE_TYPE_MAGICAL"  
+        "MaxLevel" "3"
+
+        "AbilityTextureName" "tidehunter_anchor_smash"
+
+        "precache"
+        {
+            "particle" "particles/units/heroes/hero_ancient_apparition/ancient_apparition_ice_blast_debuff.vpcf"
+            "soundfile"	"soundevents/game_sounds_heroes/game_sounds_tidehunter.vsndevts"
+            "soundfile"	"soundevents/game_sounds_heroes/game_sounds_ancient_apparition.vsndevts"
+        }
+
+        "AbilityValues"
+        {
+            "max_damage_multiplier" "200"
+            "interval" "1.0"
+            "speed" "725"
+            "radius" "1250"
+
+            // Level 1
+            "attack_damage_pct" "100"
+
+            // Level 2
+            "freeze_duration" "2.5"
+            "freeze_slow" "-100"
+
+            // Level 3
+            "threshold" "20"
+        }
+    }
+
+    "talent_tidehunter_2"
+    {
+        "BaseClass"                                           "ability_lua"
+        "ScriptFile"                                          "heroes/hero_tidehunter/talents/talent_tidehunter_2"
+        "AbilityType"                                         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"                                     "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "MaxLevel" "3"
+
+        "AbilityTextureName" "tidehunter_kraken_shell"
+
+        "precache"
+        {
+        }
+
+        "AbilityValues"
+        {
+            // Level 2
+            "interval" "12"
+            "shield_hp_pct" "70"
+
+            // Level 3
+            "health_limit_pct" "70"
+        }
+    }
+
+    //Bloodseeker 
+    "talent_bloodseeker_1"
+    {
+        "BaseClass"                                           "ability_lua"
+        "ScriptFile"                                          "heroes/hero_bloodseeker/talents/talent_bloodseeker_1"
+        "AbilityType"                                         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"                                     "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityUnitDamageType"                               "DAMAGE_TYPE_MAGICAL"  
+        "MaxLevel" "3"
+
+        "AbilityTextureName" "bloodseeker_blood_mist"
+
+        "precache"
+        {
+        }
+
+        "AbilityValues"
+        {
+            "chance" "8"
+        }
+    }
+
+    "talent_bloodseeker_2"
+    {
+        "BaseClass"                                           "ability_lua"
+        "ScriptFile"                                          "heroes/hero_bloodseeker/talents/talent_bloodseeker_2"
+        "AbilityType"                                         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"                                     "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "MaxLevel" "3"
+
+        "AbilityTextureName" "bloodseeker_bloodrage"
+
+        "precache"
+        {
+        }
+
+        "AbilityValues"
+        {
+            // Level 1
+            "heal" "10"
+
+            // Level 2
+            "health_percent_trigger" "30"
+            "rage_duration" "4"
+            "rage_cooldown" "10"
+            "rage_bat" "0.5"
+
+            // Level 3
+            "health_increase_pct" "2.5"
+            "max_stacks" "10"
+            "stack_duration" "60"
+        }
+    }
+
+    //Asan (Elder Titan remake) 
+    "talent_elder_titan_1"
+    {
+        "BaseClass"                                           "ability_lua"
+        "ScriptFile"                                          "heroes/hero_asan/talents/talent_elder_titan_1"
+        "AbilityType"                                         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"                                     "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityUnitDamageType"                               "DAMAGE_TYPE_MAGICAL"  
+        "MaxLevel" "3"
+
+        "AbilityTextureName" "asan_dagger_flurry"
+
+        "precache"
+        {
+        }
+
+        "AbilityValues"
+        {
+            // Level 1
+            "cooldown_reduction" "5"
+            // Level 2
+            "max_stacks" "20"
+            // Level 3
+            "damage_reduction_pct" "10"
+        }
+    }
+
+    "talent_elder_titan_2"
+    {
+        "BaseClass"                                           "ability_lua"
+        "ScriptFile"                                          "heroes/hero_asan/talents/talent_elder_titan_2"
+        "AbilityType"                                         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"                                     "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "MaxLevel" "3"
+
+        "AbilityTextureName" "asan_sword_mastery"
+
+        "precache"
+        {
+        }
+
+        "AbilityValues"
+        {
+            // Level 1
+            "bonus_stack_per_kill" "1"
+            // Level 2
+            "chance_to_not_consume" "40"
+            // Level 3
+            "pure_damage_pct" "30"
+        }
+    }
+
+    // Faceless Void
+    "talent_faceless_void_1"
+    {
+        "BaseClass"                                           "ability_lua"
+        "ScriptFile"                                          "heroes/hero_faceless_void/talents/talent_faceless_void_1"
+        "AbilityType"                                         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"                                     "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityUnitDamageType"                               "DAMAGE_TYPE_MAGICAL"  
+        "MaxLevel" "3"
+
+        "AbilityTextureName" "faceless_void_chronosphere"
+
+        "precache"
+        {
+        }
+
+        "AbilityValues"
+        {
+            // Level 3
+            "chrono_damage_increase" "60"
+        }
+    }
+
+    "talent_faceless_void_2"
+    {
+        "BaseClass"                                           "ability_lua"
+        "ScriptFile"                                          "heroes/hero_faceless_void/talents/talent_faceless_void_2"
+        "AbilityType"                                         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"                                     "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityUnitDamageType"                               "DAMAGE_TYPE_MAGICAL"  
+        "MaxLevel" "3"
+
+        "AbilityTextureName" "faceless_void_time_lock"
+
+        "precache"
+        {
+        }
+
+        "AbilityValues"
+        {
+            // Level 1
+            "chronosphere_radius" "400"
+            "chronosphere_duration" "1"
+            "chronosphere_cooldown" "3"
+            // Level 2
+            "time_lock_armor_reduction_pct" "-3"
+            // Level 3
+            "bonus_damage_pct" "8"
+            "bonus_move_speed_pct" "5"
+            "stack_duration" "3"
+            "max_stacks" "10"
+        }
+    }
+
+    // Lone Druid
+    "talent_lone_druid_1"
+    {
+        "BaseClass"                                           "ability_lua"
+        "ScriptFile"                                          "heroes/hero_lone_druid/talents/talent_lone_druid_1"
+        "AbilityType"                                         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"                                     "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityUnitDamageType"                               "DAMAGE_TYPE_MAGICAL"  
+        "MaxLevel" "3"
+
+        "AbilityTextureName" "druidtalent1"
+
+        "precache"
+        {
+            "particle" "particles/items4_fx/meteor_hammer_spell.vpcf"
+        }
+
+        "AbilityValues"
+        {
+            // Level 1
+            "chance" "20"
+            "radius" "400"
+            "int_to_damage" "200"
+        }
+    }
+
+    "talent_lone_druid_2"
+    {
+        "BaseClass"                                           "ability_lua"
+        "ScriptFile"                                          "heroes/hero_lone_druid/talents/talent_lone_druid_2"
+        "AbilityType"                                         "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"                                     "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+        "AbilityUnitDamageType"                               "DAMAGE_TYPE_MAGICAL"  
+        "MaxLevel" "3"
+
+        "AbilityTextureName" "lone_druid_spirit_bear"
+
+        "precache"
+        {
+        }
+
+        "AbilityValues"
+        {
+            
+        }
+    }
+}

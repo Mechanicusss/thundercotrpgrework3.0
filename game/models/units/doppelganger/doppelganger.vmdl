@@ -1,0 +1,605 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc31:version{165d48dd-8adc-4f1d-abf7-4992e04ad577} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "MaterialGroupList"
+				children = 
+				[
+					{
+						_class = "DefaultMaterialGroup"
+						remaps = 
+						[
+							{
+								from = "01_-_default.vmat"
+								to = "materials/models/units/doppelganger/doppelganger1.vmat"
+							},
+							{
+								from = "01 - default.vmat"
+								to = "materials/models/units/doppelganger/doppelganger1.vmat"
+							},
+						]
+						use_global_default = false
+						global_default_material = ""
+					},
+				]
+			},
+			{
+				_class = "AttachmentList"
+				children = 
+				[
+					{
+						_class = "Attachment"
+						name = "attach_hitloc"
+						parent_bone = "Bone02"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_head"
+						parent_bone = "Bone05"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_attack1"
+						parent_bone = "Bone16_mirrored_"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_attack2"
+						parent_bone = "Bone16"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+				]
+			},
+			{
+				_class = "HitboxSetList"
+				children = 
+				[
+					{
+						_class = "HitboxSet"
+						name = "default"
+						children = 
+						[
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone01"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -24.982765, -17.019772, -1.565369 ]
+								hitbox_maxs = [ 25.267227, 16.448978, 23.434631 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone02"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -36.41296, -34.001587, -2.864197 ]
+								hitbox_maxs = [ 33.337025, 24.498405, 24.135803 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone07"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -2.0, -2.0, -2.0 ]
+								hitbox_maxs = [ 2.0, 2.0, 2.0 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone07_mirrored_"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -2.0, -2.0, -2.0 ]
+								hitbox_maxs = [ 2.0, 2.0, 2.0 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone08"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -7.347996, -19.479311, -52.792389 ]
+								hitbox_maxs = [ 25.902, 20.926939, -2.792389 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone08_mirrored_"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -17.868795, -18.247303, -46.301987 ]
+								hitbox_maxs = [ 10.006201, 40.127693, 1.698029 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone09"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -6.408001, -36.081127, -27.031593 ]
+								hitbox_maxs = [ 22.091991, 8.325119, 5.468414 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone09_mirrored_"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -36.104591, -23.27898, -26.725388 ]
+								hitbox_maxs = [ 7.395401, 9.846021, 4.274628 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone10"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -3.64859, -28.143185, -14.913406 ]
+								hitbox_maxs = [ 16.35141, -3.143192, 9.586609 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone10_mirrored_"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -25.352608, -18.662563, -15.854195 ]
+								hitbox_maxs = [ -1.352608, 1.94681, 8.145813 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone_Pelvis"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -62.161255, -27.351025, -81.390213 ]
+								hitbox_maxs = [ 20.588732, 21.242722, -5.640198 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone11_mirrored_"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -5.246994, -10.758575, 0.342407 ]
+								hitbox_maxs = [ -3.746994, -7.258587, 9.342407 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone15"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -9.363998, -12.632385, -9.357399 ]
+								hitbox_maxs = [ 6.636002, 1.617615, 4.142609 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone12"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -6.8452, -15.00359, -4.036186 ]
+								hitbox_maxs = [ 6.1548, -2.25359, 4.463814 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone11"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -4.014389, -8.490391, -10.867599 ]
+								hitbox_maxs = [ -3.514389, -6.990391, -4.867599 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone11_mirrored__DUP_0"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -1.178215, -9.330943, -12.155403 ]
+								hitbox_maxs = [ 0.321785, -5.643443, -6.155403 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone12_mirrored_"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -7.457405, -14.609163, -7.120186 ]
+								hitbox_maxs = [ 3.542595, -1.960726, 3.379807 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone15_mirrored_"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -6.901604, -12.637047, -12.315369 ]
+								hitbox_maxs = [ 4.598396, -0.543299, 2.684631 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone11_mirrored__mirrored_"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -0.351204, -12.45805, -1.378387 ]
+								hitbox_maxs = [ 2.148796, -10.240276, 7.621613 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone06"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -20.749735, -5.27577, -40.378403 ]
+								hitbox_maxs = [ 19.125257, 12.03673, -1.878403 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone23"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -20.285257, -2.666992, -35.15538 ]
+								hitbox_maxs = [ 24.839735, 14.708006, 2.344612 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone18"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ 0.693918, -14.103493, -23.976997 ]
+								hitbox_maxs = [ 9.568918, 5.271507, -9.976997 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Unit_Protoss_Archon_ArmorTorso"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -27.800476, -31.590809, -57.627991 ]
+								hitbox_maxs = [ 36.324509, 58.659184, 50.372025 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Unit_Protoss_Archon_Gauntlet_01"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -21.765976, -41.856789, -26.926804 ]
+								hitbox_maxs = [ 21.234016, 37.393204, 31.073212 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone14_mirrored_"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -11.431389, -5.980782, -3.86438 ]
+								hitbox_maxs = [ 1.318604, 3.519207, 5.13562 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone16"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -7.317818, -14.791985, -4.868408 ]
+								hitbox_maxs = [ 2.682182, 1.208015, 5.131599 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone13"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -15.771393, -7.635796, -4.360794 ]
+								hitbox_maxs = [ 0.4786, 2.864204, 5.639206 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone14"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -12.872192, -7.99799, -4.898582 ]
+								hitbox_maxs = [ 0.127808, 2.00201, 4.101418 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Unit_Protoss_Archon_ArmorShoulderL"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -33.170792, -21.804585, -34.514771 ]
+								hitbox_maxs = [ 32.829193, 35.945408, 38.485229 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Unit_Protoss_Archon_Gauntlet_02"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -41.430603, -25.529629, -26.334389 ]
+								hitbox_maxs = [ 21.819389, 27.876617, 34.665604 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone14_mirrored__DUP_1"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -1.458015, -13.118014, -7.396385 ]
+								hitbox_maxs = [ 8.041985, -1.649266, 1.103615 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone13_mirrored_"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -0.56321, -15.13938, -4.551216 ]
+								hitbox_maxs = [ 9.93679, 0.844995, 5.948784 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone16_mirrored_"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -4.874397, -15.818226, -7.626991 ]
+								hitbox_maxs = [ 3.625603, -0.318228, 3.873016 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone14_mirrored__mirrored_"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -2.006401, -10.169449, -6.685394 ]
+								hitbox_maxs = [ 8.493599, 1.268049, 3.314606 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Unit_Protoss_Archon_ArmorShoulderR"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -25.129791, -35.188828, -35.675964 ]
+								hitbox_maxs = [ 34.370193, 32.311165, 39.324036 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Unit_Protoss_Archon_Head"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -13.409299, -19.077789, -19.108002 ]
+								hitbox_maxs = [ 15.403197, 10.234707, 27.891998 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone29"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -30.130873, -31.291485, -36.167191 ]
+								hitbox_maxs = [ 29.49412, 32.083508, 7.832825 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone26"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -13.740718, -6.877514, -38.313 ]
+								hitbox_maxs = [ 13.759276, 28.388103, 8.937004 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone24"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -13.558079, -5.834183, -48.914993 ]
+								hitbox_maxs = [ 17.629417, 10.290812, 9.085014 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone19"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -3.470802, -10.056993, -54.183594 ]
+								hitbox_maxs = [ 32.654194, 14.599257, 0.066414 ]
+							},
+						]
+					},
+				]
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						name = "doppelganger"
+						filename = "models/units/doppelganger/doppelganger.fbx"
+						import_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+				]
+			},
+			{
+				_class = "AnimationList"
+				children = 
+				[
+					{
+						_class = "AnimFile"
+						name = "Stand"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/units/doppelganger/doppelganger.fbx"
+						import_bone_scales = false
+						start_frame = 10
+						end_frame = 124
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Walk"
+						activity_name = "ACT_DOTA_RUN"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/units/doppelganger/doppelganger.fbx"
+						import_bone_scales = false
+						start_frame = 140
+						end_frame = 179
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Attack"
+						activity_name = "ACT_DOTA_ATTACK"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/units/doppelganger/doppelganger.fbx"
+						import_bone_scales = false
+						start_frame = 199
+						end_frame = 256
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Attack_1"
+						activity_name = "ACT_DOTA_CAST_ABILITY_1"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/units/doppelganger/doppelganger.fbx"
+						import_bone_scales = false
+						start_frame = 276
+						end_frame = 334
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Death"
+						activity_name = "ACT_DOTA_DIE"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/units/doppelganger/doppelganger.fbx"
+						import_bone_scales = false
+						start_frame = 354
+						end_frame = 384
+						framerate = 30.0
+						reverse = false
+					},
+				]
+				default_root_bone_name = ""
+			},
+		]
+		model_archetype = ""
+		primary_associated_entity = ""
+		anim_graph_name = ""
+		importer_notes = """
+Imported from VMDL
+==Warnings==
+Changed incompatible hitbox parent bone name 'Bone07(mirrored)' to 'Bone07_mirrored_'
+Changed incompatible hitbox parent bone name 'Bone08(mirrored)' to 'Bone08_mirrored_'
+Changed incompatible hitbox parent bone name 'Bone09(mirrored)' to 'Bone09_mirrored_'
+Changed incompatible hitbox parent bone name 'Bone10(mirrored)' to 'Bone10_mirrored_'
+Changed incompatible hitbox parent bone name 'Bone11(mirrored)' to 'Bone11_mirrored_'
+Changed incompatible hitbox parent bone name 'Bone11(mirrored)~DUP~0' to 'Bone11_mirrored__DUP_0'
+Changed incompatible hitbox parent bone name 'Bone12(mirrored)' to 'Bone12_mirrored_'
+Changed incompatible hitbox parent bone name 'Bone15(mirrored)' to 'Bone15_mirrored_'
+Changed incompatible hitbox parent bone name 'Bone11(mirrored)(mirrored)' to 'Bone11_mirrored__mirrored_'
+Changed incompatible hitbox parent bone name 'Bone14(mirrored)' to 'Bone14_mirrored_'
+Changed incompatible hitbox parent bone name 'Bone14(mirrored)~DUP~1' to 'Bone14_mirrored__DUP_1'
+Changed incompatible hitbox parent bone name 'Bone13(mirrored)' to 'Bone13_mirrored_'
+Changed incompatible hitbox parent bone name 'Bone16(mirrored)' to 'Bone16_mirrored_'
+Changed incompatible hitbox parent bone name 'Bone14(mirrored)(mirrored)' to 'Bone14_mirrored__mirrored_'
+Changed incompatible bone name 'Bone16(mirrored)' to 'Bone16_mirrored_'
+Changed incompatible animation name 'Attack 1' to 'Attack_1'
+
+"""
+	}
+}

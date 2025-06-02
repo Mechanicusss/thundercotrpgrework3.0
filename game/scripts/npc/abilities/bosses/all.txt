@@ -1,0 +1,718 @@
+#base "skafian/boss.txt"
+#base "spider/boss.txt"
+#base "reef/boss.txt"
+#base "mine/boss.txt"
+#base "invoker/boss.txt"
+#base "hephaestus/all.txt"
+#base "lake/all.txt"
+#base "skeleton_king/all.txt"
+#base "zombie/all.txt"
+#base "lava/all.txt"
+#base "divine/all.txt"
+
+"DOTAAbilities"
+{
+    "sf_creep_dark_lord"
+    {
+        "BaseClass"                     "nevermore_presence_of_the_dark_lord_custom"
+        "AbilityTextureName"            "nevermore_dark_lord"
+        "FightRecapLevel"               "1"
+        "MaxLevel"                      "1"
+        "HasShardUpgrade" "1"
+        
+        // Ability General
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityType"                   "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
+
+
+        // Ability Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange"              "900"
+
+        // Ability Resource
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Damage
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+                "presence_armor_reduction"      "-300"
+                "LinkedSpecialBonus"            "special_bonus_unique_nevermore_5"
+                "presence_magic_res_reduction"      "0"
+                "RequiresShard" "1"
+                "presence_radius"               "900"
+        }
+    }
+
+    //=================================================================================================================
+    // Winter Wyvern: Arctic Burn
+    //=================================================================================================================
+    "boss_ice_wyvern_arctic_burn"
+    {
+        "BaseClass" "winter_wyvern_arctic_burn"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"       
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "AbilitySound"                  "Hero_WinterWyvern.ArcticBurn.Cast"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
+        "MaxLevel" "5"
+        "HasScepterUpgrade"             "1"
+
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastPoint"              "0.0"
+        
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "0"
+
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "0"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+                "duration"              "10"
+                "attack_range_bonus"    "500"
+                "percent_damage"        "6 12 18 24 30"
+                "tick_rate"             "1.0 0.9 0.8 0.7 0.6"
+                "damage_duration"       "10.0"
+                "LinkedSpecialBonus"    "special_bonus_unique_winter_wyvern_6"
+                "move_slow"             "75"
+                "LinkedSpecialBonus"    "special_bonus_unique_winter_wyvern_1"
+                "night_vision_bonus"    "400"
+                "projectile_speed_bonus"    "500"
+                "tree_destruction_radius"   "175"
+                "attack_point"          "0.1"
+                "max_attacks"           "9999"
+                "mana_cost_scepter"     "0"
+                "movement_scepter"      "25"
+        }
+        "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_1"
+    }
+
+    //=================================================================================================================
+    // Winter Wyvern: Splinter Blast
+    //=================================================================================================================
+    "boss_ice_wyvern_splinter_blast"
+    {
+        "BaseClass" "winter_wyvern_splinter_blast"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"   
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+        "FightRecapLevel"               "1"
+
+        "MaxLevel" "5"
+
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange"              "1200"
+        "AbilityCastPoint"              "0.3"
+
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "5"
+
+        // Damage.
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityDamage"                 "10000 20000 30000 40000 50000"
+
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "0"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+                "projectile_speed"      "650"
+                "projectile_max_time"   "1.0"
+                "split_radius"          "900"
+                "LinkedSpecialBonus"    "special_bonus_unique_winter_wyvern_2"
+                "bonus_movespeed"       "-90"
+                "movespeed_slow_tooltip"        "60"
+                "duration"              "4.0"
+                "secondary_projectile_speed"        "800"
+        }
+        "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_2"
+    }
+
+    //=================================================================================================================
+    // Winter Wyvern: Cold Embrace
+    //=================================================================================================================
+    "boss_ice_wyvern_cold_embrace"
+    {
+        "BaseClass" "winter_wyvern_cold_embrace"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ALLIES_YES"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
+        "FightRecapLevel"               "1"
+        "AbilitySound"                  "Hero_Winter_Wyvern.ColdEmbrace"
+
+        "MaxLevel" "5"
+
+        "HasShardUpgrade"             "1"
+
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange"              "1000"
+        "AbilityCastPoint"              "0.3"
+        
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "15"
+
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "0"
+                
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+                "duration"          "7.0"
+                "heal_additive"     "30 35 40 45 50"
+                "LinkedSpecialBonus"    "special_bonus_unique_winter_wyvern_5"
+                "heal_percentage"   "4 8 12 15 18"
+                "shard_cooldown_reduction"          "4.0"   
+                "shard_splinter_range"          "1200"  
+        }
+        "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_3"
+    }
+
+    //=================================================================================================================
+    // Winter Wyvern: Winter's Curse
+    //=================================================================================================================
+    "boss_ice_wyvern_winters_curse"
+    {
+        "BaseClass" "winter_wyvern_winters_curse"
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"     
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO"
+        "AbilityUnitTargetFlags"        "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
+        "FightRecapLevel"               "2"
+        "AbilitySound"                  "Hero_WinterWyvern.WintersCurse.Target"
+
+        "MaxLevel" "5"
+
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange"              "900"
+        "AbilityCastPoint"              "0.3"
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_4"
+        
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "15"
+
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "0"
+                
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+                "radius"            "525"
+                "damage_reduction"  "100"
+                "damage_amplification"  "0"
+                "bonus_attack_speed"    "100"
+                "duration"          "6 7 8 9 10"
+                "LinkedSpecialBonus"    "special_bonus_unique_winter_wyvern_3"
+                "early_out_timer"   "2.5"
+        }
+    }
+
+    "creature_lava_fatal_bonds"
+    {
+        "BaseClass" "warlock_fatal_bonds"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+        "FightRecapLevel"               "1"
+        "AbilitySound"                  "Hero_Warlock.FatalBonds"
+        "MaxLevel" "5"
+
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastAnimation"          "ACT_DOTA_FATAL_BONDS"
+        "AbilityCastRange"              "1000"
+        "AbilityCastGestureSlot"        "DEFAULT"
+        "AbilityCastPoint"              "1"
+
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "12"
+
+        // Damage.
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityDamage"                 "0"
+
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "0"       
+        
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityModifierSupportValue"   "0.0"   // only does damage
+        
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+                "count"                     "3 4 5 6 7"
+                "LinkedSpecialBonus"        "special_bonus_unique_warlock_9"
+                "damage_share_percentage"   "60 70 80 90 100"
+                "LinkedSpecialBonus"        "special_bonus_unique_warlock_5"
+                "duration"                  "5"
+                "search_aoe"                "700"
+        }
+    }
+
+    "creature_lava_chaos_meteor"
+    {
+        "BaseClass"                     "invoker_chaos_meteor"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT"
+        "MaxLevel"                      "5"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+        "FightRecapLevel"               "1"
+        "AbilitySound"                  "Hero_Invoker.ChaosMeteor.Impact"
+        
+        "HasShardUpgrade"           "0"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange"              "700"
+        "AbilityCastPoint"              "0"
+        "AbilityCastAnimation"          "ACT_INVALID"
+        "AbilityManaCost"               "0"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityModifierSupportValue"   "0.0"   // Mainly about damage
+            
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+            "AbilityCooldown"
+            {
+                "value"                 "10"
+                "special_bonus_shard"   "-0"
+            }
+            "land_time"                 "1.3"
+            "area_of_effect"            "275"
+            "travel_distance"
+            {
+                "value"                 "1575"
+                "levelkey"              "wexlevel"
+            }
+            "travel_speed"              "300"
+            "damage_interval"
+            {
+                "value"                 "0.25"
+                "CalculateSpellDamageTooltip"   "0"
+            }
+            "vision_distance"           "500"
+            "end_vision_duration"       "3.0"
+            "main_damage"
+            {
+                "value"                 "50000 60000 70000 80000 90000"
+                "levelkey"              "exortlevel"
+                "special_bonus_unique_invoker_6"    "+40%"
+            }
+            "burn_duration"             "3.0"
+            "burn_dps"
+            {
+                "value"                 "20000 30000 40000 50000 60000"
+                "levelkey"              "exortlevel"
+                "CalculateSpellDamageTooltip"   "1"
+                "special_bonus_unique_invoker_6"    "+40%"
+            }
+            "meteor_count"
+            {
+                "value"                 "3"
+                "special_bonus_shard"   "0"
+            }
+        }
+    }
+
+    "creature_lava_flame_guard"
+    {
+        "BaseClass" "ember_spirit_flame_guard"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+        "AbilitySound"                  "Hero_EmberSpirit.FlameGuard.Cast"
+        "MaxLevel" "5"
+
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange"              "400"
+        "AbilityCastPoint"              "0"
+        
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "99999.0"
+
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "0"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+                "duration"                      "99999"
+                "radius"                        "400"
+                "absorb_amount"                 
+                {
+                    "value"                 "99999"
+                    "LinkedSpecialBonus"            "special_bonus_unique_ember_spirit_1"
+                    "DamageTypeTooltip"     "DAMAGE_TYPE_MAGICAL"
+                }               
+                "tick_interval"                 "0.2"
+                "damage_per_second"             
+                {
+                    "value"         "15000 30000 45000 60000 75000"
+                    "LinkedSpecialBonus"            "special_bonus_unique_ember_spirit_3"
+                }
+                "blind_pct"             "50"
+                "shield_pct_absorb"     "70"
+        }
+        "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_3"
+    }
+
+    "creature_lava_melting_strike"
+    {
+        "BaseClass" "forged_spirit_melting_strike"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
+        "MaxLevel"                      "5"
+        
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+            "armor_removed"         "10 11 12 13 14"
+            "max_armor_removed"     "1000"
+            "duration"              "3"
+        }
+        "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_1"
+    }
+
+    "tormentor_unyielding_shield_custom"
+	{
+        "BaseClass" "ability_lua"
+        "AbilityTextureName" "miniboss_unyielding_shield"
+		"ScriptFile" "creeps/tormentor_unyielding_shield_custom"
+		"MaxLevel"						"1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+
+        "precache"
+        {
+            "particle" "particles/neutral_fx/miniboss_10th_anniversary_loadout.vpcf"
+            "particle" "particles/neutral_fx/miniboss_death.vpcf"
+            "particle" "particles/neutral_fx/miniboss_shield.vpcf"
+            "model" "models/props_gameplay/divine_sentinel/divine_sentinel.vmdl"
+            "soundfile" "soundevents/game_sounds_creeps.vsndevts"
+        }
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+            "damage_absorb"		"25000"
+            "damage_absorb_per_minute"		"2500"
+            "regen_per_second_pct"	"10"
+		}
+	}
+
+    "tormentor_reflect_custom"
+	{
+        "BaseClass" "ability_lua"
+        "AbilityTextureName" "miniboss_reflect"
+		"ScriptFile" "creeps/tormentor_reflect_custom"
+		"MaxLevel"						"1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+
+        "precache"
+        {
+            "particle" "particles/neutral_fx/miniboss_damage_reflect.vpcf"
+            "particle" "particles/neutral_fx/miniboss_damage_impact.vpcf"
+            "soundfile" "soundevents/game_sounds_creeps.vsndevts"
+        }
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+            "passive_reflection_pct"			"90"
+		}
+	}
+
+    "boss_destruction_lord_soul_slice"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "heroes/bosses/destruction_lord/boss_destruction_lord_soul_slice"
+        "AbilityTextureName"            "soulslice"
+        "FightRecapLevel"               "1"
+        "MaxLevel"                      "5"
+        "precache"
+        {
+            "soundfile" "soundevents/game_sounds_heroes/game_sounds_centaur.vsndevts"
+            "particle"  "particles/econ/items/centaur/centaur_ti9/centaur_double_edge_ti9_2.vpcf"
+        }
+        
+        // Ability General
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityType"                   "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+
+        "AbilityCooldown" "3"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {           
+            "edge_damage"                   "50000 60000 70000 80000 90000"
+            "max_stacks" "3"
+            "duration" "7"
+            "radius"                        "350"
+        }
+    }
+
+    "boss_destruction_lord_soul_towers"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "heroes/bosses/destruction_lord/boss_destruction_lord_soul_towers"
+        "AbilityTextureName"            "undying_tombstone"
+        "FightRecapLevel"               "1"
+        "MaxLevel"                      "5"
+        "precache"
+        {
+            "soundfile" "soundevents/game_sounds_heroes/game_sounds_undying.vsndevts"
+        }
+        
+        // Ability General
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityType"                   "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+
+        "AbilityCooldown" "60"
+
+        "AbilityCastPoint" "0"
+
+        "AbilityCastAnimation" "ACT_DOTA_CAST_ABILITY_2"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {           
+            "duration" "30"
+            "buff_duration" "60"
+            "buff_regen_pct" "25"
+            "buff_dmg_pct" "100"
+        }
+    }
+
+    "boss_destruction_tower_drain"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
+        "FightRecapLevel"               "1"
+        "BaseClass"                     "ability_lua"
+        "AbilityTextureName"            "pugna_life_drain"
+        "ScriptFile"                    "heroes/bosses/destruction_lord/boss_destruction_tower_drain"
+        "MaxLevel"                      "6"
+        
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_5"
+        "AbilityChannelAnimation"       "ACT_DOTA_CHANNEL_ABILITY_5"
+        "AnimationIgnoresModelScale"    "1"
+
+        "precache"
+        {
+            "particle" "particles/units/heroes/hero_pugna/pugna_life_drain.vpcf"
+            "soundfile" "soundevents/game_sounds_heroes/game_sounds_pugna.vsndevts"
+        }
+        
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange"              "600"
+        "AbilityCastPoint"              "0"
+
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "1"
+        "AbilityChannelTime"            "30"
+
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "0"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+                "interval"               "0.1"
+                "hp_drain_pct"          "10"
+                "search_radius"          "900"
+        }
+    }
+
+    "boss_arc_warden_summon_double"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "FightRecapLevel"               "1"
+        "BaseClass"                     "ability_lua"
+        "AbilityTextureName"            "arc_warden_tempest_double"
+        "ScriptFile"                    "heroes/bosses/arc_warden/boss_arc_warden_summon_double"
+        "MaxLevel"                      "1"
+        
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_4"
+
+        "precache"
+        {
+            "soundfile" "soundevents/game_sounds_heroes/game_sounds_arc_warden.vsndevts"
+            "soundfile" "soundevents/game_sounds_heroes/game_sounds_vo_arc_warden.vsndevts"
+            "particle" "particles/status_fx/status_effect_arc_warden_tempest.vpcf"
+            "particle" "particles/units/heroes/hero_arc_warden/arc_warden_tempest_buff.vpcf"
+        }
+        
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastPoint"              "0"
+
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "60"
+
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "0"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+            "duration" "30"
+            "damage_reduction" "-50"
+            "health_percent" "25"
+        }
+    }
+
+    "boss_arc_warden_magnetic_field_collapse"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "FightRecapLevel"               "1"
+        "BaseClass"                     "ability_lua"
+        "AbilityTextureName"            "arc_warden_magnetic_field"
+        "ScriptFile"                    "heroes/bosses/arc_warden/boss_arc_warden_magnetic_field_collapse"
+        "MaxLevel"                      "1"
+        
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_2"
+
+        "precache"
+        {
+            "soundfile" "soundevents/game_sounds_heroes/game_sounds_arc_warden.vsndevts"
+            "soundfile" "soundevents/game_sounds_heroes/game_sounds_arc_terrorblade.vsndevts"
+            "soundfile" "soundevents/game_sounds_heroes/game_sounds_vo_arc_warden.vsndevts"
+            "particle" "particles/units/heroes/hero_arc_warden/arc_warden_magnetic.vpcf"
+            "particle" "particles/units/heroes/hero_arc_warden/arc_warden_magnetic_tempest.vpcf"
+            "particle" "particles/units/heroes/hero_terrorblade/terrorblade_scepter.vpcf"
+        }
+        
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastPoint"              "0"
+
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "60"
+
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "0"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+            "delay" "10"
+            "creation_radius" "1000"
+            "number_of_fields" "20"
+        }
+    }
+
+    "boss_arc_warden_essence_flux"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+        "FightRecapLevel"               "1"
+        "BaseClass"                     "ability_lua"
+        "AbilityTextureName"            "arc_warden_flux"
+        "ScriptFile"                    "heroes/bosses/arc_warden/boss_arc_warden_essence_flux"
+        "MaxLevel"                      "1"
+
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_PURE"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
+        
+        "AbilityCastAnimation"          "ACT_DOTA_CAST_ABILITY_1"
+
+        "precache"
+        {
+            "soundfile" "soundevents/game_sounds_heroes/game_sounds_arc_warden.vsndevts"
+            "soundfile" "soundevents/game_sounds_heroes/game_sounds_vo_arc_warden.vsndevts"
+            "particle" "particles/units/heroes/hero_arc_warden/arc_warden_flux_tempest_tgt.vpcf"
+        }
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+            "radius" "2000"
+            "ally_radius" "300"
+            "slow" "-50"
+            "max_hp_damage_pct" "20"
+        }
+    }
+}

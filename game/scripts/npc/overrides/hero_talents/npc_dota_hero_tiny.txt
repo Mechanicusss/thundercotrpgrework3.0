@@ -1,0 +1,5 @@
+"root"
+{
+    "talent_tiny_1" "1"
+    "talent_tiny_2" "1"
+}

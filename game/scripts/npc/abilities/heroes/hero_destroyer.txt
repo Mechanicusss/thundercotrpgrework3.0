@@ -1,0 +1,216 @@
+"DOTAAbilities"
+{
+	"destroyer_armor_crush"
+	{
+		"BaseClass"						"ability_datadriven"
+		"AbilityTextureName"			"arena/destroyer_armor_crush"
+		"MaxLevel" 						"7"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+		"AbilityCastRange"				"180"
+		"AbilityCastPoint"				"0.4 0.4 0.4 0.4 0.4 0.35 0.3"
+		"AbilityCooldown"				"16.0"
+		"AbilityManaCost"				"100"
+
+		"AbilityValues"
+		{
+				"damage"			"100 150 200 250 300 350 400"
+				"armor_reduction"	"-3 -5 -7 -9 -11 -13 -15"
+				"duration"			"1 1.2 1.4 1.6 1.8 2.0 2.2"
+		}
+
+		"precache"
+		{
+			"particle"				"particles/arena/units/heroes/hero_destroyer/destroyer_armor_crush.vpcf"
+		}
+
+		"OnSpellStart"
+		{
+			"FireSound"
+			{
+				"EffectName"	"Arena.Hero_Destroyer.ArmorCrush"
+				"Target"		"CASTER"
+			}
+			"FireEffect"
+			{
+				"EffectName"		"particles/arena/units/heroes/hero_destroyer/destroyer_armor_crush.vpcf"
+				"EffectAttachType"	"follow_origin"
+				"Target"			"TARGET"
+			}
+			"ApplyModifier"
+			{
+				"ModifierName"		"modifier_destroyer_armor_crush"
+				"Target" 			"TARGET"
+			}
+			"RunScript"
+			{
+				"ScriptFile"	"kv"
+				"Function"		"PercentDamage"
+				"Damage"		"%damage"
+				"CalculateSpellDamageTooltip"	"0"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_destroyer_armor_crush"
+			{
+				"IsDebuff"			"1"
+				"IsStunDebuff"		"1"
+				"Duration"			"%duration"
+
+				"OverrideAnimation"	"ACT_DOTA_DISABLED"
+				"EffectName"		"particles/generic_gameplay/generic_stunned.vpcf"
+				"EffectAttachType"	"follow_overhead"
+
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"	"%armor_reduction"
+				}
+
+				"States"
+				{
+					"MODIFIER_STATE_STUNNED"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}
+	}
+
+	"destroyer_seal_of_limit"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"arena/destroyer_seal_of_limit"
+		"MaxLevel" 						"7"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityCastPoint"				"0.1"
+		"AbilityCooldown"				"30.0"
+		"AbilityManaCost"				"100 105 110 115 120 125 130"
+
+		"AbilityValues"
+		{
+				"duration"			"15"
+				"max_health_pct"	"28"
+				"movement_speed"	"15 25 35 45 55 65 75"
+				"attack_speed"		"25 35 45 55 65 75 90"
+				"bonus_armor"		"8 12 16 20 24 30 36"
+				"bonus_magical_damage_resistance_pct"	"10 15 20 25 30 35 40"
+				"health_regen"		"10 15 20 25 30 35 40"
+		}
+
+		"precache"
+		{
+			"particle"				"particles/arena/units/heroes/hero_destroyer/destroyer_seal_of_limit.vpcf"
+		}
+
+		"OnSpellStart"
+		{
+			"FireSound"
+			{
+				"EffectName"	"Arena.Hero_Destroyer.SealOfLimit"
+				"Target"		"CASTER"
+			}
+			"ApplyModifier"
+			{
+				"ModifierName"	"modifier_destroyer_seal_of_limit"
+				"Target" 		"CASTER"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_destroyer_seal_of_limit"
+			{
+				"Duration"			"%duration"
+
+				"EffectName"        "particles/arena/units/heroes/hero_destroyer/destroyer_seal_of_limit.vpcf"
+				"EffectAttachType"  "follow_origin"
+
+				"ThinkInterval"  "0.1"
+				"OnIntervalThink"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"heroes/hero_destroyer/seal_of_limit"
+						"Function"		"UpdateHealth"
+					}
+				}
+
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT"	"%movement_speed"
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"		"%bonus_armor"
+					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"		"%health_regen"
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"%attack_speed"
+					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"%bonus_magical_damage_resistance_pct"
+				}
+			}
+		}
+	}
+
+	"destroyer_body_reconstruction"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"arena/destroyer_body_reconstruction"
+		"MaxLevel" 						"7"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityCooldown"				"120 110 100 90 80 70 60"
+		"AbilityManaCost"				"100 110 120 130 140 150 160"
+		"AbilityCastPoint"				"0.1"
+
+		"precache"
+		{
+			"particle"				"particles/arena/units/heroes/hero_destroyer/destroyer_body_reconstruction.vpcf"
+		}
+
+		"OnSpellStart"
+		{
+			"FireSound"
+			{
+				"EffectName"	"Arena.Hero_Destroyer.BodyReconstruction"
+				"Target"		"CASTER"
+			}
+			"FireEffect"
+			{
+				"EffectName"		"particles/arena/units/heroes/hero_destroyer/destroyer_body_reconstruction.vpcf"
+				"EffectAttachType"	"follow_origin"
+			}
+
+			"RunScript"
+			{
+				"ScriptFile"	"heroes/hero_destroyer/body_reconstruction"
+				"Function"		"MaxHealth"
+			}
+		}
+	}
+
+	"destroyer_frenzy"
+	{
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"					"heroes/hero_destroyer/frenzy"
+		"AbilityTextureName"			"arena/destroyer_frenzy"
+		"MaxLevel" 						"7"
+		"LevelsBetweenUpgrades"			"5"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+
+		"AbilityValues"
+		{
+				"hp_mark_pct_lvl1"	"80"
+				"bonus_damage_pct_lvl1"	"30 50 70 90 110 130 150"
+				"bonus_armor_pct_lvl1"	"20 25 30 35 40 45 50"
+				"hp_mark_pct_lvl2"	"50"
+				"bonus_damage_pct_lvl2"	"50 70 90 110 130 150 170"
+				"bonus_armor_pct_lvl2"	"30 35 40 45 50 55 60"
+				"hp_mark_pct_lvl3"	"30"
+				"bonus_damage_pct_lvl3"	"30 40 50 60 70 80 100"
+				"bonus_armor_pct_lvl3"	"40 45 50 55 60 65 70"
+		}
+
+		"precache"
+		{
+			"particle"				"particles/arena/units/heroes/hero_destroyer/destroyer_frenzy.vpcf"
+		}
+	}
+}

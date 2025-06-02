@@ -1,0 +1,117 @@
+"DOTAAbilities"
+{
+    "zombie_death_lust"
+	{
+		"BaseClass" "ability_lua"
+        "ScriptFile" "creeps/zombie_death_lust"
+        "AbilityTextureName" "undying_tombstone_zombie_deathstrike"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+        "MaxLevel" "5"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportBonus"	"5"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"slow"					"-5"
+				"health_threshold_pct"	"40"
+				"duration"				"2.5"
+				"bonus_move_speed"			"35 40 45 50 55"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+
+	"zombie_boss_putrid_aura"
+	{
+		"BaseClass" "ability_lua"
+        "ScriptFile" "heroes/bosses/zombie/zombie_boss_putrid_aura"
+        "AbilityTextureName" "undying_flesh_golem"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+        "MaxLevel" "5"
+
+		"precache"
+		{
+			"particle" "particles/units/heroes/hero_undying/undying_fg_aura.vpcf"
+		}
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportBonus"	"5"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"radius" "600"
+			"slow" "-30 -35 -40 -45 -50"
+			"damage_amp" "20 25 30 35 40"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+
+	"zombie_boss_raise_dead"
+	{
+		"BaseClass" "ability_lua"
+        "ScriptFile" "heroes/bosses/zombie/zombie_boss_raise_dead"
+        "AbilityTextureName" "undying_tombstone"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+        "MaxLevel" "5"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportBonus"	"5"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"death_heal_pct" "5 6 7 8 9"
+			"lifetime" "10"
+			"spawn_interval" "0.5"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+
+	"zombie_boss_decay"
+	{
+		"BaseClass" "ability_lua"
+        "ScriptFile" "heroes/bosses/zombie/zombie_boss_decay"
+        "AbilityTextureName" "undying_decay"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+        "MaxLevel" "5"
+
+		"AbilityCooldown" "3"
+
+		"precache"
+		{
+			"soundfile" "soundevents/game_sounds_heroes/game_sounds_undying.vsndevts"
+			"particle" "particles/units/heroes/hero_undying/undying_decay_strength_buff.vpcf"
+			"particle" "particles/units/heroes/hero_undying/undying_decay.vpcf"
+		}
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportBonus"	"5"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"radius" "325"
+			"strength_steal" "-2 -4 -6 -8 -10"
+			"duration" "60"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+}

@@ -1,0 +1,133 @@
+"DOTAAbilities"
+{
+	"sai_rage_of_pain"
+	{
+		"BaseClass"             		"ability_lua"
+		"AbilityTextureName"			"arena/sai_rage_of_pain"
+		"ScriptFile"					"heroes/hero_sai/rage_of_pain"
+		"MaxLevel" 						"7"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"LevelsBetweenUpgrades"			"2"
+		"AbilityValues"
+		{
+				"health_per_stack_pct"			"20"
+
+				"damage_per_stack_pct"			"1 1.1 1.2 1.3 1.4 1.5 2"
+
+				"crit_chance_pct"		"10"
+
+				"crit_chance_per_stack_pct"		"0.5"
+
+				"crit_mult_pre_stack_pct"		"1 2 3 4 5 6 7"
+
+				"mana_for_bonus_damage"	"30000"
+		}
+	}
+
+	"sai_divine_flesh"
+	{
+		"BaseClass"             		"ability_lua"
+		"AbilityTextureName"			"arena/sai_divine_flesh"
+		"ScriptFile"					"heroes/hero_sai/divine_flesh"
+		"MaxLevel" 						"7"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+		"AbilityCastPoint"				"0.3"
+		"AbilityCooldown"				"4.0"
+		"AbilityValues"
+		{
+
+				"health_regeneration_pct"	"0.2 0.4 0.6 0.8 1.0 1.2 1.4"
+
+				"active_self_damage_pct"	"0.8 1.2 1.6 2.0 2.6 3.2 4.0"
+
+				"active_bonus_armor"	"5 10 15 20 25 30 35"
+
+				"active_magic_resistance_pct"	"16 20 24 28 32 36 40"
+
+				"think_interval"		"0.1"
+		}
+
+		"precache"
+		{
+			"particle"		"particles/arena/units/heroes/hero_sai/divine_flesh.vpcf"
+		}
+	}
+
+	"sai_invulnerability"
+	{
+		"BaseClass"             		"ability_lua"
+		"AbilityTextureName"			"arena/sai_invulnerability"
+		"ScriptFile"					"heroes/hero_sai/invulnerability"
+		"MaxLevel" 						"7"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE"
+		"AbilityCooldown"				"5.0"
+
+		"AbilityValues"
+		{
+
+				"outgoing_damage_reduction_pct"	"-50"
+
+				"incoming_damage_reduction_pct"	"-8 -15 -22 -29 -36 -43 -50"
+
+				"divine_flesh_regen_mult"	"1.4 1.5 1.6 1.7 1.8 1.9 2.0"
+
+				"mana_per_second"		"10 30 50 70 90 110 130"
+
+				"attack_speed_reduction"	"-280"
+
+				"movement_speed_reduction_pct"	"-25"
+
+				"think_interval"		"0.1"
+
+				"mana_per_second_pct"	"6"
+		}
+
+		"precache"
+		{
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_medusa.vsndevts"
+			"particle"	"particles/arena/units/heroes/hero_sai/invulnerability.vpcf"
+		}
+	}
+
+	"sai_release_of_forge"
+	{
+		"BaseClass"             		"ability_lua"
+		"AbilityTextureName"			"arena/sai_release_of_forge"
+		"ScriptFile"					"heroes/hero_sai/release_of_forge"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitTargetTeam" 		"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType" 		"DOTA_UNIT_TARGET_HERO"
+		"AbilityUnitTargetFlags" 		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+		"AbilityCooldown"				"120"
+		"MaxLevel" 						"7"
+		"AbilityManaCost"				"100 150 200 250 300 350 400"
+		"HasScepterUpgrade"				"1"
+
+		"AbilityValues"
+		{
+
+				"duration"				"6"
+				"pure_damage_pct"		"1 2 3 4 5 6 7"
+				"aura_movement_speed_pct"	"25"
+
+				"aura_vision_pct"		"-50"
+
+				"aura_cast_time_pct"	"-75"
+
+				"aura_turn_rate_pct"	"-75"
+
+				"bonus_respawn_time_pct"	"30 35 40 45 50 55 60"
+
+				"chance_to_live"		"20"
+		}
+
+		"precache"
+		{
+			"model"			"models/items/invoker/forge_spirit/sempiternal_revelations_forged_spirits/sempiternal_revelations_forged_spirits.vmdl"
+			"particle"  	"particles/econ/items/invoker/glorious_inspiration/invoker_forge_spirit_ambient_esl_fire.vpcf"
+			"soundfile"		"soundevents/game_sounds_heroes/game_sounds_spectre.vsndevts"
+		}
+	}
+}

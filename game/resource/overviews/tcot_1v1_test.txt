@@ -1,0 +1,8 @@
+tcot_1v1_test
+{
+	material materials/overviews/tcot_1v1_test.vmat
+	pos_x -6144
+	pos_y 6144
+	scale 12.000
+}
+

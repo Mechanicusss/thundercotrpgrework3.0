@@ -1,0 +1,73 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vpcf54:version{326b1595-45e8-4004-aa5a-3e08655ff51f} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_nBehaviorVersion = 12
+	m_nMaxParticles = 0
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_entityName = "self"
+				},
+				{
+					m_iControlPoint = 3
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_entityName = "self"
+				},
+				{
+					m_iControlPoint = 4
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_entityName = "self"
+				},
+				{
+					m_iControlPoint = 1
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_entityName = "self"
+				},
+			]
+		},
+	]
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/spectre/spectre_arcana/spectre_arcana_minigame__2death_decal_dark.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/spectre/spectre_arcana/spectre_arcana_minigame__2toast_beam_vertical.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/spectre/spectre_arcana/spectre_arcana_minigame__2death_burst_dust.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/spectre/spectre_arcana/spectre_arcana_minigame__2death_smoke.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/spectre/spectre_arcana/spectre_arcana_minigame__2death_overshoot.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/spectre/spectre_arcana/spectre_arcana_minigame__2death_dagger_model.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/spectre/spectre_arcana/spectre_arcana_minigame__2death_wispy.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/spectre/spectre_arcana/spectre_arcana_minigame__2death_dander.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/spectre/spectre_arcana/spectre_arcana_minigame__2death_burst.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/spectre/spectre_arcana/spectre_arcana_minigame__2death_flare.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/spectre/spectre_arcana/spectre_arcana_minigame__2death_decal.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/spectre/spectre_arcana/spectre_arcana_minigame__2death_runes_ground.vpcf"
+		},
+	]
+}

@@ -1,0 +1,858 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc31:version{165d48dd-8adc-4f1d-abf7-4992e04ad577} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "MaterialGroupList"
+				children = 
+				[
+					{
+						_class = "DefaultMaterialGroup"
+						remaps = 
+						[
+							{
+								from = "anakim_t00.vmat"
+								to = "materials/models/units/anakim/anakim_00.vmat"
+							},
+							{
+								from = "anakim_t01.vmat"
+								to = "materials/models/units/anakim/anakim_01.vmat"
+							},
+						]
+						use_global_default = false
+						global_default_material = ""
+					},
+				]
+			},
+			{
+				_class = "AttachmentList"
+				children = 
+				[
+					{
+						_class = "Attachment"
+						name = "attach_head"
+						parent_bone = "Bip01_head"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_hitloc"
+						parent_bone = "bip01_spine2"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_attack1"
+						parent_bone = "Bip01_R_Hand"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_spirit1"
+						parent_bone = "Dummy12"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_spirit2"
+						parent_bone = "Dummy13"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_spirit3"
+						parent_bone = "Dummy14"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_spirit4"
+						parent_bone = "Dummy15"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_spirit5"
+						parent_bone = "Dummy16"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_spirit6"
+						parent_bone = "Dummy17"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_spirit7"
+						parent_bone = "Dummy18"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_spirit8"
+						parent_bone = "Dummy19"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+				]
+			},
+			{
+				_class = "HitboxSetList"
+				children = 
+				[
+					{
+						_class = "HitboxSet"
+						name = "default"
+						children = 
+						[
+							{
+								_class = "Hitbox"
+								parent_bone = "Bip01_Pelvis"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -8.937912, -7.549944, -11.724781 ]
+								hitbox_maxs = [ 12.620773, 6.848635, 11.72419 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bip01_Spine"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -7.026581, -11.269882, -11.724415 ]
+								hitbox_maxs = [ 30.322708, 6.322962, 11.724556 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bip01_Spine1"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -5.05217, -10.239264, -10.535596 ]
+								hitbox_maxs = [ 24.69725, 7.141898, 10.535211 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "bip01_spine2"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -13.248138, -7.934261, -14.06216 ]
+								hitbox_maxs = [ 27.517685, 8.227207, 14.062771 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bip01_Neck"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -0.548294, -4.355663, -5.022226 ]
+								hitbox_maxs = [ 8.437119, 3.426027, 4.866186 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bip01_R_Clavicle"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ 0.25771, -6.400196, -3.128937 ]
+								hitbox_maxs = [ 13.515751, 3.809162, 7.559555 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bip01_L_Thigh"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -4.627792, -10.032961, -11.271526 ]
+								hitbox_maxs = [ 44.391464, 8.972748, 8.891872 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bip01_R_Thigh"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -4.627808, -10.033724, -8.891668 ]
+								hitbox_maxs = [ 44.391434, 8.973391, 11.272749 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bip01_L_Clavicle"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ 0.257355, -6.400242, -7.559692 ]
+								hitbox_maxs = [ 13.516212, 3.809357, 3.128677 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bip01_R_UpperArm"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -4.937302, -8.331688, -3.228691 ]
+								hitbox_maxs = [ 24.679092, 2.871215, 4.29792 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bip01_L_Calf"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -6.084099, -7.238248, -6.936014 ]
+								hitbox_maxs = [ 51.880142, 8.74187, 5.294306 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bip01_R_Calf"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -6.084152, -7.238288, -5.294003 ]
+								hitbox_maxs = [ 55.354012, 8.741858, 6.936474 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone04"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -17.024948, -14.474747, -22.580299 ]
+								hitbox_maxs = [ 53.770493, 15.970787, 22.580292 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bip01_L_UpperArm"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -4.937317, -8.331787, -4.298294 ]
+								hitbox_maxs = [ 24.678925, 2.871548, 3.230133 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bip01_R_Forearm"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -5.370533, -9.036573, -8.704132 ]
+								hitbox_maxs = [ 125.681168, 7.309733, 7.00692 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bip01_L_Foot"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -5.769234, -9.742542, -5.158466 ]
+								hitbox_maxs = [ 9.524422, 13.863758, 4.545303 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bip01_R_Foot"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -5.769211, -9.74255, -4.544948 ]
+								hitbox_maxs = [ 9.524448, 13.863758, 5.158826 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone02"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -4.83461, -9.907722, -33.114975 ]
+								hitbox_maxs = [ 166.675674, 9.967571, 33.114822 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone09"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -12.112015, -37.663727, -6.655754 ]
+								hitbox_maxs = [ 156.635269, 12.638336, 6.55912 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone07"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -13.265411, -41.136246, -7.275421 ]
+								hitbox_maxs = [ 172.766754, 13.913849, 7.385574 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone05"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -14.655991, -46.030823, -7.856865 ]
+								hitbox_maxs = [ 186.280807, 14.740479, 7.88039 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone19"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -14.655945, -46.030792, -7.880409 ]
+								hitbox_maxs = [ 186.280869, 14.740463, 7.856857 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone20"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -13.265381, -41.136246, -7.385582 ]
+								hitbox_maxs = [ 172.766815, 13.913849, 7.275406 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone21"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -12.11203, -37.663692, -6.559128 ]
+								hitbox_maxs = [ 156.635254, 12.638382, 6.655754 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bip01_head"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -6.081146, -10.253708, -7.79526 ]
+								hitbox_maxs = [ 16.93132, 10.001492, 7.795264 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bip01_L_Forearm"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -5.36282, -9.041817, -7.046394 ]
+								hitbox_maxs = [ 125.688721, 7.31391, 8.673721 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bip01_R_Hand"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -2.0, -2.0, -2.0 ]
+								hitbox_maxs = [ 2.0, 2.0, 2.0 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bip01_L_Toe0"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -0.945988, -0.113213, -3.597265 ]
+								hitbox_maxs = [ 6.727489, 3.708748, 3.27171 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bip01_R_Toe0"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -0.945988, -0.113216, -3.271333 ]
+								hitbox_maxs = [ 6.727489, 3.708738, 3.597645 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Dummy14"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -2.0, -2.0, -2.0 ]
+								hitbox_maxs = [ 2.0, 2.0, 2.0 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Dummy15"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -2.0, -2.0, -2.0 ]
+								hitbox_maxs = [ 2.0, 2.0, 2.0 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Dummy13"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -2.0, -2.0, -2.0 ]
+								hitbox_maxs = [ 2.0, 2.0, 2.0 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Dummy12"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -2.0, -2.0, -2.0 ]
+								hitbox_maxs = [ 2.0, 2.0, 2.0 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Dummy19"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -2.0, -2.0, -2.0 ]
+								hitbox_maxs = [ 2.0, 2.0, 2.0 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Dummy18"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -2.0, -2.0, -2.0 ]
+								hitbox_maxs = [ 2.0, 2.0, 2.0 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Dummy17"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -2.0, -2.0, -2.0 ]
+								hitbox_maxs = [ 2.0, 2.0, 2.0 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Dummy16"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -2.0, -2.0, -2.0 ]
+								hitbox_maxs = [ 2.0, 2.0, 2.0 ]
+							},
+						]
+					},
+				]
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						name = "anakim"
+						filename = "models/units/anakim/anakim.fbx"
+						import_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+				]
+			},
+			{
+				_class = "AnimationList"
+				children = 
+				[
+					{
+						_class = "AnimFile"
+						name = "atk01"
+						activity_name = "ACT_DOTA_ATTACK"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/units/anakim/anim/atk01.FBX"
+						import_bone_scales = false
+						start_frame = 12
+						end_frame = 55
+						framerate = 45.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "atk02"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/units/anakim/anim/atk02.FBX"
+						import_bone_scales = false
+						start_frame = 0
+						end_frame = 55
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "atk03"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/units/anakim/anim/atk03.FBX"
+						import_bone_scales = false
+						start_frame = 0
+						end_frame = 55
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "atkwait"
+						children = 
+						[
+							{
+								_class = "AnimSmoothLoop"
+								frames_from_start = 30
+								frames_from_end = 30
+							},
+						]
+						activity_name = "ACT_DOTA_IDLE"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/units/anakim/anim/atkwait.FBX"
+						import_bone_scales = false
+						start_frame = 0
+						end_frame = 55
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "death"
+						children = 
+						[
+							{
+								_class = "ExtractMotion"
+								extract_tx = true
+								extract_ty = true
+								extract_tz = false
+								extract_rz = false
+								linear = false
+								quadratic = false
+								root_bone_name = ""
+								motion_type = "Single"
+							},
+						]
+						activity_name = "ACT_DOTA_DIE"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/units/anakim/anim/death.FBX"
+						import_bone_scales = false
+						start_frame = 0
+						end_frame = 55
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "deathwait"
+						children = 
+						[
+							{
+								_class = "ExtractMotion"
+								extract_tx = true
+								extract_ty = true
+								extract_tz = false
+								extract_rz = false
+								linear = false
+								quadratic = false
+								root_bone_name = ""
+								motion_type = "Single"
+							},
+						]
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/units/anakim/anim/deathwait.FBX"
+						import_bone_scales = false
+						start_frame = 0
+						end_frame = 55
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "run"
+						children = 
+						[
+							{
+								_class = "AnimSmoothLoop"
+								frames_from_start = 4
+								frames_from_end = 4
+							},
+							{
+								_class = "ExtractMotion"
+								extract_tx = true
+								extract_ty = true
+								extract_tz = false
+								extract_rz = false
+								linear = false
+								quadratic = false
+								root_bone_name = ""
+								motion_type = "Single"
+							},
+						]
+						activity_name = "ACT_DOTA_RUN"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/units/anakim/anim/run.FBX"
+						import_bone_scales = false
+						start_frame = 0
+						end_frame = 55
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "spatk01"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/units/anakim/anim/spatk01.FBX"
+						import_bone_scales = false
+						start_frame = 0
+						end_frame = 55
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "spwait01"
+						activity_name = "ACT_DOTA_SPAWN"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/units/anakim/anim/spwait01.FBX"
+						import_bone_scales = false
+						start_frame = 0
+						end_frame = 55
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Wait"
+						children = 
+						[
+							{
+								_class = "AnimSmoothLoop"
+								frames_from_start = 5
+								frames_from_end = 5
+							},
+						]
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/units/anakim/anim/Wait.FBX"
+						import_bone_scales = false
+						start_frame = 0
+						end_frame = 55
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Walk"
+						children = 
+						[
+							{
+								_class = "ExtractMotion"
+								extract_tx = true
+								extract_ty = true
+								extract_tz = false
+								extract_rz = false
+								linear = false
+								quadratic = false
+								root_bone_name = ""
+								motion_type = "Single"
+							},
+						]
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/units/anakim/anim/Walk.FBX"
+						import_bone_scales = false
+						start_frame = 0
+						end_frame = 55
+						framerate = 30.0
+						reverse = false
+					},
+				]
+				default_root_bone_name = ""
+			},
+		]
+		model_archetype = ""
+		primary_associated_entity = ""
+		anim_graph_name = ""
+		importer_notes = """
+Imported from VMDL
+==Warnings==
+Changed incompatible hitbox parent bone name 'Bip01 Pelvis' to 'Bip01_Pelvis'
+Changed incompatible hitbox parent bone name 'Bip01 Spine' to 'Bip01_Spine'
+Changed incompatible hitbox parent bone name 'Bip01 Spine1' to 'Bip01_Spine1'
+Changed incompatible hitbox parent bone name 'bip01 spine2' to 'bip01_spine2'
+Changed incompatible hitbox parent bone name 'Bip01 Neck' to 'Bip01_Neck'
+Changed incompatible hitbox parent bone name 'Bip01 R Clavicle' to 'Bip01_R_Clavicle'
+Changed incompatible hitbox parent bone name 'Bip01 L Thigh' to 'Bip01_L_Thigh'
+Changed incompatible hitbox parent bone name 'Bip01 R Thigh' to 'Bip01_R_Thigh'
+Changed incompatible hitbox parent bone name 'Bip01 L Clavicle' to 'Bip01_L_Clavicle'
+Changed incompatible hitbox parent bone name 'Bip01 R UpperArm' to 'Bip01_R_UpperArm'
+Changed incompatible hitbox parent bone name 'Bip01 L Calf' to 'Bip01_L_Calf'
+Changed incompatible hitbox parent bone name 'Bip01 R Calf' to 'Bip01_R_Calf'
+Changed incompatible hitbox parent bone name 'Bip01 L UpperArm' to 'Bip01_L_UpperArm'
+Changed incompatible hitbox parent bone name 'Bip01 R Forearm' to 'Bip01_R_Forearm'
+Changed incompatible hitbox parent bone name 'Bip01 L Foot' to 'Bip01_L_Foot'
+Changed incompatible hitbox parent bone name 'Bip01 R Foot' to 'Bip01_R_Foot'
+Changed incompatible hitbox parent bone name 'Bip01 head' to 'Bip01_head'
+Changed incompatible hitbox parent bone name 'Bip01 L Forearm' to 'Bip01_L_Forearm'
+Changed incompatible hitbox parent bone name 'Bip01 R Hand' to 'Bip01_R_Hand'
+Changed incompatible hitbox parent bone name 'Bip01 L Toe0' to 'Bip01_L_Toe0'
+Changed incompatible hitbox parent bone name 'Bip01 R Toe0' to 'Bip01_R_Toe0'
+Changed incompatible bone name 'Bip01 head' to 'Bip01_head'
+Changed incompatible bone name 'bip01 spine2' to 'bip01_spine2'
+Changed incompatible bone name 'Bip01 R Hand' to 'Bip01_R_Hand'
+
+"""
+	}
+}

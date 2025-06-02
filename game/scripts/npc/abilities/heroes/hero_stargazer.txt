@@ -1,0 +1,195 @@
+"DOTAAbilities"
+{
+	"stargazer_celestial_selection"
+    {
+        "BaseClass" "ability_lua"
+        "AbilityTextureName"                            "arena/stargazer_cosmic_countdown"
+        "ScriptFile" "heroes/hero_stargazer/celestial_selection"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityType"         "DOTA_ABILITY_TYPE_ULTIMATE"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
+        "MaxLevel" "2"
+        "HasScepterUpgrade" "1"
+        "LevelsBetweenUpgrades" "294"
+        "AbilityCooldown" "30 0"
+        "AbilityValues"
+        {
+            "str_gain"              "50 5000"
+            "agi_gain"              "50 5000"
+            "int_gain"              "50 5000"
+            "chance"                "100"
+            "RequiresScepter"       "1"
+        }
+
+    }
+
+	"stargazer_gamma_ray"
+	{
+		"BaseClass"						"ability_datadriven"
+		"AbilityTextureName"			"arena/stargazer_gamma_ray"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"AbilityCastRange"				"500"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+		"AbilityManaCost"				"0"
+		"AbilityCastPoint"				"0.15"
+		"MaxLevel"						"10"
+		
+		"AbilityUnitDamageSubType"	"DAMAGE_SUBTYPE_ENERGY"
+
+		"AbilityValues"
+		{
+				"base_damage"		"80 140 200 260 320 380 440 500 560 620"
+				"int_to_dmg_pct"	"100"
+				"magic_res"		"-50"
+				"duration"		"7"
+				"base_radius"		"150 175 200 225 250 275 300 325 350 375"
+				"int_to_radius_pct"	"100"
+				"max_damage"		"30000"
+				"max_radius"		"800"
+				"chance"		"38"
+				"debuff_chance" "100"
+		}
+
+		"precache"
+		{
+			"particle"  "particles/arena/units/heroes/hero_stargazer/gamma_ray_immortal1.vpcf"
+		}
+
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"heroes/hero_stargazer/gamma_ray"
+				"Function"		"OnSpellStart"
+				"Target"		"POINT"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_gamma_ray_passive"
+            {
+                "Passive"           "1"
+                "IsHidden"          "1"
+
+                "OnAttack"
+                {
+                    "RunScript"
+                    {
+                        "ScriptFile"    "heroes/hero_stargazer/gamma_ray"
+                        "Function"      "OnAttack"
+                    }
+                }
+            }
+		}
+	}
+
+	"stargazer_warp"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile" "heroes/hero_stargazer/warp"
+		"AbilityTextureName"			"arena/stargazer_warp"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityCooldown"				"0"
+		"AbilityManaCost"				"0"
+		"AbilityCastPoint"				"0.6 0.5 0.4 0.3 0.2 0.1 0"
+		"MaxLevel"						"10"
+		"HasShardUpgrade" "1"
+
+		"precache"
+		{
+			"particle"  "particles/units/heroes/hero_pugna/pugna_ward_attack.vpcf"
+			"soundfile" "soundevents/game_sounds_heroes/game_sounds_pugna.vsndevts"
+		}
+
+		"AbilityValues"
+		{
+				"crit_chance"			"24"
+				"crit_mult"			"0.05"
+				"crit_dmg_max"			"2000"
+				"crit_dmg_min"			"200 225 250 275 300 325 350 375 400 425"
+				"cooldown"			"1.5"
+				"RequiresShard" "1"
+		}
+
+		"OnSpellStart"
+		{
+			"FireSound"
+			{
+				"EffectName"	"Hero_Pugna.NetherWard.Attack"
+				"Target" 		"CASTER"
+			}
+
+			"RunScript"
+			{
+				"ScriptFile"	"heroes/hero_stargazer/warp"
+				"Function"		"OnSpellStart"
+				"Target"		"POINT"
+			}
+		}
+	}
+
+	"stargazer_inverse_field"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_lua"
+		"ScriptFile" "heroes/hero_stargazer/inverse_field"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+		"AbilityTextureName"			"arena/stargazer_inverse_field"
+		"MaxLevel"						"10"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"base_reflection" 			"1.0 1.25 1.75 2.0 2.25 2.50 2.75 3.0 3.25 3.50"
+				"str_to_reflection_pct"		"0.2"
+		}
+
+		"precache"
+		{
+			"particle"	"particles/units/heroes/hero_centaur/centaur_return.vpcf"
+		}
+	}
+
+	"stargazer_cosmic_countdown"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityCooldown"				"60"
+		"AbilityTextureName"			"arena/stargazer_cosmic_countdown"
+		"MaxLevel"						"4"
+		"LevelsBetweenUpgrades"         "25"
+
+		"AbilityValues"
+		{
+				"stats_per_cycle"		"10"
+				"stats_per_cycle_increase_per_min"		"5 9 11 14"
+		}
+
+		"Modifiers"
+		{
+			"modifier_stargazer_cosmic_countdown"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+
+				"ThinkInterval"  "0.1"
+				"OnIntervalThink"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"heroes/hero_stargazer/cosmic_countdown"
+						"Function"		"CheckAbility"
+					}
+				}
+			}
+		}
+	}
+}

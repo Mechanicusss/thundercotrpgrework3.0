@@ -1,0 +1,5 @@
+"root"
+{
+    "talent_faceless_void_1" "1"
+    "talent_faceless_void_2" "1"
+}

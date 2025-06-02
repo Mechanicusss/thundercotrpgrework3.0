@@ -1,0 +1,28 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{aafc65d8-7a5a-4e01-bd8d-3ac118422503} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 2
+	m_nGroupID = 3
+	m_flMaxDrawDistance = 2000.000000
+	m_bShouldSort = false
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/arena/units/bosses/freya/sharp_ice_shards_cast_warp.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/arena/units/bosses/freya/sharp_ice_shards_cast_b.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/arena/units/bosses/freya/sharp_ice_shards_cast_quills.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/arena/units/bosses/freya/sharp_ice_shards_cast_ring.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/arena/units/bosses/freya/sharp_ice_shards_cast_ring_dust.vpcf"
+		},
+	]
+	m_nBehaviorVersion = 9
+}

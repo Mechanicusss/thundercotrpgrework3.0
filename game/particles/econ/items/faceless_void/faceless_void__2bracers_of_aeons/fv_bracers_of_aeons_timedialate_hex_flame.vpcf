@@ -1,0 +1,236 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vpcf57:version{4f75132e-4f5d-493c-958e-3bb4328089ba} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_flConstantRadius = 16.0
+	m_Operators = 
+	[
+		{
+			_class = "C_OP_Decay"
+		},
+		{
+			_class = "C_OP_SnapshotRigidSkinToBones"
+			m_nControlPointNumber = 6
+		},
+		{
+			_class = "C_OP_FadeInSimple"
+		},
+		{
+			_class = "C_OP_BasicMovement"
+		},
+		{
+			_class = "C_OP_FadeOut"
+			m_flFadeOutTimeMin = 0.65
+			m_flFadeOutTimeMax = 0.85
+		},
+	]
+	m_Renderers = 
+	[
+		{
+			_class = "C_OP_RenderTrails"
+			m_flOverbrightFactor = 6.0
+			m_flMinLength = 500.0
+			m_flForwardShift = 0.9
+			m_flAnimationRate = -25.0
+			m_bAnimateInFPS = true
+			m_flMaxLength = 1000.0
+			m_nAnimationType = "ANIMATION_TYPE_FIT_LIFETIME"
+			m_flRadiusTaper = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 1.0
+			}
+			m_flRadiusScale = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 1.0
+			}
+			m_vecTailColorScale = 
+			{
+				m_nType = "PVEC_TYPE_LITERAL"
+				m_vLiteralValue = [ 0.0, 0.0, 0.5 ]
+			}
+			m_flTailAlphaScale = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 1.0
+			}
+			m_vecTexturesInput = 
+			[
+				{
+					m_hTexture = resource:"materials/particle/smoke/steam/steam.vtex"
+				},
+			]
+			m_nOutputBlendMode = "PARTICLE_OUTPUT_BLEND_MODE_ADD"
+			m_nFogType = "PARTICLE_FOG_GAME_DEFAULT"
+		},
+	]
+	m_Initializers = 
+	[
+		{
+			m_bDisableOperator = false
+			m_nOpEndCapState = "PARTICLE_ENDCAP_ALWAYS_ON"
+			m_flOpStartFadeInTime = 0.0
+			m_flOpEndFadeInTime = 0.0
+			m_flOpStartFadeOutTime = 0.0
+			m_flOpEndFadeOutTime = 0.0
+			m_flOpFadeOscillatePeriod = 0.0
+			m_bNormalizeToStopTime = false
+			m_flOpTimeOffsetMin = 0.0
+			m_flOpTimeOffsetMax = 0.0
+			m_nOpTimeOffsetSeed = 0
+			m_nOpTimeScaleSeed = 0
+			m_flOpTimeScaleMin = 1.0
+			m_flOpTimeScaleMax = 1.0
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 0.5
+				m_flRandomMax = 0.65
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+			m_nOutputField = 1
+		},
+		{
+			_class = "C_INIT_InitSkinnedPositionFromCPSnapshot"
+			m_nSnapshotControlPointNumber = 8
+			m_nControlPointNumber = 6
+			m_bRigid = true
+			m_bIgnoreDt = true
+			m_flMinNormalVelocity = -5000.0
+			m_flMaxNormalVelocity = -5000.0
+		},
+		{
+			m_bDisableOperator = false
+			m_nOpEndCapState = "PARTICLE_ENDCAP_ALWAYS_ON"
+			m_flOpStartFadeInTime = 0.0
+			m_flOpEndFadeInTime = 0.0
+			m_flOpStartFadeOutTime = 0.0
+			m_flOpEndFadeOutTime = 0.0
+			m_flOpFadeOscillatePeriod = 0.0
+			m_bNormalizeToStopTime = false
+			m_flOpTimeOffsetMin = 0.0
+			m_flOpTimeOffsetMax = 0.0
+			m_nOpTimeOffsetSeed = 0
+			m_nOpTimeScaleSeed = 0
+			m_flOpTimeScaleMin = 1.0
+			m_flOpTimeScaleMax = 1.0
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 80.0
+				m_flRandomMax = 24.0
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+			m_nOutputField = 3
+		},
+		{
+			_class = "C_INIT_RandomColor"
+			m_ColorMin = [ 87, 152, 255, 255 ]
+			m_ColorMax = [ 103, 129, 255, 255 ]
+		},
+		{
+			_class = "C_INIT_RandomSequence"
+			m_nSequenceMax = 1
+		},
+		{
+			m_bDisableOperator = true
+			m_nOpEndCapState = "PARTICLE_ENDCAP_ALWAYS_ON"
+			m_flOpStartFadeInTime = 0.0
+			m_flOpEndFadeInTime = 0.0
+			m_flOpStartFadeOutTime = 0.0
+			m_flOpEndFadeOutTime = 0.0
+			m_flOpFadeOscillatePeriod = 0.0
+			m_bNormalizeToStopTime = false
+			m_flOpTimeOffsetMin = 0.0
+			m_flOpTimeOffsetMax = 0.0
+			m_nOpTimeOffsetSeed = 0
+			m_nOpTimeScaleSeed = 0
+			m_flOpTimeScaleMin = 1.0
+			m_flOpTimeScaleMax = 1.0
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 0.501961
+				m_flRandomMax = 0.784314
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+			m_nOutputField = 7
+		},
+		{
+			_class = "C_INIT_RandomYawFlip"
+		},
+	]
+	m_Emitters = 
+	[
+		{
+			_class = "C_OP_InstantaneousEmitter"
+			m_flStartTime = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 0.0
+			}
+			m_nParticlesToEmit = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 128.0
+			}
+		},
+	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = [ 0.0, 0.0, 0.0 ]
+					m_angOffset = [ null, null, null ]
+					m_entityName = "self"
+				},
+				{
+					m_iControlPoint = 5
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = [ 0.0, 0.0, 0.0 ]
+					m_angOffset = [ null, null, null ]
+					m_entityName = "self"
+				},
+			]
+		},
+	]
+	m_nSnapshotControlPoint = 8
+	m_hSnapshot = "particles/models/items/faceless_void/bracers_of_aeons/bracers_of_aeons_hex_fx.vsnap"
+	m_ForceGenerators = 
+	[
+		{
+			_class = "C_OP_AttractToControlPoint"
+			m_fForceAmount = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 5000.0
+			}
+			m_fFalloffPower = 0.0
+			m_fForceAmountMin = null
+			m_bApplyMinForce = false
+			m_TransformInput = 
+			{
+				m_nType = "PT_TYPE_CONTROL_POINT"
+				m_nControlPoint = 0
+				m_bUseOrientation = false
+			}
+		},
+	]
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/faceless_void/faceless_void__2bracers_of_aeons/fv_bracers_of_aeons_timedialate_hex_embers.vpcf"
+		},
+	]
+	m_nMaxParticles = 128
+	m_PreEmissionOperators = [  ]
+	m_nBehaviorVersion = 4
+	m_nFirstMultipleOverride_BackwardCompat = 6
+}

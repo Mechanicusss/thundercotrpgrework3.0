@@ -1,0 +1,391 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+  TCOTRPG.Aghanim.Greetings.Intro =
+  {
+    type = "dota_src1_2d"
+    vsnd_files = 
+    [
+      "sounds/misc/aghanim/agh_intro_player_return_follow_up_04.vsnd",
+    ]
+    volume = "4.000000"
+    pitch = "1.000000"
+    event_type = "0"
+    memory_type = "0"
+  }
+
+  TCOTRPG.Waves.Music.BGM =
+  {
+    type = "dota_src1_2d"
+    vsnd_files = 
+    [
+      "sounds/eternal_torment_bgm.vsnd",
+    ]
+    volume = "1.000000"
+    pitch = "1.000000"
+    event_type = "0"
+    memory_type = "0"
+  }
+
+  TCOTRPG.Buffs.Select = 
+  {
+    type = "dota_src1_2d"
+    vsnd_files = 
+    [
+      "sounds/ui/menu/pick_select.vsnd",
+    ]
+    volume = "1.000000"
+    pitch = "1.000000"
+    event_type = "0"
+    memory_type = "0"
+  }
+
+  TCOTRPG.Buffs.Open = 
+  {
+    type = "dota_src1_2d"
+    vsnd_files = 
+    [
+      "sounds/music/jlin_01/stingers/radiant_win.vsnd",
+    ]
+    volume = "3.000000"
+    pitch = "1.000000"
+    event_type = "0"
+    memory_type = "0"
+  }
+
+  TCOTRPG.Gate.Destroy = 
+  {
+    type = "dota_src1_2d"
+    vsnd_files = 
+    [
+      "sounds/ambient/tut_gate_metal_open01.vsnd",
+    ]
+    volume = "1.000000"
+    pitch = "1.000000"
+    event_type = "0"
+    memory_type = "0"
+  }
+
+    TCOTRPG.Chicken.Cuckle = 
+  {
+    type = "dota_src1_2d"
+    vsnd_files = 
+    [
+      "sounds/misc/soundboard/chicken.vsnd",
+    ]
+    volume = "3.000000"
+    pitch = "1.000000"
+    event_type = "0"
+    memory_type = "0"
+  }
+  TCOTRPG.Waves.Music.EndScreen = 
+  {
+    type = "dota_src1_2d"
+    vsnd_files = 
+    [
+      "sounds/music/valve_ti9/stingers/radiant_lose.vsnd",
+    ]
+    volume = "3.000000"
+    pitch = "1.000000"
+    event_type = "0"
+    memory_type = "0"
+  }
+
+  TCOTRPG.Waves.Music.Intro = 
+  {
+    type = "dota_src1_2d"
+    vsnd_files = "sounds/music/valve_ti8/music/roshan.vsnd"
+    volume = "2.000000"
+    start_point = "0.702000"
+    end_point = "40.680000"
+    syncpoints = 
+    [
+      "7.010000",
+      "14.020000",
+      "21.030001",
+      "28.040001",
+      "35.049999",
+    ]
+  }
+
+  TCOTRPG.Waves.Music.Boss1 = 
+  {
+    type = "dota_src1_2d"
+    vsnd_files = "sounds/music/valve_ti8/music/battle_01.vsnd"
+    volume = "2.000000"
+    start_point = "1.437000"
+    end_point = "43.845001"
+    syncpoints = 
+    [
+      "5.647000",
+      "11.294000",
+      "16.941000",
+      "22.587999",
+      "28.235001",
+      "33.882000",
+      "39.528999",
+    ]
+    restart_time = "42.408001"
+  }
+
+  TCOTRPG.Waves.Music.Boss2 = 
+  {
+    type = "dota_src1_2d"
+    vsnd_files = "sounds/music/valve_ti8/music/battle_03.vsnd"
+    volume = "2.000000"
+    start_point = "2.000000"
+    end_point = "42.000000"
+    syncpoints = 
+    [
+      "10.000000",
+      "14.000000",
+      "18.000000",
+      "22.000000",
+      "26.000000",
+      "30.000000",
+      "34.000000",
+      "38.000000",
+    ]
+    restart_time = "40.000000"
+  }
+
+  TCOTRPG.Waves.Warning.Tick = 
+  {
+    type = "dota_ui_limit_time"
+    pitch = 1.000000
+    volume = 3.000000
+    block_time = 1.300000
+    block_name = "Conquest.capture_point_timer"
+    vsnd_files = "sounds/addons/conquest/capture_point_timer_hallow.vsnd"
+    vsnd_duration = 1.248005
+  }
+  
+  TCOTRPG.Waves.Warning.EnemyCount = 
+  {
+    type = "dota_src1_2d"
+    volume = 3.000000
+    mixgroup = "Stingers"
+    vsnd_files = 
+    [
+      "sounds/ui/stingers/enc/diretide_award.vsnd",
+    ]
+    vsnd_duration = 2.664063
+  }
+
+  TCOTRPG.Waves.Modifier.New = 
+  {
+    type = "dota_src1_3d"
+    pitch = 1.000000
+    volume = 3.000000
+    vsnd_files = "sounds/ui/menu/match_open.vsnd"
+    vsnd_duration = 2.381428
+  }
+
+  TCOTRPG.Waves.Aghanim.CheckOutThisGuy = 
+  {
+    type = "dota_src1_2d"
+    volume = 4.000000
+    pitch = 1.000000
+    limiter_on = 1.000000
+    vsnd_files = "sounds/misc/aghanim/agh_event_room_intro_03.vsnd"
+    vsnd_duration = 3.029546
+  }
+  TCOTRPG.Waves.Aghanim.CheckOutTheHustle = 
+  {
+    type = "dota_src1_2d"
+    volume = 4.000000
+    pitch = 1.000000
+    limiter_on = 1.000000
+    vsnd_files = "sounds/misc/aghanim/agh_event_room_intro_08.vsnd"
+    vsnd_duration = 3.673197
+  }
+  TCOTRPG.Waves.Aghanim.SmallBusinessOwner = 
+  {
+    type = "dota_src1_2d"
+    volume = 4.000000
+    pitch = 1.000000
+    limiter_on = 1.000000
+    vsnd_files = "sounds/misc/aghanim/agh_event_room_intro_09.vsnd"
+    vsnd_duration = 2.867120
+  }
+  TCOTRPG.Waves.Aghanim.BroEntrance = 
+  {
+    type = "dota_src1_2d"
+    volume = 4.000000
+    pitch = 1.000000
+    limiter_on = 1.000000
+    vsnd_files = "sounds/misc/aghanim/agh_broentrance_02.vsnd"
+    vsnd_duration = 6.963424
+  }
+  TCOTRPG.Waves.Aghanim.BucketEntrance = 
+  {
+    type = "dota_src1_2d"
+    volume = 4.000000
+    pitch = 1.000000
+    limiter_on = 1.000000
+    vsnd_files = "sounds/misc/aghanim/agh_bucketentrance_02.vsnd"
+    vsnd_duration = 12.903174
+  }
+  TCOTRPG.Waves.Aghanim.GoatEntrance = 
+  {
+    type = "dota_src1_2d"
+    volume = 4.000000
+    pitch = 1.000000
+    limiter_on = 1.000000
+    vsnd_files = "sounds/misc/aghanim/agh_goatentrance_02.vsnd"
+    vsnd_duration = 13.744286
+  }
+  TCOTRPG.Waves.Aghanim.MechEntrance = 
+  {
+    type = "dota_src1_2d"
+    volume = 4.000000
+    pitch = 1.000000
+    limiter_on = 1.000000
+    vsnd_files = "sounds/misc/aghanim/agh_mechentrance_02.vsnd"
+    vsnd_duration = 10.276938
+  }
+  TCOTRPG.Waves.Aghanim.LookWhoItIs = 
+  {
+    type = "dota_src1_2d"
+    volume = 4.000000
+    pitch = 1.000000
+    limiter_on = 1.000000
+    vsnd_files = "sounds/misc/aghanim/agh_session_intro_04.vsnd"
+    vsnd_duration = 2.399660
+  }
+  TCOTRPG.Waves.Aghanim.LotsOfHobbies = 
+  {
+    type = "dota_src1_2d"
+    volume = 4.000000
+    pitch = 1.000000
+    limiter_on = 1.000000
+    vsnd_files = "sounds/misc/aghanim/agh_tinker_01.vsnd"
+    vsnd_duration = 7.420454
+  }
+  TCOTRPG.Waves.Aghanim.Shazaam = 
+  {
+    type = "dota_src1_2d"
+    volume = 4.000000
+    pitch = 1.000000
+    limiter_on = 1.000000
+    vsnd_files = "sounds/misc/aghanim/aghs_conjures_magic_01.vsnd"
+    vsnd_duration = 1.720771
+  }
+  TCOTRPG.Waves.Aghanim.FlickOfTheWrist = 
+  {
+    type = "dota_src1_2d"
+    volume = 4.000000
+    pitch = 1.000000
+    limiter_on = 1.000000
+    vsnd_files = "sounds/misc/aghanim/aghs_conjures_magic_02.vsnd"
+    vsnd_duration = 2.334150
+  }
+  TCOTRPG.Waves.Aghanim.Booyah = 
+  {
+    type = "dota_src1_2d"
+    volume = 4.000000
+    pitch = 1.000000
+    limiter_on = 1.000000
+    vsnd_files = "sounds/misc/aghanim/aghs_conjures_magic_03.vsnd"
+    vsnd_duration = 1.458617
+  }
+  TCOTRPG.Waves.Aghanim.Hiyahh_01 = 
+  {
+    type = "dota_src1_2d"
+    volume = 4.000000
+    pitch = 1.000000
+    limiter_on = 1.000000
+    vsnd_files = "sounds/misc/aghanim/aghs_conjures_magic_03.vsnd"
+    vsnd_duration = 1.458617
+  }
+  TCOTRPG.Waves.Aghanim.Hiyahh_02 = 
+  {
+    type = "dota_src1_2d"
+    volume = 4.000000
+    pitch = 1.000000
+    limiter_on = 1.000000
+    vsnd_files = "sounds/misc/aghanim/aghs_conjures_magic_03.vsnd"
+    vsnd_duration = 1.458617
+  }
+  TCOTRPG.Waves.Aghanim.Hiyahh_03 = 
+  {
+    type = "dota_src1_2d"
+    volume = 4.000000
+    pitch = 1.000000
+    limiter_on = 1.000000
+    vsnd_files = "sounds/misc/aghanim/aghs_conjures_magic_03.vsnd"
+    vsnd_duration = 1.458617
+  }
+  TCOTRPG.Waves.Aghanim.Hiyahh_04 = 
+  {
+    type = "dota_src1_2d"
+    volume = 4.000000
+    pitch = 1.000000
+    limiter_on = 1.000000
+    vsnd_files = "sounds/misc/aghanim/aghs_fight_attack_01d.vsnd"
+    vsnd_duration = 2.011406
+  }
+  TCOTRPG.Waves.Aghanim.BingBong_01 = 
+  {
+    type = "dota_src1_2d"
+    volume = 4.000000
+    pitch = 1.000000
+    limiter_on = 1.000000
+    vsnd_files = "sounds/misc/aghanim/aghs_fight_attack_04a.vsnd"
+    vsnd_duration = 2.038277
+  }
+  TCOTRPG.Waves.Aghanim.BingBong_02 = 
+  {
+    type = "dota_src1_2d"
+    volume = 4.000000
+    pitch = 1.000000
+    limiter_on = 1.000000
+    vsnd_files = "sounds/misc/aghanim/aghs_fight_attack_04b.vsnd"
+    vsnd_duration = 2.126825
+  }
+  TCOTRPG.Waves.Aghanim.BingBong_03 = 
+  {
+    type = "dota_src1_2d"
+    volume = 4.000000
+    pitch = 1.000000
+    limiter_on = 1.000000
+    vsnd_files = "sounds/misc/aghanim/aghs_fight_attack_04c.vsnd"
+    vsnd_duration = 2.477370
+  }
+  TCOTRPG.Waves.Aghanim.BoopityBop_01 = 
+  {
+    type = "dota_src1_2d"
+    volume = 4.000000
+    pitch = 1.000000
+    limiter_on = 1.000000
+    vsnd_files = "sounds/misc/aghanim/aghs_fight_attack_05a.vsnd"
+    vsnd_duration = 1.977438
+  }
+  TCOTRPG.Waves.Aghanim.BoopityBop_02 = 
+  {
+    type = "dota_src1_2d"
+    volume = 4.000000
+    pitch = 1.000000
+    limiter_on = 1.000000
+    vsnd_files = "sounds/misc/aghanim/aghs_fight_attack_05b.vsnd"
+    vsnd_duration = 2.406122
+  }
+  TCOTRPG.Waves.Aghanim.BoopityBop_03 = 
+  {
+    type = "dota_src1_2d"
+    volume = 4.000000
+    pitch = 1.000000
+    limiter_on = 1.000000
+    vsnd_files = "sounds/misc/aghanim/aghs_fight_attack_05c.vsnd"
+    vsnd_duration = 2.286123
+  }
+
+  TCOTRPG.Waves.Boss.Appearance = 
+  {
+    type = "dota_src1_2d"
+    volume = 0.800000
+    mixgroup = "Stingers"
+    volume_fade_out = 1.000000
+    vsnd_files = "sounds/ui/stingers/enc/dt_treasure_underscore.vsnd"
+    vsnd_duration = 7.029342
+  }
+}

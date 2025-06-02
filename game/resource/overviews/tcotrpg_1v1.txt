@@ -1,0 +1,8 @@
+tcotrpg_1v1
+{
+	material materials/overviews/tcotrpg_1v1.vmat
+	pos_x -6144
+	pos_y 6144
+	scale 12.000
+}
+

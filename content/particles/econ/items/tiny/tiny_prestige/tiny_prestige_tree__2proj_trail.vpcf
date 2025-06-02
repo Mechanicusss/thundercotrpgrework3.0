@@ -1,0 +1,133 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vpcf54:version{326b1595-45e8-4004-aa5a-3e08655ff51f} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 16
+	m_nInitialParticles = 1
+	m_flConstantRadius = 50.0
+	m_ConstantColor = [ 255, 255, 255, 64 ]
+	m_Renderers = 
+	[
+		{
+			_class = "C_OP_RenderRopes"
+			m_flRefractAmount = 0.075
+			m_nRefractBlurRadius = 3
+			m_nRefractBlurType = "BLURFILTER_BOX"
+			m_flFinalTextureOffsetU = 1.0
+			m_flTextureVWorldSize = 1024.0
+			m_flTextureVScrollRate = -1.0
+			m_nMaxTesselation = 3
+			m_nMinTesselation = 3
+			m_bSaturateColorPreAlphaBlend = false
+			m_vecColorScale = 
+			{
+				m_nType = "PVEC_TYPE_LITERAL_COLOR"
+				m_LiteralColor = [ 255, 255, 255 ]
+			}
+			m_vecTexturesInput = 
+			[
+				{
+					m_hTexture = resource:"materials/particle/beam_jagged_06.vtex"
+					m_TextureControls = 
+					{
+						m_flFinalTextureScaleU = 
+						{
+							m_nType = "PF_TYPE_LITERAL"
+							m_flLiteralValue = -1.0
+						}
+					}
+				},
+			]
+			m_nOutputBlendMode = "PARTICLE_OUTPUT_BLEND_MODE_ALPHA"
+			m_nFogType = "PARTICLE_FOG_GAME_DEFAULT"
+		},
+	]
+	m_Operators = 
+	[
+		{
+			_class = "C_OP_BasicMovement"
+		},
+		{
+			_class = "C_OP_Decay"
+			m_flOpStartFadeInTime = 0.5
+			m_flOpEndFadeInTime = 0.5
+		},
+		{
+			_class = "C_OP_InterpolateRadius"
+			m_flEndScale = 0.0
+			m_flBias = 0.35
+		},
+		{
+			_class = "C_OP_FadeOutSimple"
+			m_flFadeOutTime = 0.85
+		},
+		{
+			_class = "C_OP_FadeInSimple"
+			m_flFadeInTime = 0.15
+		},
+		{
+			_class = "C_OP_ColorInterpolate"
+			m_ColorFade = [ 7, 68, 174, 255 ]
+		},
+	]
+	m_Initializers = 
+	[
+		{
+			m_bDisableOperator = false
+			m_nOpEndCapState = "PARTICLE_ENDCAP_ALWAYS_ON"
+			m_flOpStartFadeInTime = 0.0
+			m_flOpEndFadeInTime = 0.0
+			m_flOpStartFadeOutTime = 0.0
+			m_flOpEndFadeOutTime = 0.0
+			m_flOpFadeOscillatePeriod = 0.0
+			m_bNormalizeToStopTime = false
+			m_flOpTimeOffsetMin = 0.0
+			m_flOpTimeOffsetMax = 0.0
+			m_nOpTimeOffsetSeed = 0
+			m_nOpTimeScaleSeed = 0
+			m_flOpTimeScaleMin = 1.0
+			m_flOpTimeScaleMax = 1.0
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 0.8
+			}
+			m_nOutputField = 1
+		},
+		{
+			_class = "C_INIT_CreateWithinSphereTransform"
+			m_fRadiusMax = 10.0
+			m_TransformInput = 
+			{
+				m_nType = "PT_TYPE_CONTROL_POINT"
+				m_nControlPoint = 3
+				m_nControlPointRangeMax = 0
+			}
+		},
+		{
+			_class = "C_INIT_RandomColor"
+			m_ColorMin = [ 80, 240, 255, 255 ]
+			m_ColorMax = [ 24, 229, 255, 255 ]
+		},
+	]
+	m_Emitters = 
+	[
+		{
+			_class = "C_OP_ContinuousEmitter"
+			m_flEmitRate = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 10.0
+			}
+		},
+	]
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = [  ]
+		},
+	]
+	m_nBehaviorVersion = 12
+}

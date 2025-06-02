@@ -1,0 +1,8 @@
+lastbossplace
+{
+	material materials/overviews/lastbossplace.vmat
+	pos_x -2783
+	pos_y 2936
+	scale 5.467
+}
+

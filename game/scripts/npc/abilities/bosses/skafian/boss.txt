@@ -1,0 +1,331 @@
+#base "follower.txt"
+
+"DOTAAbilities"
+{
+    "roshan_spell_block_custom"
+	{
+		"BaseClass" "roshan_spell_block"
+        "AbilityTextureName" "roshan_spell_block"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"5.0"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+
+
+    "roshan_bash_custom"
+	{
+		"BaseClass" "roshan_bash"
+        "AbilityTextureName" "roshan_bash"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"bash_chance"		"20"
+				"bonus_damage"		"500"
+				"stun_duration"		"1.65"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
+
+
+    "roshan_slam_custom"
+    {
+        "BaseClass" "roshan_slam"
+        "AbilityTextureName" "roshan_slam"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+        "MaxLevel" "5"
+
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "0"
+
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "7.0"
+        "AbilityCastPoint"              "0.47 0.47 0.47 0.47"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+                "radius"            "350"
+                "slow_duration_hero"    "2.0"
+                "slow_duration_unit"    "4.0"
+                "slow_amount"       "100"
+                "damage"            "700 1400 2100 2800 3500"
+                "damage_growth"     "10"
+        }
+        "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_3"
+    }
+
+    "boss_skafian_fury_swipes"
+    {
+        "BaseClass"                     "ursa_fury_swipes"
+        "AbilityTextureName"            "ursa_fury_swipes"
+        "FightRecapLevel"               "1"
+        "MaxLevel"                      "3"
+        
+        // Ability General
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_PHYSICAL"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
+                
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+                "bonus_reset_time"              
+                {
+                    "value"                     "5 6 7"
+                    "special_bonus_unique_ursa_4" "+0"
+                }
+                "bonus_reset_time_roshan"       "0"
+                "damage_per_stack"              
+                {
+                    "value"                 "5 10 20"
+                    "LinkedSpecialBonus"            "special_bonus_unique_ursa"
+                }
+        }
+    }
+
+    "boss_skafian_entangle"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass" "lone_druid_spirit_bear_entangle"
+        "AbilityTextureName" "lone_druid_spirit_bear_entangle"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+        "AbilitySound"                  "LoneDruid_SpiritBear.Entangle"
+        "MaxLevel" "3"
+
+        // Damage.
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityDamage"                 "500 1000 2000"
+
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "5.0 4.0 3.0"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+                "damage"                "500 1000 2000"
+                "entangle_chance"       "20 25 30"
+                "hero_duration"         "1.0 1.5 2.0"
+                "creep_damage_multiplier"       "0"
+                "hero_entangle_chance"      "20 25 30"
+        }
+        "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_2"
+    }
+
+    "boss_skafian_enrage"
+    {
+        // General
+        "BaseClass" "ursa_enrage"
+        "AbilityTextureName" "ursa_enrage"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityType"                   "DOTA_ABILITY_TYPE_ULTIMATE"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
+        "FightRecapLevel"               "1"
+        "AbilitySound"                  "Hero_Ursa.Enrage"
+        "MaxLevel" "3"
+        "HasScepterUpgrade"         "0"
+        
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastAnimation"          "ACT_DOTA_OVERRIDE_ABILITY_4"
+        "AbilityCastGestureSlot"        "DEFAULT"
+        "AbilityCastRange"              "0"
+
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "20 15 10"
+
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "0 0 0"
+        
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+                "damage_reduction"          "80"
+                "status_resistance"         "100"
+                "LinkedSpecialBonus"            "special_bonus_unique_ursa_8"
+                "duration"                  "2.0 3.0 4.0"
+                "LinkedSpecialBonus"    "special_bonus_unique_ursa_3"
+                "cooldown_scepter"          "0"
+                "RequiresScepter"           "1"
+        }
+    }
+
+    "boss_skafian_howl"
+    {
+        "BaseClass" "ability_lua"
+        "ScriptFile" "heroes/bosses/forest/boss_skafian_howl"
+        "AbilityTextureName" "lycan_howl"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+        "AbilitySound"                  "Hero_Lycan.Howl"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+        "MaxLevel" "5"
+
+        "precache"
+        {
+            "particle" "particles/econ/items/lycan/ti9_immortal/lycan_ti9_immortal_howl_buff.vpcf"
+            "soundfile" "soundevents/game_sounds_heroes/game_sounds_lycan.vsndevts"
+            "particle" "particles/units/heroes/hero_terrorblade/terrorblade_scepter_ring_2.vpcf"
+            "particle" "particles/generic_gameplay/generic_stunned.vpcf"
+        }
+
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastPoint"              "0.3"
+
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "20"
+    
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "0"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityModifierSupportBonus"   "5"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+            "howl_duration"     "6"     
+            "damage_increase"       
+            {
+                "value"     "10"
+            }
+            "attack_speed_increase"       
+            {
+                "value"     "60 120 180 240 300"
+            }
+            "stun_duration"       
+            {
+                "value"     "1.5"
+            }
+            "stun_radius" "1600"
+        }
+        "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_2"
+        "AbilityCastGestureSlot"    "DEFAULT" 
+    }
+
+    "boss_skafian_wolf_bite"
+    {
+        "BaseClass" "ability_lua"
+        "ScriptFile" "heroes/bosses/forest/boss_skafian_wolf_bite"
+        "AbilityTextureName" "lycan_wolf_bite"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+        "AbilitySound"                  "Hero_Lycan.Howl"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
+        "MaxLevel" "5"
+
+        "precache"
+        {
+            "soundfile" "soundevents/game_sounds_heroes/game_sounds_lycan.vsndevts"
+            "soundfile" "soundevents/game_sounds_heroes/game_sounds_bloodseeker.vsndevts"
+            "soundfile" "soundevents/game_sounds_heroes/game_sounds_obsidian_destroyer.vsndevts"
+            "particle"  "particles/generic_gameplay/generic_lifesteal.vpcf"
+            "particle" "particles/abilities/rupture_burst.vpcf"
+            "particle" "particles/units/heroes/hero_bloodseeker/bloodseeker_rupture.vpcf"
+        }
+
+        // Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastPoint"              "0.3"
+
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "15"
+    
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "0"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityModifierSupportBonus"   "5"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+            "duration"     "6"     
+            "lifesteal"       
+            {
+                "value"     "30"
+            }
+            "hp_bleed_pct"       
+            {
+                "value"     "15 20 25 30 35"
+            }
+            "interval"       
+            {
+                "value"     "0.33"
+            }
+            "slow" "-30"
+            "threshold" "33"
+        }
+        "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_2"
+        "AbilityCastGestureSlot"    "DEFAULT" 
+    }
+
+    "boss_skafian_lycanthropy"
+    {
+        "BaseClass" "ability_lua"
+        "ScriptFile" "heroes/bosses/forest/boss_skafian_lycanthropy"
+        "AbilityTextureName" "lycan_feral_impulse"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilitySound"                  "Hero_Lycan.Howl"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_PURE"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "MaxLevel" "5"
+
+        "AbilityCooldown" "60"
+
+        "precache"
+        {
+            "soundfile" "soundevents/game_sounds_heroes/game_sounds_lycan.vsndevts"
+            "soundfile" "soundevents/game_sounds_heroes/game_sounds_lich.vsndevts"
+        }
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+            "threshold"     "30 35 40 45 50"     
+            "damage_reflect" "75"
+            "duration" "10"
+            "hp_regen_pct" "3.0"
+        }
+        "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_2"
+        "AbilityCastGestureSlot"    "DEFAULT" 
+    }
+}

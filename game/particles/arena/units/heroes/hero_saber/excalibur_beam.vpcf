@@ -1,0 +1,39 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{aafc65d8-7a5a-4e01-bd8d-3ac118422503} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 30
+	m_ConstantColor = 
+	[
+		111,
+		98,
+		255,
+		150,
+	]
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/arena/units/heroes/hero_saber/excalibur_beam_refract.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/arena/units/heroes/hero_saber/excalibur_beam_body.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/arena/units/heroes/hero_saber/excalibur_beam_core.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/arena/units/heroes/hero_saber/excalibur_beam_wave.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/arena/units/heroes/hero_saber/excalibur_beam_spiral.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/arena/units/heroes/hero_saber/excalibur_beam_spiral_dark.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/arena/units/heroes/hero_saber/excalibur_beam_fire.vpcf"
+		},
+	]
+	m_flConstantRadius = 200.000000
+	m_nBehaviorVersion = 9
+}

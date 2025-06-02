@@ -1,0 +1,492 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc31:version{165d48dd-8adc-4f1d-abf7-4992e04ad577} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "MaterialGroupList"
+				children = 
+				[
+					{
+						_class = "DefaultMaterialGroup"
+						remaps = 
+						[
+							{
+								from = "imported material 01.vmat"
+								to = "materials/models/units/sara/sara.vmat"
+							},
+						]
+						use_global_default = false
+						global_default_material = ""
+					},
+				]
+			},
+			{
+				_class = "AttachmentList"
+				children = 
+				[
+					{
+						_class = "Attachment"
+						name = "attach_hitloc"
+						parent_bone = "Bone_Chest"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_head"
+						parent_bone = "Bone_Head"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_attack1"
+						parent_bone = "Bone_Sword"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_attack2"
+						parent_bone = "Bone_Sword"
+						relative_origin = [ -0.000022, -112.86467, 0.0 ]
+						relative_angles = [ 0.0, -0.000011, -0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+				]
+			},
+			{
+				_class = "HitboxSetList"
+				children = 
+				[
+					{
+						_class = "HitboxSet"
+						name = "default"
+						children = 
+						[
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone_Chest"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -15.517021, -18.048622, -11.228002 ]
+								hitbox_maxs = [ 14.892367, 10.641882, 30.422001 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone_Pelvis"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -18.861065, -13.433671, -28.732193 ]
+								hitbox_maxs = [ 19.314299, 15.634956, -7.232193 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone_Head"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -17.283184, -19.708258, -17.074997 ]
+								hitbox_maxs = [ 17.04365, 14.858733, 16.925003 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone_Leg_R1"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -16.258041, -6.880383, -55.036228 ]
+								hitbox_maxs = [ -0.611951, 9.350863, -4.286229 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone_Leg_L1"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -11.576704, -6.287142, -53.911892 ]
+								hitbox_maxs = [ 3.83509, 9.71223, -3.886893 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone_Polytail_B1"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -11.322531, -11.667097, -29.437271 ]
+								hitbox_maxs = [ 12.068105, 13.113029, -16.245457 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone_Arm_R1"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -5.539411, -4.930124, -32.256485 ]
+								hitbox_maxs = [ 2.682089, 3.182896, 0.629514 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone_Leg_R2"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -5.850011, -8.188602, -46.055962 ]
+								hitbox_maxs = [ 6.958744, 9.968984, 8.26906 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone_Leg_L2"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -7.114477, -12.534834, -45.896469 ]
+								hitbox_maxs = [ 7.16396, 7.724602, 7.947387 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone_Polytail_B2"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -15.749797, -42.00536, -20.024317 ]
+								hitbox_maxs = [ 14.569572, -0.484489, 2.215684 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone_Arm_R2"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -8.221241, -7.320227, -33.846897 ]
+								hitbox_maxs = [ 2.865582, 1.727773, 1.788303 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone_Arm_L1"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -1.900256, -5.334583, -35.118977 ]
+								hitbox_maxs = [ 6.883744, 3.333515, 0.017025 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone_Foot_R"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -4.949718, -14.210047, -9.766239 ]
+								hitbox_maxs = [ 2.956531, 5.571199, 0.640011 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone_Foot_L"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -2.443256, -17.858356, -10.008438 ]
+								hitbox_maxs = [ 5.462993, 1.92289, 0.397812 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone_Polytail_B3"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -16.497879, -14.866948, -10.523976 ]
+								hitbox_maxs = [ 16.220863, -4.366951, 20.976025 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone_Sword"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -6.000023, -115.364716, -19.942192 ]
+								hitbox_maxs = [ 6.321227, 29.635258, 2.467198 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone_Arm_L2"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -3.007555, -6.396692, -28.708992 ]
+								hitbox_maxs = [ 5.586193, 1.240025, 1.291008 ]
+							},
+						]
+					},
+				]
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						name = "sara"
+						filename = "models/units/sara/sara.smd"
+						import_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+				]
+			},
+			{
+				_class = "AnimationList"
+				children = 
+				[
+					{
+						_class = "AnimFile"
+						name = "Stand"
+						activity_name = "ACT_DOTA_IDLE_RARE"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/units/sara/sara_anim.fbx"
+						import_bone_scales = false
+						start_frame = 10
+						end_frame = 100
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Stand_2"
+						activity_name = "ACT_DOTA_IDLE_RARE"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/units/sara/sara_anim.fbx"
+						import_bone_scales = false
+						start_frame = 120
+						end_frame = 195
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Walk"
+						activity_name = "ACT_DOTA_RUN"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/units/sara/sara_anim.fbx"
+						import_bone_scales = false
+						start_frame = 215
+						end_frame = 248
+						framerate = 40.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Stand_Ready"
+						activity_name = "ACT_DOTA_IDLE"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/units/sara/sara_anim.fbx"
+						import_bone_scales = false
+						start_frame = 268
+						end_frame = 298
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Attack"
+						activity_name = "ACT_DOTA_ATTACK2"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/units/sara/sara_anim.fbx"
+						import_bone_scales = false
+						start_frame = 318
+						end_frame = 348
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Attack_2"
+						activity_name = "ACT_DOTA_ATTACK"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/units/sara/sara_anim.fbx"
+						import_bone_scales = false
+						start_frame = 368
+						end_frame = 398
+						framerate = 35.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Attack_Slam"
+						activity_name = "ACT_DOTA_ATTACK_EVENT_BASH"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/units/sara/sara_anim.fbx"
+						import_bone_scales = false
+						start_frame = 418
+						end_frame = 448
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Spell"
+						activity_name = "ACT_DOTA_CAST_ABILITY_3"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/units/sara/sara_anim.fbx"
+						import_bone_scales = false
+						start_frame = 468
+						end_frame = 493
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Death"
+						activity_name = "ACT_DOTA_DIE"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/units/sara/sara_anim.fbx"
+						import_bone_scales = false
+						start_frame = 513
+						end_frame = 675
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Dissipate"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/units/sara/sara_anim.fbx"
+						import_bone_scales = false
+						start_frame = 573
+						end_frame = 675
+						framerate = 30.0
+						reverse = false
+					},
+				]
+				default_root_bone_name = ""
+			},
+		]
+		model_archetype = ""
+		primary_associated_entity = ""
+		anim_graph_name = ""
+		importer_notes = """
+Imported from VMDL
+==Warnings==
+Changed incompatible animation name 'Stand 2' to 'Stand_2'
+Changed incompatible animation name 'Stand Ready' to 'Stand_Ready'
+Changed incompatible animation name 'Attack 2' to 'Attack_2'
+Changed incompatible animation name 'Attack Slam' to 'Attack_Slam'
+
+"""
+	}
+}

@@ -1,0 +1,5 @@
+"root"
+{
+    "talent_wisp_1" "1"
+    "talent_wisp_2" "1"
+}

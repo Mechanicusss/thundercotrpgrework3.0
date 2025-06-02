@@ -1,0 +1,793 @@
+"DOTAAbilities"
+{
+	"cherub_sleep_cloud"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"				"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+		"AbilityTextureName"			"arena/cherub_sleep_cloud"
+		"MaxLevel" 						"7"
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3 0.3 0.25 0.2"
+		"AbilityCastRange"				"400 450 500 550 600 650 700"
+		"AbilityCooldown"				"40"
+		"AbilityManaCost"				"160"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"radius"				"500 525 550 575 600 625 650"
+				"duration"				"1.0 1.5 2.0 2.5 3.0 3.5 4.0"
+
+				"time_to_sleep"			"2.0 1.75 1.5 1.25 1.0 0.75 0.5"
+
+				"damage_to_wake"		"75 100 175 250 375 495 600"
+
+				"think_interval"		"0.1"
+		}
+
+		"precache"
+		{
+			"particle"  "particles/arena/units/heroes/hero_cherub/sleep_cloud.vpcf"
+		}
+
+		"OnSpellStart"
+		{
+			"CreateThinker"
+			{
+				"ModifierName"	"modifier_cherub_sleep_cloud"
+				"Target" 		"CASTER"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_cherub_sleep_cloud"
+			{
+				"IsHidden"				"1"
+				"Duration"				"%duration"
+
+				"Aura"					"modifier_cherub_sleep_cloud_timer"
+				"Aura_Radius"			"%radius"
+				"Aura_Teams"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+				"Aura_Types"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+
+				"OnCreated"
+				{
+					"FireSound"
+					{
+						"EffectName"	"Arena.Hero_Cherub.SleepCloud.Cast"
+						"Target" 		"TARGET"
+					}
+
+					"AttachEffect"
+					{
+						"EffectName"		"particles/arena/units/heroes/hero_cherub/sleep_cloud.vpcf"
+						"EffectAttachType"	"follow_origin"
+						"Target"			"TARGET"
+						"ControlPoints"
+						{
+							"00" "0 0 0"
+							"01" "%radius %radius %radius"
+						}
+					}
+				}
+			}
+
+			"modifier_cherub_sleep_cloud_timer"
+			{
+				"IsDebuff"		"1"
+
+				"ThinkInterval"  "%think_interval"
+				"OnIntervalThink"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"heroes/hero_cherub/sleep_cloud"
+						"Function"		"ThinkerCountTime"
+						"think_interval"	"%think_interval"
+						"time_to_sleep"		"%time_to_sleep"
+					}
+				}
+
+				"OnDestroy"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"heroes/hero_cherub/sleep_cloud"
+						"Function"		"ClearThinkerTime"
+					}
+
+					"RemoveModifier"
+					{
+						"ModifierName"	"modifier_cherub_sleep_cloud_sleep"
+						"Target" 		"TARGET"
+					}
+				}
+			}
+
+			"modifier_cherub_sleep_cloud_sleep"
+			{
+				"IsDebuff"		"1"
+				"EffectName"	"particles/generic_gameplay/generic_sleep.vpcf"
+				"EffectAttachType"	"follow_overhead"
+
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"heroes/hero_cherub/sleep_cloud"
+						"Function"		"ClearThinkerTime"
+					}
+				}
+
+				"OnTakeDamage"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"heroes/hero_cherub/sleep_cloud"
+						"Function"		"WakeDamageCount"
+						"Damage"		"%attack_damage"
+						"damage_to_wake"	"%damage_to_wake"
+					}
+				}
+
+				"States"
+				{
+					"MODIFIER_STATE_STUNNED"		"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}
+	}
+
+	"cherub_synthesis"
+	{
+		"BaseClass"						"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE"
+		"AbilityTextureName"			"arena/cherub_synthesis"
+		"MaxLevel" 						"7"
+
+		"AbilityValues"
+		{
+
+				"base_conversion_rate"	"20 40 60 80 100 120 140"
+
+				"mana_to_hp_pct"		"125 150 175 200 225 250 275"
+
+				"hp_to_mana_pct"		"80 100 120 140 160 180 200"
+				"think_interval"		"0.1"
+
+		}
+
+		"precache"
+		{
+			"particle"  "particles/arena/units/heroes/hero_cherub/synthesis.vpcf"
+		}
+
+		"OnToggleOn"
+		{
+			"ApplyModifier"
+			{
+				"ModifierName"	"modifier_cherub_synthesis"
+				"Target" 		"CASTER"
+			}
+			"ApplyModifier"
+			{
+				"ModifierName"	"modifier_cherub_synthesis_sound"
+				"Target" 		"CASTER"
+			}
+		}
+
+		"OnToggleOff"
+		{
+			"RemoveModifier"
+			{
+				"ModifierName"	"modifier_cherub_synthesis"
+				"Target" 		"CASTER"
+			}
+			"RemoveModifier"
+			{
+				"ModifierName"	"modifier_cherub_synthesis_sound"
+				"Target" 		"CASTER"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_cherub_synthesis"
+			{
+				"IsHidden"			"1"
+				"IsPurgable"		"0"
+
+				"OnCreated"
+				{
+					"AttachEffect"
+					{
+						"EffectName"        "particles/arena/units/heroes/hero_cherub/synthesis.vpcf"
+						"EffectAttachType"  "follow_origin"
+						"Target"            "CASTER"
+					}
+
+					"FireSound"
+					{
+						"EffectName"	"Arena.Hero_Cherub.Synthesis.Working"
+						"Target" 		"CASTER"
+					}
+				}
+
+				"OnDestroy"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"kv"
+						"Function"		"StopEndableSound"
+						"sound"			"Arena.Hero_Cherub.Synthesis.Working"
+					}
+				}
+
+				"ThinkInterval"  "%think_interval"
+				"OnIntervalThink"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"heroes/hero_cherub/synthesis"
+						"Function"		"Transform"
+					}
+				}
+			}
+
+			"modifier_cherub_synthesis_sound"
+			{
+				"IsHidden"			"1"
+
+				"ThinkInterval"		"8.034"
+				"OnIntervalThink"
+				{
+					"FireSound"
+					{
+						"EffectName"	"Arena.Hero_Cherub.Synthesis.Working"
+						"Target" 		"CASTER"
+					}
+				}
+			}
+		}
+	}
+
+	"cherub_explosive_spore"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"arena/cherub_explosive_spore"
+		"MaxLevel" 						"7"
+
+		"AbilityCastRange"				"distance"
+		"AbilityCastPoint"				"0.3"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_ALL"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+
+		"AbilityCooldown"				"10 9 8 7 6 5 4"
+		"AbilityManaCost"				"60 80 100 120 140 160 180"
+		"AbilityDamage"					"100 175 250 325 400 475 550"
+		"AbilityUnitDamageSubType"	"DAMAGE_SUBTYPE_EARTH"
+
+		"AbilityValues"
+		{
+
+				"explode_delay"			"10"
+
+				"explode_radius"		"350 360 370 380 390 400 425"
+
+				"lifesteel_heroes_pct"	"40"
+				"lifesteel_creeps_pct"	"10"
+
+				"spore_health"			"100 200 300 500 700 1000 1500"
+
+				"spore_movespeed"		"200 220 250 280 300 320 350"
+
+				"spore_vision_range"	"450"
+
+				"spore_bounty_gold"		"200 330 400 450 500 650 800"
+
+				"spore_bounty_exp"		"25"
+
+				"distance"				"150"
+
+				"growth_think_interval"	"0.1"
+
+				"model_scale_min"		"0.5"
+
+				"model_scale_max"		"1.0"
+
+				"alret_time"			"2.0"
+
+				"spore_vision_delay"	"2.5"
+		}
+
+		"precache"
+		{
+			"particle"  "particles/arena/units/heroes/hero_cherub/explosive_spore_explode.vpcf"
+		}
+
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"			"heroes/hero_cherub/explosive_spore"
+				"Function"				"SpawnSpore"
+				"spore_health"			"%spore_health"
+				"spore_movespeed"		"%spore_movespeed"
+				"spore_bounty_gold"		"%spore_bounty_gold"
+				"spore_bounty_exp"		"%spore_bounty_exp"
+				"spore_vision_range"	"%spore_vision_range"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_cherub_explosive_spore"
+			{
+				"IsHidden"			"1"
+				"IsPurgable"		"0"
+
+				"ThinkInterval"  		"%growth_think_interval"
+				"OnIntervalThink"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"heroes/hero_cherub/explosive_spore"
+						"Function"		"GrowthThink"
+					}
+				}
+
+				"OnDeath"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"heroes/hero_cherub/explosive_spore"
+						"Function"		"ExplodeSpore"
+					}
+				}
+
+				"States"
+				{
+					"MODIFIER_STATE_FLYING"				"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_UNIT_COLLISION"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}
+	}
+
+	"cherub_flower_garden"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"arena/cherub_flower_garden"
+		"MaxLevel" 						"7"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+
+		"AbilityCastRange"				"400"
+		"AbilityCastPoint"				"0.1"
+
+		"AbilityCooldown"				"5.0"
+
+		"AbilityChannelTime"			"0.5"
+		"HasScepterUpgrade"				"1"
+		"AbilityUnitDamageSubType"	"DAMAGE_SUBTYPE_EARTH"
+
+		"AbilityValues"
+		{
+				"channel_time"			"0.5"
+
+				"flower_health"			"500 700 900 1500 2000 3500 5000"
+
+				"flower_health_scepter"	"2000 3000 4000 5000 6000 7000 8000"
+
+				"damage_return_scepter"	"30 60 90 120 150 180 210"
+
+				"life_time"				"300.0"
+
+				"life_time_min_tooltip"	"5"
+		}
+
+		"precache"
+		{
+			"particle"					"particles/neutral_fx/troll_heal.vpcf"
+			"particle"					"particles/base_attacks/fountain_attack.vpcf"
+			"particle"					"particles/units/heroes/hero_batrider/batrider_base_attack.vpcf"
+			"particle"					"particles/units/heroes/hero_centaur/centaur_return.vpcf"
+		}
+
+		"OnChannelSucceeded"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"heroes/hero_cherub/flower_garden"
+				"Function"		"CreatePlot"
+			}
+		}
+	}
+
+	"cherub_flower_white_rose"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"arena/cherub_flower_white_rose"
+		"MaxLevel" 						"7"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+
+		"AbilityValues"
+		{
+
+				"attack_range"		"300 350 450 550 650 750 850"
+
+				"damage"			"10 20 40 60 80 100 140"
+
+				"attack_rate"		"0.9"
+				"max_plants"		"6"
+		}
+
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"heroes/hero_cherub/flower_garden"
+				"Function"		"ChooseFlower"
+			}
+		}
+	}
+
+	"cherub_flower_white_rose_enabled"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"arena/cherub_flower_white_rose"
+		"MaxLevel" 						"7"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		"AbilityValues"
+		{
+				"attack_range"		"300 350 450 550 650 750 850"
+
+				"damage"			"10 20 40 60 80 100 140"
+
+				"attack_rate"		"0.9"
+
+				"max_plants"		"6"
+		}
+
+		"Modifiers"
+		{
+			"modifier_cherub_flower_white_rose_enabled"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_ATTACK_RANGE_BONUS"			"%attack_range"
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"		"%damage"
+				}
+			}
+		}
+	}
+
+	"cherub_flower_red_rose"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"arena/cherub_flower_red_rose"
+		"MaxLevel" 						"7"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+
+		"AbilityValues"
+		{
+
+				"attack_range"		"130 160 190 220 240 270 300"
+
+				"damage"			"20 40 60 80 100 140 220"
+
+				"attack_rate"		"0.1"
+
+				"max_plants"		"6"
+
+		}
+
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"heroes/hero_cherub/flower_garden"
+				"Function"		"ChooseFlower"
+			}
+		}
+	}
+
+	"cherub_flower_red_rose_enabled"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"arena/cherub_flower_red_rose"
+		"MaxLevel" 						"7"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		"AbilityValues"
+		{
+				"attack_range"		"130 160 190 220 240 270 300"
+				"damage"			"20 40 60 80 100 140 220"
+				"attack_rate"		"0.1"
+				"max_plants"		"6"
+		}
+
+		"Modifiers"
+		{
+			"modifier_cherub_flower_red_rose_enabled"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_ATTACK_RANGE_BONUS"			"%attack_range"
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"		"%damage"
+				}
+			}
+		}
+	}
+
+	"cherub_flower_pink_blossom"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"arena/cherub_flower_pink_blossom"
+		"MaxLevel" 						"7"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+
+		"AbilityValues"
+		{
+				"heal_range"		"400 450 500 550 600 650 700"
+				"heal_amount"		"10 15 20 25 30 35 40"
+				"max_targets"		"2"
+				"heal_interval"		"0.3"
+				"max_plants"		"4"
+		}
+
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"heroes/hero_cherub/flower_garden"
+				"Function"		"ChooseFlower"
+			}
+		}
+	}
+
+	"cherub_flower_pink_blossom_enabled"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"arena/cherub_flower_pink_blossom"
+		"MaxLevel" 						"7"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		"AbilityValues"
+		{
+				"heal_range"		"400 450 500 550 600 650 700"
+				"heal_amount"		"10 15 20 25 30 35 40"
+				"max_targets"		"2"
+				"heal_interval"		"0.3"
+				"max_plants"		"4"
+		}
+
+		"Modifiers"
+		{
+			"modifier_cherub_flower_pink_blossom_enabled"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+
+				"ThinkInterval"  "%heal_interval"
+				"OnIntervalThink"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"heroes/hero_cherub/flower_garden"
+						"Function"		"PinkBlossomThink"
+					}
+				}
+			}
+		}
+	}
+
+	"cherub_flower_blue_blossom"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"arena/cherub_flower_blue_blossom"
+		"MaxLevel" 						"7"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+
+		"AbilityValues"
+		{
+			"restore_range"		"400 450 500 550 600 650 700"
+			"restore_amount"	"5 10 15 20 25 30 35"
+			"restore_interval"	"1.0"
+			"max_plants"		"4"
+
+		}
+
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"heroes/hero_cherub/flower_garden"
+				"Function"		"ChooseFlower"
+			}
+		}
+	}
+
+	"cherub_flower_blue_blossom_enabled"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"arena/cherub_flower_blue_blossom"
+		"MaxLevel" 						"7"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		"AbilityValues"
+		{
+				"restore_range"		"400 450 500 550 600 650 700"
+				"restore_amount"	"5 10 15 20 25 30 35"
+				"restore_interval"	"1.0"
+				"max_plants"		"4"
+		}
+
+		"Modifiers"
+		{
+			"modifier_cherub_flower_blue_blossom_enabled"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+
+				"ThinkInterval"  "%restore_interval"
+				"OnIntervalThink"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"heroes/hero_cherub/flower_garden"
+						"Function"		"BlueBlossomThink"
+					}
+				}
+			}
+		}
+	}
+
+	"cherub_flower_yellow_daisy"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"arena/cherub_flower_yellow_daisy"
+		"MaxLevel" 						"7"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+
+		"AbilityValues"
+		{
+				"aura_radius"		"250 350 450 550 650 750 850"
+				"bonus_attackspeed"	"40 60 80 100 120 140 160"
+				"max_plants"		"2"
+		}
+
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"heroes/hero_cherub/flower_garden"
+				"Function"		"ChooseFlower"
+			}
+		}
+	}
+
+	"cherub_flower_yellow_daisy_enabled"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"arena/cherub_flower_yellow_daisy"
+		"MaxLevel" 						"7"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		"AbilityValues"
+		{
+				"aura_radius"		"250 350 450 550 650 750 850"
+				"bonus_attackspeed"	"40 60 80 100 120 140 160"
+				"max_plants"		"2"
+		}
+
+		"Modifiers"
+		{
+			"modifier_cherub_flower_yellow_daisy_enabled"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+
+				"Aura"          	"modifier_cherub_flower_yellow_daisy_enabled_aura_effect"
+				"Aura_Radius"   	"%aura_radius"
+				"Aura_Teams"    	"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+				"Aura_Types"    	"DOTA_UNIT_TARGET_ALL"
+				"Aura_Flags"    	"DOTA_UNIT_TARGET_FLAG_NONE"
+				"Aura_ApplyToCaster" "0"
+			}
+
+			"modifier_cherub_flower_yellow_daisy_enabled_aura_effect"
+			{
+				"IsBuff"			"1"
+				"IsPurgable"		"0"
+
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"%bonus_attackspeed"
+				}
+			}
+		}
+	}
+
+	"cherub_flower_purple_lotus"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"arena/cherub_flower_purple_lotus"
+		"MaxLevel" 						"7"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+
+		"AbilityValues"
+		{
+				"aura_radius"		"50 100 150 200 250 300 350"
+				"magic_resistance_reduction"	"-10 -15 -25 -30 -40 -45 -50"
+				"max_plants"		"2"
+		}
+
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"heroes/hero_cherub/flower_garden"
+				"Function"		"ChooseFlower"
+			}
+		}
+	}
+
+	"cherub_flower_purple_lotus_enabled"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"arena/cherub_flower_purple_lotus"
+		"MaxLevel" 						"7"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		"AbilityValues"
+		{
+				"aura_radius"		"50 100 150 200 250 300 350"
+				"magic_resistance_reduction"	"-10 -15 -25 -30 -40 -45 -50"
+				"max_plants"		"2"
+		}
+
+		"Modifiers"
+		{
+			"modifier_cherub_flower_purple_lotus_enabled"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+
+				"Aura"          	"modifier_cherub_flower_purple_lotus_enabled_aura_effect"
+				"Aura_Radius"   	"%aura_radius"
+				"Aura_Teams"    	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+				"Aura_Types"    	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_CREEP"
+				"Aura_Flags"    	"DOTA_UNIT_TARGET_FLAG_NONE"
+			}
+
+			"modifier_cherub_flower_purple_lotus_enabled_aura_effect"
+			{
+				"IsDebuff"			"1"
+				"IsPurgable"		"0"
+
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"%magic_resistance_reduction"
+				}
+			}
+		}
+	}
+}
+ 

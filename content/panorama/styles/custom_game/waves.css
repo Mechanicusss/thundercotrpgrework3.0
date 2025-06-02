@@ -1,0 +1,110 @@
+#Waves {
+    horizontal-align: left;
+    margin-left: 230px;
+}
+
+.Waves {
+    background-color: black;
+    width: 296px;
+    padding-bottom: 10px;
+    margin-top: -2px;
+    border-radius: 0 0 4px 4px;
+    background-image: url("file://{images}/custom_game/bg_scoreboard_psd.png");
+    background-position: 0% 10%;
+    box-shadow: 0 0 2px black;
+    font-family: inherit;
+    font-size: 16px;
+    
+    flow-children: down-wrap;
+}
+
+#waves-label {
+    background-color: blue;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    width: 296px;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-image: url("file://{images}/custom_game/inventory_bg_psd.png");
+    border-bottom: 1px solid rgba(255,255,255,0.03);
+    background-position: top;
+    text-shadow: 1px 1px 1px black;
+    visibility: collapse;
+}
+
+.Progress {
+    flow-children: down-wrap;
+    padding: 0 10px;
+}
+
+.Progress .Bar {
+    background-color: black;
+    width: 296px;
+    height: 30px;
+    border-radius: 4px;
+}
+
+.Progress .Bar #waves-bar {
+    width: 296px;
+    height: 30px;
+    z-index: 1;
+}
+
+#waves-bar.counting {
+    background-color: rgb(61,133,75);
+    background-color: gradient( linear, 0% 0%, 35% 100%, from(#3d854b), to( #3d851f ) );
+
+}
+
+#waves-bar.flashing {
+    background-color: #853d3d;
+    animation-duration: 1s;
+    animation-name: blinkingBackground;
+    animation-iteration-count: infinite;
+}
+
+@keyframes 'blinkingBackground' {
+    100%      { background-color: #853d3d; }
+    50% { background-color: #3d854b;}
+}
+
+.Progress .Bar #waves-bar-info {
+    color: white;
+    z-index: 2;
+    font-weight: bold;
+    font-size: 16px;
+    horizontal-align: right;
+    text-shadow: 1px 1px 1px black;
+    padding: 6px;
+}
+
+.Progress .Count {
+    flow-children: right-wrap;
+    padding: 10px 0;
+    color: white;
+    width: 296px;
+}
+
+.Progress .Count .CountInformation {
+    flow-children: right-wrap;
+    horizontal-align: right;
+}
+
+.Progress .Count .CountInformation #waves-count-max {
+    opacity: 0.75;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+
+.Progress .Count .CountInformation #waves-count-current {
+    font-size: 22px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px black;
+    letter-spacing: 1px;
+}
+
+.Progress .Count .CountLabel #waves-count-label {
+    font-weight: bold;
+    line-height: 1.25;
+}

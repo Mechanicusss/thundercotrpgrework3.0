@@ -1,0 +1,42 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{7412167c-06e9-4698-aff2-e63eb59037e7} -->
+{
+  custom_net_tables =
+  [
+    "game_info",
+    "selection",
+    "duel",
+    "waves",
+    "waves_disable",
+    "ability_selection_open",
+    "ability_selection_open_replace",
+    "ability_selection_swap_position",
+    "ability_selection_swap_position_replace",
+    "modify_gold_bank",
+    "zone_outpost_capture",
+    "select_custom_hero",
+    "select_custom_hero_open",
+    "new_game_plus_voted",
+    "new_game_plus_vote_initiate",
+    "new_game_plus_vote_finished",
+    "new_game_plus_vote_reload_enemies",
+
+    "aghanim_scores", 
+    "game_global",  
+    "special_ability_upgrades",
+    "respawns_remaining",
+    "respawns_max",
+    "revive_state",
+
+    "room_data",
+
+    "reward_options",
+    "reward_choices",
+    "minor_ability_upgrades",
+    "major_ability_upgrades",
+    "misc_buffs",
+
+    "boss_net_table",
+    "currency_rewards",
+    "encounter_state",
+  ]
+}

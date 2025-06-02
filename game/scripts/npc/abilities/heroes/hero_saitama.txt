@@ -1,0 +1,184 @@
+"DOTAAbilities"
+{
+    "saitama_push_ups"
+    {
+        "BaseClass"                "ability_lua"
+        "AbilityTextureName"       "arena/saitama_push_ups"
+        "ScriptFile"               "heroes/hero_saitama/push_ups.lua"
+        "MaxLevel"                 "10"
+        "AbilityChannelTime"       "2"
+        "AbilityBehavior"          "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+        "AbilityCooldown"          "100 95 90 85 80 75 70 65 60 55"
+        "AbilityManaCost"          "200 180 160 140 120 100 80 60 40 20"
+        "LevelsBetweenUpgrades"    "5"
+        "AbilityValues"
+        {
+            "bonus_strength"
+            {
+                "value"    "50 10 15 20 25 30 35 40 45 50"
+            }
+            "stacks_amount"
+            {
+                "value"    "1"
+            }
+        }
+    }
+    "saitama_squats"
+    {
+        "BaseClass"                "ability_lua"
+        "AbilityTextureName"       "arena/saitama_squats"
+        "ScriptFile"               "heroes/hero_saitama/squats.lua"
+        "MaxLevel"                 "10"
+        "AbilityChannelTime"       "2"
+        "AbilityBehavior"          "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+        "AbilityCooldown"          "100 95 90 85 80 75 70 65 60 55"
+        "AbilityManaCost"          "200 180 160 140 120 100 80 60 40 20"
+        "LevelsBetweenUpgrades"    "5"
+        "AbilityValues"
+        {
+            "bonus_armor"
+            {
+                "value"    "2 4 6 8 10 12 14 16 18 20" // "2 4 6 8 10 12 14 16 18 20"
+            }
+            "stacks_amount"
+            {
+                "value"    "1"
+            }
+        }
+    }
+    "saitama_sit_ups"
+    {
+        "BaseClass"                "ability_lua"
+        "AbilityTextureName"       "arena/saitama_sit_ups"
+        "ScriptFile"               "heroes/hero_saitama/sit_ups.lua"
+        "MaxLevel"                 "10"
+        "AbilityChannelTime"       "2"
+        "AbilityBehavior"          "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+        "AbilityCooldown"          "100 95 90 85 80 75 70 65 60 55"
+        "AbilityManaCost"          "200 180 160 140 120 100 80 60 40 20"
+        "LevelsBetweenUpgrades"    "5"
+        "AbilityValues"
+        {
+            "bonus_damage"
+            {
+                "value"    "40 80 120 160 200 240 280 320 360 400" // "40 80 120 160 200 240 280 320 360 400"
+            }
+            "stacks_amount"
+            {
+                "value"    "1"
+            }
+        }
+    }
+    "saitama_jogging"
+    {
+        "BaseClass"                "ability_lua"
+        "AbilityTextureName"       "arena/saitama_jogging"
+        "ScriptFile"               "heroes/hero_saitama/jogging.lua"
+        "AbilityBehavior"          "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "LevelsBetweenUpgrades"    "3"
+        "RequiredLevel"            "4"
+        "MaxLevel"                 "7"
+        "AbilityValues"
+        {
+            "bonus_strength"
+            {
+                "value"    "1" //"1"
+            }
+            "stacks_amount"
+            {
+                "value"    "1"
+            }
+            "range"
+            {
+                "value"    "10000 9500 9000 8500 8000 7500 7000"
+            }
+            "range_limit"
+            {
+                "value"    "400"
+            }
+        }
+    }
+    "saitama_serious_punch"
+    {
+        "BaseClass"                "ability_lua"
+        "AbilityTextureName"       "arena/saitama_serious_punch"
+        "ScriptFile"               "heroes/hero_saitama/serious_punch.lua"
+        "MaxLevel"                 "1"
+        "IsGrantedByScepter"       "1"
+        "HasInnateModifiers"       "1"
+        "AbilityBehavior"          "DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+        "AbilityUnitTargetType"    "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "AbilityUnitTargetTeam"    "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitDamageType"    "DAMAGE_TYPE_PHYSICAL"
+        "SpellImmunityType"        "SPELL_IMMUNITY_ENEMIES_NO"
+        "AbilityCooldown"          "3"
+        "AbilityCastRange"         "25"
+        "AbilityCastPoint"         "0.8"
+        "precache"
+        {
+            "soundfile"    "soundevents/game_sounds_heroes/game_sounds_earthshaker.vsndevts"
+            "particle"     "particles/econ/items/earthshaker/egteam_set/hero_earthshaker_egset/earthshaker_echoslam_start_fallback_mid_egset.vpcf"
+        }
+        "AbilityValues"
+        {
+            "base_damage_multiplier_pct"
+            {
+                "CalculateSpellDamageTooltip"    "0"
+                "value"                          "200" //	"200"
+            }
+            "damage_multiplier_per_stack_pct"
+            {
+                "CalculateSpellDamageTooltip"    "0"
+                "value"                          "3"     //	"3"
+            }
+            "knockback_duration_step"
+            {
+                "value"    "10000" // "10000"
+            }
+            "knockback_distance_step"
+            {
+                "value"    "10" //	"10"
+            }
+            "knockback_height_step"
+            {
+                "knockback_height_step"	"80" //	"80"
+            }
+        }
+    }
+    "saitama_limiter"
+    {
+        "BaseClass"                "ability_lua"
+        "AbilityTextureName"       "arena/saitama_limiter"
+        "ScriptFile"               "heroes/hero_saitama/limiter.lua"
+        "MaxLevel"                 "4"
+        "AbilityBehavior"          "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+        "AbilityCooldown"          "100"
+        "AbilityType"              "DOTA_ABILITY_TYPE_ULTIMATE"
+        "HasScepterUpgrade"        "1"
+        "HasInnateModifiers"       "1"
+        "LevelsBetweenUpgrades"    "50"
+        "AbilityValues"
+        {
+            "bonus_strength_pct"
+            {
+                "value"    "0.01 0.02 0.03 0.04" // "0.01 0.02 0.03 0.04"
+            }
+            "manacost_pct"
+            {
+                "value"    "15"
+            }
+            "loss_stacks_pct"
+            {
+                "value"    "99"
+            }
+            "stacks_for_kill"
+            {
+                "value"    "1" //	"1"
+            }
+            "manacost"
+            {
+                "value"    "300 250 200 150 100 50 0"
+            }
+        }
+    }
+}

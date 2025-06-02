@@ -1,0 +1,298 @@
+/* Prettified by Source 2 Viewer 10.2.0.0 - https://valveresourceformat.github.io */
+
+#ShortcutMenuContainer
+{
+    background-image: url("s2r://panorama/images/custom_game/bottomleftbg_png.png");
+    background-size: 100% 100%;
+    width: 380px;
+    height: 82px;
+    vertical-align: bottom;
+    horizontal-align: left;
+    flow-children: left-wrap;
+    padding: 0 24px;
+    z-index: 1;
+}
+
+#ShortcutMenuQuestJournal
+{
+    vertical-align: center;
+    border-left: 1px solid rgba(255,255,255,0.03);
+    tooltip-position: top;
+    padding: 18px;
+}
+
+#ShortcutMenuQuestJournal:hover
+{
+    background-color: rgba(0,0,0,0.25);
+}
+
+#ShortcutMenuQuestJournalItem
+{
+    background-image: url("s2r://panorama/images/custom_game/hudquesticon_png.png");
+    background-size: 100% 100%;
+    width: 42px;
+    height: 42px;
+    border-radius: 50px;
+    box-shadow: 0 0 6px black inset;
+    vertical-align: center;
+}
+
+#ShortcutMenuAccountStash
+{
+    vertical-align: center;
+    border-left: 1px solid rgba(255,255,255,0.03);
+    tooltip-position: top;
+    padding: 18px;
+}
+
+#ShortcutMenuAccountStash:hover
+{
+    background-color: rgba(0,0,0,0.25);
+}
+
+#ShortcutMenuAccountStashItem
+{
+    background-image: url("s2r://panorama/images/custom_game/accountstashicon_png.png");
+    background-size: 100% 100%;
+    width: 42px;
+    height: 42px;
+    border-radius: 50px;
+    box-shadow: 0 0 6px black inset;
+    vertical-align: center;
+}
+
+#ShortcutMenuDPSMeter
+{
+    vertical-align: center;
+    border-left: 1px solid rgba(255,255,255,0.03);
+    tooltip-position: top;
+    padding: 18px;
+}
+
+#ShortcutMenuDPSMeter:hover
+{
+    background-color: rgba(0,0,0,0.25);
+}
+
+#ShortcutMenuDPSMeterItem
+{
+    background-image: url("s2r://panorama/images/custom_game/icondpsmeter_png.png");
+    background-size: 100% 100%;
+    width: 42px;
+    height: 42px;
+    border-radius: 50px;
+    box-shadow: 0 0 6px black inset;
+    vertical-align: center;
+}
+
+#ShortcutMenuAutoLoot
+{
+    vertical-align: center;
+    border-left: 1px solid rgba(255,255,255,0.03);
+    tooltip-position: top;
+    padding: 18px;
+}
+
+#ShortcutMenuAutoLoot:hover
+{
+    background-color: rgba(0,0,0,0.25);
+}
+
+#ShortcutMenuAutoLootItem
+{
+    background-image: url("s2r://panorama/images/custom_game/iconautoloot_png.png");
+    background-size: 100% 100%;
+    width: 42px;
+    height: 42px;
+    border-radius: 50px;
+    box-shadow: 0 0 6px black inset;
+    vertical-align: center;
+}
+
+#ShortcutMenuFactions
+{
+    vertical-align: center;
+    border-left: 1px solid rgba(255,255,255,0.03);
+    tooltip-position: top;
+    padding: 18px;
+}
+
+#ShortcutMenuFactions:hover
+{
+    background-color: rgba(0,0,0,0.25);
+}
+
+#ShortcutMenuFactionsItem
+{
+    background-image: url("s2r://panorama/images/custom_game/iconfactions_png.png");
+    background-size: 100% 100%;
+    width: 42px;
+    height: 42px;
+    border-radius: 50px;
+    box-shadow: 0 0 6px black inset;
+    vertical-align: center;
+}
+
+#CustomShopMenu
+{
+    background-color: gradient( linear, 0% 0%, 100% 0%, from( rgba(0,0,0,0) ), to( rgba(0,0,0,0.75) ) );
+    vertical-align: bottom;
+    horizontal-align: right;
+    flow-children: right-wrap;
+    padding: 12px;
+    width: 200px;
+}
+
+#CustomShopMenuGoldContainer
+{
+    background-image: url("s2r://panorama/images/custom_game/rune_button_bg_png.png");
+    background-size: 100% 100%;
+    width: 100%;
+    height: 40px;
+    vertical-align: center;
+    flow-children: right-wrap;
+    border-right: 1px solid rgba(255,255,255,0.03);
+    border-radius: 6px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.25);
+    tooltip-position: top;
+    margin-top: 12px;
+}
+
+#CustomShopMenuGoldAmount
+{
+    color: #f4d361;
+    font-weight: bold;
+    font-size: 20px;
+    text-shadow: 1px 1px 1px black;
+    text-align: right;
+    font-family: RadianceM,Radiance,FZLanTingHei-R-GBK,TH Sarabun New,YDYGO 540,Gulim,MingLiU;
+    vertical-align: center;
+    horizontal-align: right;
+    margin-left: 3px;
+    padding-right: 12px;
+}
+
+#CustomShopMenuGoldImage
+{
+    background-image: url("s2r://panorama/images/custom_game/icon_gold_psd_png.png");
+    background-size: 100% 100%;
+    width: 25px;
+    height: 25px;
+    vertical-align: center;
+    margin-left: 6px;
+}
+
+#CustomShopMenuCraftContainer
+{
+    background-image: url("s2r://panorama/images/custom_game/dash_button_drop_bg_psd_c258b05_png.png");
+    background-size: 100% 100%;
+    margin-left: 12px;
+    vertical-align: center;
+    flow-children: right-wrap;
+    border-right: 1px solid rgba(255,255,255,0.03);
+    height: 40px;
+    padding: 0 12px;
+    border-radius: 6px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.25);
+}
+
+#CustomShopMenuCraftAmount
+{
+    color: silver;
+    font-weight: bold;
+    font-size: 15px;
+    text-shadow: 1px 1px 1px black;
+    text-align: right;
+    font-family: RadianceM,Radiance,FZLanTingHei-R-GBK,TH Sarabun New,YDYGO 540,Gulim,MingLiU;
+    vertical-align: center;
+    horizontal-align: center;
+    text-transform: uppercase;
+}
+
+#CustomShopMenuCraftContainer:hover
+{
+    brightness: 1.5;
+    color: #FFF;
+}
+
+#CustomShopMenuCraftContainer:hover #CustomShopMenuCraftAmount
+{
+    color: #FFF;
+}
+
+#CustomShopMenuRows
+{
+    flow-children: down-wrap;
+    width: 100%;
+}
+
+#CustomShopMenuRow
+{
+    flow-children: right-wrap;
+    padding: 6px;
+    width: 100%;
+}
+
+#CustomShopMenuRow.legendary
+{
+    background-color: gradient( linear, 0% 0%, 100% 0%, from( rgba(0, 0, 0, 0) ), to( rgba(253, 101, 0, 0.25) ) );
+}
+
+#CustomShopMenuRow.mythical
+{
+    background-color: gradient( linear, 0% 0%, 100% 0%, from( rgba(0, 0, 0, 0) ), to( rgba(152, 0, 253, 0.25) ) );
+}
+
+#CustomShopMenuRow.rare
+{
+    background-color: gradient( linear, 0% 0%, 100% 0%, from( rgba(0, 0, 0, 0) ), to( rgba(0, 67, 253, 0.25) ) );
+}
+
+#CustomShopMenuRow.common
+{
+    background-color: gradient( linear, 0% 0%, 100% 0%, from( rgba(0, 0, 0, 0) ), to( rgba(139, 139, 139, 0.25) ) );
+}
+
+#CustomShopMenuRowImage
+{
+    background-size: 100% 100%;
+    background-position: center;
+    width: 31px;
+    height: 30px;
+    margin-right: 12px;
+    border-radius: 50%;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5) inset;
+}
+
+#CustomShopMenuRowImage.common
+{
+    background-image: url("s2r://panorama/images/custom_game/essence_common_png.png");
+}
+
+#CustomShopMenuRowImage.rare
+{
+    background-image: url("s2r://panorama/images/custom_game/essence_rare_png.png");
+}
+
+#CustomShopMenuRowImage.mythical
+{
+    background-image: url("s2r://panorama/images/custom_game/essence_mythical_png.png");
+}
+
+#CustomShopMenuRowImage.legendary
+{
+    background-image: url("s2r://panorama/images/custom_game/essence_legendary_png.png");
+}
+
+#CustomShopMenuRowText
+{
+    color: #FFF;
+    font-family: RadianceM,Radiance,FZLanTingHei-R-GBK,TH Sarabun New,YDYGO 540,Gulim,MingLiU;
+    font-size: 18px;
+    text-shadow: 1px 1px 1px black;
+    font-weight: bold;
+    line-height: 1.5;
+    horizontal-align: right;
+    padding-right: 6px;
+}
+

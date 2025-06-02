@@ -1,0 +1,119 @@
+/* Prettified by Source 2 Viewer 11.1.0.0 - https://valveresourceformat.github.io */
+
+#HeroPickText
+{
+    opacity: 1;
+}
+
+.HeroPickText
+{
+    color: #ffffff;
+    font-size: 40px;
+    text-align: center;
+    line-height: 25px;
+    margin-left: 45%;
+    margin-top: 30%;
+    opacity: 1;
+    text-shadow: 0 0 3px rgb(254, 255, 239), 0 0 3px rgb(255, 255, 255);
+    transition-property: opacity;
+    transition-duration: .4s;
+    transition-timing-function: ease-in-out;
+    animation-name: OpacityPulse;
+    animation-duration: 2.82s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes 'OpacityPulse'
+{
+    0%
+    {
+        opacity: 1.0;
+    }
+    
+    50%
+    {
+        opacity: 0.2;
+    }
+    
+    100%
+    {
+        opacity: 1.0;
+    }
+    
+}
+
+#HeroPickImage
+{
+    margin-top: 5%;
+    margin-right: 90%;
+    border-radius: 0px;
+    horizontal-align: right;
+    width: 70px;
+    height: 90px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border: 3px solid rgb(238, 255, 0);
+    background-image: url("s2r://panorama/images/custom_game/saitama_png.vtex");
+    opacity: 1;
+}
+
+#HeroPickImage2
+{
+    margin-top: 5%;
+    margin-right: 86.0%;
+    border-radius: 0px;
+    horizontal-align: right;
+    width: 70px;
+    height: 90px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border: 3px solid rgb(238, 255, 0);
+    background-image: url("s2r://panorama/images/custom_game/alhimick_png.vtex");
+    opacity: 1;
+}
+
+#HeroPickImage3
+{
+    margin-top: 5%;
+    margin-right: 82.0%;
+    border-radius: 0px;
+    horizontal-align: right;
+    width: 70px;
+    height: 90px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border: 3px solid rgb(238, 255, 0);
+    background-image: url("s2r://panorama/images/custom_game/nevermore_png.vtex");
+    opacity: 1;
+}
+
+#HeroPickImage4
+{
+    margin-top: 5%;
+    margin-right: 78.0%;
+    border-radius: 0px;
+    horizontal-align: right;
+    width: 70px;
+    height: 90px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border: 3px solid rgb(238, 255, 0);
+    background-image: url("s2r://panorama/images/custom_game/clinkz_png.vtex");
+    opacity: 1;
+}
+
+#HeroPickImage5
+{
+    margin-top: 5%;
+    margin-right: 74.0%;
+    border-radius: 0px;
+    horizontal-align: right;
+    width: 70px;
+    height: 90px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border: 3px solid rgb(238, 255, 0);
+    background-image: url("s2r://panorama/images/custom_game/thinker_png.vtex");
+    opacity: 1;
+}
+

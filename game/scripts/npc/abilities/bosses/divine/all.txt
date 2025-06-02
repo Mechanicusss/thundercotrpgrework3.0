@@ -1,0 +1,90 @@
+"DOTAAbilities"
+{
+    "boss_omniknight_purification"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "heroes/bosses/divine/boss_omniknight_purification"
+        "AbilityTextureName"            "omniknight_purification"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_PURE"
+        "FightRecapLevel"               "1"
+        "AbilitySound"                  "Hero_Omniknight.Purification"
+        
+        "MaxLevel" "5"
+
+        "precache"
+        {
+            "soundfile" "soundevents/game_sounds_heroes/game_sounds_omniknight.vsndevts"
+            "particle" "particles/units/heroes/hero_omniknight/omniknight_purification.vpcf"
+        }
+        
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+            "max_hp_threshold" "3 4 5 6 7"
+            "max_hp_heal_pct" "2.5"
+            "radius" "360"
+        }
+        "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_1"
+    }
+
+    "boss_omniknight_guardian_angel"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "heroes/bosses/divine/boss_omniknight_guardian_angel"
+        "AbilityTextureName"            "omniknight_guardian_angel"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "FightRecapLevel"               "1"
+        
+        "MaxLevel" "5"
+
+        "precache"
+        {
+            "soundfile" "soundevents/game_sounds_heroes/game_sounds_omniknight.vsndevts"
+            "particle" "particles/units/heroes/hero_omniknight/omniknight_guardian_angel_ally.vpcf"
+            "particle" "particles/frostivus_herofx/holdout_guardian_angel_wings.vpcf"
+        }
+        
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+            "damage_reduction" "-50"
+        }
+        "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_1"
+    }
+
+    "boss_omniknight_repel"
+    {
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "heroes/bosses/divine/boss_omniknight_repel"
+        "AbilityTextureName"            "omniknight_repel"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_PURE"
+        "FightRecapLevel"               "1"
+        
+        "MaxLevel" "5"
+
+        "AbilityCooldown" "3"
+
+        "precache"
+        {
+            "soundfile" "soundevents/game_sounds_heroes/game_sounds_omniknight.vsndevts"
+            "particle" "particles/econ/items/omniknight/omni_ti8_head/omniknight_repel_buff_ti8.vpcf"
+            "particle" "particles/units/heroes/hero_omniknight/omniknight_hammer_of_purity_projectile.vpcf"
+            "particle" "particles/units/heroes/hero_omniknight/omniknight_hammer_of_purity_detonation.vpcf"
+            "particle" "particles/units/heroes/hero_omniknight/omniknight_shard_hammer_of_purity_target.vpcf"
+        }
+        
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+            "damage" "15000 20000 25000 30000 35000"
+            "purge_interval" "5"
+        }
+
+        "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_1"
+    }
+}

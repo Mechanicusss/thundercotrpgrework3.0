@@ -1,0 +1,167 @@
+/* Prettified by Source 2 Viewer 10.2.0.0 - https://valveresourceformat.github.io */
+
+#ItemGroundLabelContainer
+{
+    background-color: gradient( linear, 0% 100%, 0% 0%, from( rgba(0, 0, 0, 0.75) ), to(rgba(53, 53, 53, 0.5)) );
+    border-radius: 4px;
+    z-index: -1;
+}
+
+#ItemGroundLabelContainer.mythical:hover
+{
+    box-shadow: 0 0 6px rgba(152, 0, 253, 1);
+}
+
+#ItemGroundLabelContainer.legendary:hover
+{
+    box-shadow: 0 0 6px rgba(253, 101, 0, 1);
+}
+
+#ItemGroundLabelContainer.rare:hover
+{
+    box-shadow: 0 0 6px rgb(58, 174, 252);
+}
+
+#ItemGroundLabelContainer.common:hover
+{
+    box-shadow: 0 0 6px rgba(139, 139, 139, 1);
+}
+
+#ItemGroundLabel
+{
+    color: #FFF;
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-size: 18px;
+    text-shadow: 1px 1px 1px black;
+    font-family: RadianceM,Radiance,FZLanTingHei-R-GBK,TH Sarabun New,YDYGO 540,Gulim,MingLiU;
+    letter-spacing: 1px;
+    font-weight: normal;
+}
+
+#CustomItemTooltipContainer
+{
+    background-image: url("file://{resources}/panorama/images/custom_game/graybg_png.png");
+    background-size: 100%;
+    width: 350px;
+    visibility: collapse;
+    opacity: 0;
+    border-radius: 6px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 1);
+    flow-children: down-wrap;
+    margin:-100000px;
+}
+
+#CustomItemTooltipHeader
+{
+    flow-children: right-wrap;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 6px;
+}
+
+#CustomItemTooltipHeaderImage
+{
+    height: 40px;
+    border-radius: 6px;
+    box-shadow: 0 0 6px black inset;
+}
+
+#CustomItemTooltipHeaderNameContainer
+{
+    flow-children: down-wrap;
+    vertical-align: middle;
+    width: 70%;
+}
+
+#CustomItemTooltipHeaderLevel
+{
+    font-family: RadianceM,Radiance,FZLanTingHei-R-GBK,TH Sarabun New,YDYGO 540,Gulim,MingLiU;
+    color: silver;
+    font-size: 15px;
+    text-shadow: 1px 1px 1px black;
+    padding: 0 12px;
+}
+
+#CustomItemTooltipHeaderName
+{
+    color: #FFF;
+    text-shadow: 1px 1px 1px black;
+    font-family: RadianceM,Radiance,FZLanTingHei-R-GBK,TH Sarabun New,YDYGO 540,Gulim,MingLiU;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 0 12px;
+    vertical-align: center;
+    text-overflow: shrink min(10px);
+    white-space: nowrap;
+    overflow: squish;
+    width: 90%;
+    max-width: 90%;
+    text-transform: uppercase;
+}
+
+#CustomItemTooltipStatsContainer
+{
+    width: 100%;
+    padding: 12px 18px;
+    flow-children: down-wrap;
+}
+
+#CustomItemTooltipStatRow
+{
+    font-family: RadianceM,Radiance,FZLanTingHei-R-GBK,TH Sarabun New,YDYGO 540,Gulim,MingLiU;
+    font-size: 15px;
+    color: silver;
+    text-shadow: 1px 1px 1px black;
+    line-height: 1.5;
+}
+
+#CustomItemTooltipEffectContainer
+{
+    width: 100%;
+    margin-top: 0;
+}
+
+#CustomItemTooltipEffectLabel
+{
+    font-family: RadianceM,Radiance,FZLanTingHei-R-GBK,TH Sarabun New,YDYGO 540,Gulim,MingLiU;
+    font-size: 15px;
+    color: #ffeb9d;
+    text-shadow: 1px 1px 1px black;
+    background-image: url("file://{resources}/panorama/images/custom_game/battle_cup_now_live_bg_png_png.png");
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    margin: 12px;
+}
+
+#CustomItemTooltipEffectLabel.regular
+{
+    background-image: url("file://{resources}/panorama/images/custom_game/graybg_png.png");
+    color: silver;
+    margin-top:-12px;
+}
+
+#CustomItemTooltipEffectLabel h1
+{
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #FFF;
+    background-color: red;
+}
+
+.levprop
+{
+    font-weight: bold;
+}
+
+.legaff
+{
+    font-weight: bold;
+    width: 100%;
+    color: orange;
+    font-size: 15px;
+    line-height: 1.5;
+}
+

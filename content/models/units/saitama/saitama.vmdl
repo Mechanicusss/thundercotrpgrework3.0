@@ -1,0 +1,770 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc31:version{165d48dd-8adc-4f1d-abf7-4992e04ad577} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "MaterialGroupList"
+				children = 
+				[
+					{
+						_class = "DefaultMaterialGroup"
+						remaps = 
+						[
+							{
+								from = "imported material 01.vmat"
+								to = "materials/models/units/saitama/saitama2.vmat"
+							},
+							{
+								from = "imported material 02.vmat"
+								to = "materials/models/units/saitama/saitama1.vmat"
+							},
+						]
+						use_global_default = false
+						global_default_material = ""
+					},
+				]
+			},
+			{
+				_class = "AttachmentList"
+				children = 
+				[
+					{
+						_class = "Attachment"
+						name = "attach_hitloc"
+						parent_bone = "Bone03"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_head"
+						parent_bone = "Bone04"
+						relative_origin = [ 0.0, -9.0, 21.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_attack1"
+						parent_bone = "Bone10"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "attach_attack2"
+						parent_bone = "Bone43"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+				]
+			},
+			{
+				_class = "HitboxSetList"
+				children = 
+				[
+					{
+						_class = "HitboxSet"
+						name = "default"
+						children = 
+						[
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone01"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -13.86483, -10.296289, -1.889091 ]
+								hitbox_maxs = [ 13.643181, 8.643515, 10.706833 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone02"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -13.179221, -13.17842, 1.110207 ]
+								hitbox_maxs = [ 12.957574, 5.260201, 9.529488 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "bone_kuabu_"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -2.0, -2.0, -2.0 ]
+								hitbox_maxs = [ 2.0, 2.0, 2.0 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "bone_new0"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -12.498955, -13.195528, -9.455063 ]
+								hitbox_maxs = [ 12.277309, 5.739268, -2.398865 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bonea65"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -7.408352, -6.812811, -28.304321 ]
+								hitbox_maxs = [ 5.467051, 6.510126, -3.587151 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone05"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -5.688698, -8.165934, -28.642593 ]
+								hitbox_maxs = [ 7.186707, 5.157003, -3.925423 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone03"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -21.095877, -12.949445, -5.017189 ]
+								hitbox_maxs = [ 20.874228, 12.842881, 17.479675 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "BoneA66"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -4.508526, -7.543633, -36.891968 ]
+								hitbox_maxs = [ 7.20969, 6.560741, 1.479813 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone06"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -7.486494, -7.543633, -36.336811 ]
+								hitbox_maxs = [ 4.231726, 6.560741, 2.034969 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone58"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -3.498856, -8.767883, -14.064232 ]
+								hitbox_maxs = [ 19.71102, 5.872736, 6.278976 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone08"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -16.569489, -8.767883, -11.569176 ]
+								hitbox_maxs = [ 3.277207, 5.872736, 6.3022 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "BoneA67"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -4.032133, -3.591097, -11.550598 ]
+								hitbox_maxs = [ 5.027906, 7.594772, -2.299003 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone63"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -5.271614, -3.491097, -11.439571 ]
+								hitbox_maxs = [ 3.997671, 7.694773, -2.187976 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone42"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -0.334806, -2.976887, -12.244362 ]
+								hitbox_maxs = [ 15.689188, 4.961026, 1.843742 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone09"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -17.999128, -3.334493, -15.475677 ]
+								hitbox_maxs = [ 2.380928, 4.961026, 2.271767 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "bone_new2"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -4.721312, -7.937878, -2.739075 ]
+								hitbox_maxs = [ 4.764006, 1.75501, 3.353088 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "BoneA68"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -5.718095, -4.541792, -2.108624 ]
+								hitbox_maxs = [ 5.071215, 4.962227, 2.803264 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone64"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -5.703173, -4.541792, -2.108621 ]
+								hitbox_maxs = [ 5.086137, 4.962227, 2.803267 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Point05"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -6.598276, -2.32448, -69.143288 ]
+								hitbox_maxs = [ 6.376631, 2.40254, 9.581314 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Point08"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -6.503279, -7.0998, -69.891365 ]
+								hitbox_maxs = [ 8.514761, 0.440557, 9.895927 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Point09"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -8.736408, -7.0998, -69.891365 ]
+								hitbox_maxs = [ 6.281631, 0.440557, 9.895927 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone43"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -4.836235, -5.608855, -7.320206 ]
+								hitbox_maxs = [ 6.333633, 4.328227, 4.96109 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone10"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -5.651882, -5.608856, -7.626869 ]
+								hitbox_maxs = [ 3.600002, 3.450958, 2.932266 ]
+							},
+							{
+								_class = "Hitbox"
+								parent_bone = "Bone04"
+								surface_property = ""
+								translation_only = false
+								group_id = 0
+								hitbox_mins = [ -9.231968, -14.486263, -2.820999 ]
+								hitbox_maxs = [ 9.010208, 4.266777, 22.236191 ]
+							},
+						]
+					},
+				]
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						name = "saitama"
+						filename = "models/units/saitama/saitama.fbx"
+						import_scale = 1.0
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+				]
+			},
+			{
+				_class = "AnimationList"
+				children = 
+				[
+					{
+						_class = "AnimFile"
+						name = "Stand"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/units/saitama/saitama.fbx"
+						import_bone_scales = false
+						start_frame = 10
+						end_frame = 70
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Stand_Ready"
+						children = 
+						[
+							{
+								_class = "AnimSmoothLoop"
+								frames_from_start = 5
+								frames_from_end = 5
+							},
+						]
+						activity_name = "ACT_DOTA_IDLE"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/units/saitama/saitama.fbx"
+						import_bone_scales = false
+						start_frame = 112
+						end_frame = 135
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Attack_1"
+						activity_name = "ACT_DOTA_ATTACK"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/units/saitama/saitama.fbx"
+						import_bone_scales = false
+						start_frame = 155
+						end_frame = 185
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Attack_2"
+						activity_name = "ACT_DOTA_ATTACK2"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/units/saitama/saitama.fbx"
+						import_bone_scales = false
+						start_frame = 205
+						end_frame = 235
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Attack_Slam"
+						children = 
+						[
+							{
+								_class = "ActivityModifier"
+								activity_name = "ACT_DOTA_ATTACK_EVENT_BASH"
+								activity_weight = 1
+							},
+						]
+						activity_name = "ACT_DOTA_ATTACK_EVENT"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/units/saitama/saitama.fbx"
+						import_bone_scales = false
+						start_frame = 255
+						end_frame = 285
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Spell_One"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/units/saitama/saitama.fbx"
+						import_bone_scales = false
+						start_frame = 305
+						end_frame = 353
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Spell_Two"
+						activity_name = "ACT_DOTA_CAST_ABILITY_6"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/units/saitama/saitama.fbx"
+						import_bone_scales = false
+						start_frame = 373
+						end_frame = 409
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Spell_Three"
+						activity_name = "ACT_DOTA_CAST_ABILITY_5"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/units/saitama/saitama.fbx"
+						import_bone_scales = false
+						start_frame = 429
+						end_frame = 460
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Attack_Walk_Stand_Spin"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/units/saitama/saitama.fbx"
+						import_bone_scales = false
+						start_frame = 480
+						end_frame = 543
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Death"
+						activity_name = "ACT_DOTA_DIE"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/units/saitama/saitama.fbx"
+						import_bone_scales = false
+						start_frame = 563
+						end_frame = 593
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Dissipate"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/units/saitama/saitama.fbx"
+						import_bone_scales = false
+						start_frame = 613
+						end_frame = 643
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Walk"
+						activity_name = "ACT_DOTA_RUN"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/units/saitama/saitama.fbx"
+						import_bone_scales = false
+						start_frame = 663
+						end_frame = 683
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Spell_Blink"
+						activity_name = "ACT_DOTA_CHANNEL_ABILITY_2"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/units/saitama/saitama.fbx"
+						import_bone_scales = false
+						start_frame = 703
+						end_frame = 712
+						framerate = 15.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Spell_Channel"
+						activity_name = "ACT_DOTA_CHANNEL_ABILITY_3"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/units/saitama/saitama.fbx"
+						import_bone_scales = false
+						start_frame = 733
+						end_frame = 737
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Spell_Slam_Start"
+						activity_name = "ACT_DOTA_CAST_ABILITY_1"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/units/saitama/saitama.fbx"
+						import_bone_scales = false
+						start_frame = 757
+						end_frame = 767
+						framerate = 25.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Spell_Gold"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/units/saitama/saitama.fbx"
+						import_bone_scales = false
+						start_frame = 807
+						end_frame = 818
+						framerate = 30.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Spell_Slam_Channeling"
+						children = 
+						[
+							{
+								_class = "AnimSmoothLoop"
+								frames_from_start = 2
+								frames_from_end = 2
+							},
+						]
+						activity_name = "ACT_DOTA_CHANNEL_ABILITY_1"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/units/saitama/saitama.fbx"
+						import_bone_scales = false
+						start_frame = 767
+						end_frame = 784
+						framerate = 7.0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "Spell_Slam_End"
+						activity_name = "ACT_DOTA_CHANNEL_END_ABILITY_1"
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = false
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						animgraph_additive = false
+						source_filename = "models/units/saitama/saitama.fbx"
+						import_bone_scales = false
+						start_frame = 784
+						end_frame = 787
+						framerate = 15.0
+						reverse = false
+					},
+				]
+				default_root_bone_name = ""
+			},
+		]
+		model_archetype = ""
+		primary_associated_entity = ""
+		anim_graph_name = ""
+		importer_notes = """
+Imported from VMDL
+==Warnings==
+Changed incompatible hitbox parent bone name 'bone_kuabu ' to 'bone_kuabu_'
+Changed incompatible animation name 'Stand Ready' to 'Stand_Ready'
+Changed incompatible animation name 'Attack 1' to 'Attack_1'
+Changed incompatible animation name 'Attack 2' to 'Attack_2'
+Changed incompatible animation name 'Attack Slam' to 'Attack_Slam'
+Changed incompatible animation name 'Spell One' to 'Spell_One'
+Changed incompatible animation name 'Spell Two' to 'Spell_Two'
+Changed incompatible animation name 'Spell Three' to 'Spell_Three'
+Changed incompatible animation name 'Attack Walk Stand Spin' to 'Attack_Walk_Stand_Spin'
+Changed incompatible animation name 'Spell Blink' to 'Spell_Blink'
+Changed incompatible animation name 'Spell Channel' to 'Spell_Channel'
+Changed incompatible animation name 'Spell Slam Start' to 'Spell_Slam_Start'
+Changed incompatible animation name 'Spell Gold' to 'Spell_Gold'
+Changed incompatible animation name 'Spell Slam Channeling' to 'Spell_Slam_Channeling'
+Changed incompatible animation name 'Spell Slam End' to 'Spell_Slam_End'
+
+"""
+	}
+}

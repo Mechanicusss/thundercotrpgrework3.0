@@ -1,0 +1,3 @@
+#base "portraits/new.txt"
+#base "portraits/unchanged.txt"
+"Portraits"{}

@@ -1,0 +1,47 @@
+<root>
+    <styles>
+        <include src="s2r://panorama/styles/custom_game/endgame_screen.css" />
+    </styles>
+
+    <scripts>
+        <include src="s2r://panorama/scripts/custom_game/endgame_screen_player.js" />
+        <include src="s2r://panorama/scripts/custom_game/endgame_screen.js" />
+    </scripts>
+
+    <snippets>
+        <snippet name="PlayerPortrait">
+            <Panel class="PlayerPortrait" hittest="false">
+                <DOTAAvatarImage steamid="" id="PlayerAvatar" />
+                <DOTAUserName steamid="" id="PlayerName" />
+
+                <Label id="PlayerKills" onactivate="DOTAHUDToggleScoreboard()" />
+                <Label id="PlayerDeaths" />
+                <Label id="PlayerAssists" />
+                <Label id="PlayerNetWorth" />
+
+                <DOTAItemImage itemname="" id="PlayerItem1" class="PlayerItem" />
+                <DOTAItemImage itemname="" id="PlayerItem2" class="PlayerItem" />
+                <DOTAItemImage itemname="" id="PlayerItem3" class="PlayerItem" />
+                <DOTAItemImage itemname="" id="PlayerItem4" class="PlayerItem" />
+                <DOTAItemImage itemname="" id="PlayerItem5" class="PlayerItem" />
+                <DOTAItemImage itemname="" id="PlayerItem6" class="PlayerItem" />
+
+                <Label id="PlayerPointChanges" />
+            </Panel>
+        </snippet>
+
+        <snippet name="PlayersContainerRadiantSnippet">
+            <Panel class="PlayersContainerRadiant" hittest="false">
+                
+            </Panel>
+        </snippet>
+
+        <snippet name="PlayersContainerDireSnippet">
+            <Panel class="PlayersContainerDire" hittest="false"></Panel>
+        </snippet>
+    </snippets>
+
+    <Panel hittest="false" style="width: 100%; height: 100%;">
+        <Panel id="EndGameScreen" />
+    </Panel>
+</root>

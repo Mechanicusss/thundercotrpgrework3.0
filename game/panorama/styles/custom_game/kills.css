@@ -1,0 +1,466 @@
+#PreGameSettingsContainer {
+    background-color: gradient( linear, 100% 0%, 100% 100%, from( #111111 ), color-stop( 0.01, #202327 ), color-stop( 0.2, #141619ff ), to( #000000dd ) );
+    box-shadow: black 0px 0px 8px 0px ;
+    width: 550px;
+    margin-left: -42px;
+    height: 100%;
+    flow-children: down-wrap;
+}
+
+#Kills {
+    flow-children: right-wrap;
+    horizontal-align: left;
+    vertical-align: top;
+    width: 550px;
+    padding: 30px 18px;
+    z-index: 1;
+}
+
+#WeChat {
+    background-image: url("file://{images}/custom_game/wechat.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50%;
+    height: 400px;
+    horizontal-align: center;
+    vertical-align: top;
+    tooltip-position: top;
+}
+
+#Discord {
+    background-image: url("file://{images}/custom_game/discord.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50%;
+    height: 400px;
+    horizontal-align: center;
+    vertical-align: top;
+    tooltip-position: top;
+}
+
+#Boosty {
+    visibility: collapse;
+}
+
+#Instructions {
+    color: #FFF;
+    background-image: url("file://{images}/custom_game/bg_scoreboard_psd.png"); 
+    background-size: cover;
+    z-index: 3;
+    width: 100%;
+    vertical-align: bottom;
+    box-shadow: black 0px 0px 8px 0px;
+    background-color: #000000da;
+    flow-children: right-wrap;
+    margin-top: 0px;
+    z-index: 4;
+}
+
+#Instructions.Voted {
+    margin-top: 20px;
+}
+
+#DefaultValveButtonID.Clicked Label, #DefaultValveButtonIDWAVE.Clicked Label, #DefaultValveButtonIDXP.Clicked Label, #DefaultValveButtonIDGOLD.Clicked Label, #DefaultValveButtonIDEFFECT.Clicked Label, #DefaultValveButtonIDFASTBOSSES.Clicked Label {
+    /*color: #707070;*/
+}
+
+#DefaultValveButtonID.Chosen, #DefaultValveButtonIDWAVE.Chosen, #DefaultValveButtonIDXP.Chosen, #DefaultValveButtonIDGOLD.Chosen, #DefaultValveButtonIDEFFECT.Chosen, #DefaultValveButtonIDFASTBOSSES.Chosen {
+    background-image: url("file://{images}/custom_game/settings_button_on.png"); 
+    opacity: 1;
+}
+
+#DefaultValveButtonIDWAVE.Chosen Label, #DefaultValveButtonIDXP.Chosen Label, #DefaultValveButtonIDGOLD.Chosen Label, #DefaultValveButtonIDEFFECT.Chosen Label, #DefaultValveButtonIDFASTBOSSES.Chosen Label {
+    color: #acd7e5;
+}
+
+#DefaultValveButtonID.Chosen Label, #DefaultValveButtonIDGOLD .Chosen Label, #DefaultValveButtonIDWAVE .Chosen Label, #DefaultValveButtonIDXP .Chosen Label, #DefaultValveButtonIDEFFECT .Chosen Label, #DefaultValveButtonIDFASTBOSSES .Chosen Label {
+    text-shadow: 1px 1px 0px 2.0 #000000;
+    color: #FFF;
+    font-weight: bold;
+}
+
+#Header {
+    color: #FFF;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    horizontal-align: left;
+    background-image: url("file://{images}/custom_game/bg_scoreboard_psd.png");
+    background-size: cover;
+    width: 550px;
+    z-index: 2;
+    text-shadow: 1px 1px 0px 2.0 #000000;
+    font-family: defaultFont;
+    border-bottom: 1px solid #ffffff03;
+    background-color: #000000da;
+    padding: 12px;
+    text-align: center;
+    border-top: 1px solid #ffffff05;
+    box-shadow: black 0px 0px 8px 0px ;
+    text-align: center;
+}
+
+#HasVoted {
+    color: #FFF;
+    font-weight: bold;
+    background-image: url("file://{images}/custom_game/bg_scoreboard_psd.png");
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 0;
+    border-bottom: 1px solid #ffffff03;
+    text-shadow: 1px 1px 0px 2.0 #000000;
+    font-size: 18px;
+    text-align: center;
+}
+
+#DefaultValveButtonID
+{
+    horizontal-align: center;
+    vertical-align: bottom;
+    margin-bottom: 0;
+    background-color: transparent;
+}
+
+#DefaultValveButtonIDWAVE
+{
+    vertical-align: bottom;
+    margin-bottom: 0;
+    box-shadow: black 0 0 3px;
+    border: 3px solid transparent;
+}
+
+#DefaultValveButtonIDXP
+{
+    vertical-align: bottom;
+    margin-bottom: 0;
+    box-shadow: black 0 0 3px;
+    border: 3px solid transparent;
+}
+
+#DefaultValveButtonIDGOLD
+{
+    vertical-align: bottom;
+    margin-bottom: 0;
+    box-shadow: black 0 0 3px;
+    border: 3px solid transparent;
+}
+
+#DefaultValveButtonIDFASTBOSSES
+{
+    vertical-align: bottom;
+    margin-bottom: 0;
+    box-shadow: black 0 0 3px;
+    border: 3px solid transparent;
+}
+
+#DefaultValveButtonIDEFFECT
+{
+    vertical-align: bottom;
+    margin-bottom: 0;
+    border: 3px solid transparent;
+}
+
+
+.DefaultValveButtonClass, .DefaultValveButtonClassWAVE, .DefaultValveButtonClassXP, .DefaultValveButtonClassGOLD, .DefaultValveButtonClassFASTBOSSES, .DefaultValveButtonClassEFFECT
+{
+    transition-property: background-color;
+    transition-duration: 0.05s;
+    transition-timing-function: linear;
+    background-image: url("file://{images}/custom_game/settings_button_off.png");
+    background-size: cover;
+    width: 150px;
+    padding: 6px 24px 10px;
+    border-radius: 4px;
+}
+
+.DefaultValveButtonClass Label, .DefaultValveButtonClassWAVE Label, .DefaultValveButtonClassXP Label, .DefaultValveButtonClassGOLD Label, .DefaultValveButtonClassFASTBOSSES Label, .DefaultValveButtonClassEFFECT Label
+{
+    margin-top: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgb(177, 177, 177);
+    text-align: center;
+    horizontal-align: center;
+    vertical-align: middle;
+    text-shadow: 2px 2px 0px 1.0 #000000;
+    
+    font-size: 16px;
+    font-family: defaultFont;
+
+    line-height: 1.5;
+}
+.DefaultValveButtonClass:not(.Clicked):hover, .DefaultValveButtonClassWAVE:not(.Clicked):hover, .DefaultValveButtonClassXP:not(.Clicked):hover, .DefaultValveButtonClassGOLD:not(.Clicked):hover, .DefaultValveButtonClassFASTBOSSES:not(.Clicked):hover, .DefaultValveButtonClassEFFECT:not(.Clicked):hover
+{
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #4c5561 ), to( #6c7d88 ) );
+    border-top-color: #aaaaaa77;
+    border-left-color: #aaaaaa33;
+    border-bottom-color: #333333;
+    border-right-color: #404040;
+}
+.DefaultValveButtonClass:not(.Clicked):active, .DefaultValveButtonClassGOLD:not(.Clicked):active, .DefaultValveButtonClassWAVE:not(.Clicked):active, .DefaultValveButtonClassXP:not(.Clicked):active, .DefaultValveButtonClassFASTBOSSES:not(.Clicked):active, .DefaultValveButtonClassEFFECT:not(.Clicked):active
+{
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #393939), to( #555555 ) );
+    border-top-color: #222222;
+    border-left-color: #303030;
+    border-bottom-color: #666666;
+    border-right-color: #444444;
+    sound: "ui_generic_button_click";
+}
+
+#HeaderVoteWave {
+    color: #FFF;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    horizontal-align: left;
+    background-image: url("file://{images}/custom_game/bg_scoreboard_psd.png");
+    background-size: cover;
+    width: 550px;
+    z-index: 2;
+    text-shadow: 1px 1px 0px 2.0 #000000;
+    font-family: defaultFont;
+    border-bottom: 1px solid #ffffff03;
+    background-color: #000000da;
+    padding: 12px;
+    text-align: center;
+    border-top: 1px solid #ffffff05;
+    box-shadow: black 0px 0px 8px 0px ;
+    margin-left: -42px;
+    text-align: center;
+}
+
+#VoteForWave {
+    flow-children: right;
+    horizontal-align: left;
+    vertical-align: top;
+    background-color: #121212;
+    border-top: 1px solid #242424;
+    box-shadow: black 0px 0px 8px 0px ;
+    width: 550px;
+    margin: 0;
+    padding: 30px 18px 12px;
+    margin-left: -42px;
+    z-index: 1;
+}
+
+#VoteForExp {
+    flow-children: right;
+    horizontal-align: left;
+    vertical-align: top;
+    background-color: #121212;
+    border-top: 1px solid #242424;
+    box-shadow: black 0px 0px 8px 0px ;
+    width: 550px;
+    margin: 0;
+    padding: 30px 18px 12px;
+    margin-left: -42px;
+    z-index: 1;
+}
+
+#VoteForGold {
+    flow-children: right;
+    horizontal-align: left;
+    vertical-align: top;
+    background-color: #121212;
+    border-top: 1px solid #242424;
+    box-shadow: black 0px 0px 8px 0px ;
+    width: 550px;
+    margin: 0;
+    padding: 30px 18px 12px;
+    margin-left: -42px;
+    z-index: 1;
+}
+
+#VoteForFastBosses {
+    flow-children: right;
+    horizontal-align: left;
+    vertical-align: top;
+    background-color: #121212;
+    border-top: 1px solid #242424;
+    box-shadow: black 0px 0px 8px 0px ;
+    width: 550px;
+    margin: 0;
+    padding: 30px 18px 12px;
+    margin-left: -42px;
+    z-index: 1;
+}
+
+#HeaderVoteEffects {
+    color: #FFF;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    horizontal-align: left;
+    background-image: url("file://{images}/custom_game/bg_scoreboard_psd.png");
+    background-size: cover;
+    width: 550px;
+    z-index: 2;
+    text-shadow: 1px 1px 0px 2.0 #000000;
+    font-family: defaultFont;
+    border-bottom: 1px solid #ffffff03;
+    background-color: #000000da;
+    padding: 12px;
+    text-align: center;
+    border-top: 1px solid #ffffff05;
+    box-shadow: black 0px 0px 8px 0px ;
+    margin-left: -42px;
+    text-align: center;
+}
+
+#VoteForEffects {
+    flow-children: right;
+    horizontal-align: left;
+    vertical-align: top;
+    border-top: 1px solid #242424;
+    width: 550px;
+    margin: 0;
+    padding: 30px 18px 12px;
+    z-index: 1;
+}
+
+.KillsSelection {
+    vertical-align: center;
+}
+
+.diff_easy {
+    background-image: url("file://{images}/custom_game/diff_easy.png");
+    background-size: cover;
+    width: 55px;
+    height: 55px;
+    margin-right: 20px;
+}
+
+.diff_easy_chosen {
+    background-image: url("file://{images}/custom_game/diff_easy_chosen.png");
+    background-size: cover;
+    width: 55px;
+    height: 55px;
+    margin-right: 20px;
+}
+
+.diff_normal {
+    background-image: url("file://{images}/custom_game/diff_normal.png");
+    background-size: cover;
+    width: 70px;
+    height: 70px;
+    margin-right: 20px;
+}
+
+.diff_hard {
+    background-image: url("file://{images}/custom_game/diff_hard.png");
+    background-size: cover;
+    width: 70px;
+    height: 70px;
+    margin-right: 20px;
+}
+
+.diff_impossible {
+    background-image: url("file://{images}/custom_game/diff_impossible.png");
+    background-size: cover;
+    width: 70px;
+    height: 70px;
+    margin-right: 20px;
+}
+
+.diff_hell {
+    background-image: url("file://{images}/custom_game/diff_hell.png");
+    background-size: cover;
+    width: 70px;
+    height: 70px;
+    margin-right: 20px;
+}
+
+.diff_hardcore {
+    background-image: url("file://{images}/custom_game/diff_hardcore.png");
+    background-size: cover;
+    width: 70px;
+    height: 70px;
+}
+
+.diff_normal_chosen {
+    background-image: url("file://{images}/custom_game/diff_normal_chosen.png");
+    background-size: cover;
+    width: 70px;
+    height: 70px;
+    margin-right: 20px;
+}
+
+.diff_hard_chosen {
+    background-image: url("file://{images}/custom_game/diff_hard_chosen.png");
+    background-size: cover;
+    width: 70px;
+    height: 70px;
+    margin-right: 20px;
+}
+
+.diff_impossible_chosen {
+    background-image: url("file://{images}/custom_game/diff_impossible_chosen.png");
+    background-size: cover;
+    width: 70px;
+    height: 70px;
+    margin-right: 20px;
+}
+
+.diff_hell_chosen {
+    background-image: url("file://{images}/custom_game/diff_hell_chosen.png");
+    background-size: cover;
+    width: 70px;
+    height: 70px;
+    margin-right: 20px;
+}
+
+.diff_hardcore_chosen {
+    background-image: url("file://{images}/custom_game/diff_hardcore_chosen.png");
+    background-size: cover;
+    width: 70px;
+    height: 70px;
+}
+
+.WaveSelection {
+    horizontal-align: center;
+}
+
+.ExpSelection {
+    horizontal-align: center;
+}
+
+.GoldSelection {
+    horizontal-align: center;
+}
+
+.FastBossesSelection {
+    horizontal-align: center;
+}
+
+.EffectSelection {
+    horizontal-align: center;
+}
+
+#VoteButtonContainer {
+    flow-children: right-wrap;
+    margin-bottom: 12px;
+    horizontal-align: center;
+}
+
+#VoteButtonContainer > Panel {
+    margin: 0 12px 12px 0;
+}
+
+#HostNotice {
+    width: 100%;
+    margin: 0;
+    z-index: 1;
+    margin: 12px;
+    border-radius: 4px;
+    background-color: rgba(0,0,0,0.5);
+    padding: 24px;
+}
+
+#HostNoticeWarning {
+    color: #FFF;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.5;
+}

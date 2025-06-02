@@ -1,0 +1,44 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:generic:version{aafc65d8-7a5a-4e01-bd8d-3ac118422503} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 24
+	m_flConstantLifespan = 1.500000
+	m_Operators = 
+	[
+		{
+			_class = "C_OP_Decay"
+		},
+		{
+			_class = "C_OP_PositionLock"
+			m_bLockRot = true
+		},
+	]
+	m_Initializers = 
+	[
+		{
+			_class = "C_INIT_RingWave"
+			m_flInitialRadius = 128.000000
+			m_flThickness = 24.000000
+		},
+	]
+	m_Emitters = 
+	[
+		{
+			_class = "C_OP_ContinuousEmitter"
+		},
+	]
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/arena/units/heroes/hero_zaken/stitching_strikes_elec.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/arena/units/heroes/hero_zaken/stitching_strikes_glow.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/arena/units/heroes/hero_zaken/stitching_strikes_trail.vpcf"
+		},
+	]
+	m_nBehaviorVersion = 5
+}

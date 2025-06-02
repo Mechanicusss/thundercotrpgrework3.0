@@ -1,0 +1,171 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vpcf57:version{4f75132e-4f5d-493c-958e-3bb4328089ba} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 1
+	m_flConstantRadius = 1.0
+	m_nConstantSequenceNumber1 = 1
+	m_nBehaviorVersion = 12
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_entityName = "self"
+				},
+			]
+		},
+	]
+	m_Emitters = 
+	[
+		{
+			_class = "C_OP_InstantaneousEmitter"
+			m_nParticlesToEmit = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 1.0
+			}
+		},
+	]
+	m_Initializers = 
+	[
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 0.8
+				m_flRandomMax = 1.0
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+			m_nOutputField = 10
+		},
+		{
+			_class = "C_INIT_CreateWithinSphereTransform"
+		},
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 1.5
+				m_flRandomMax = 2.0
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+			}
+		},
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_RANDOM_UNIFORM"
+				m_flRandomMin = 0.0
+				m_flRandomMax = 360.0
+				m_nRandomMode = "PF_RANDOM_MODE_CONSTANT"
+				m_bHasRandomSignFlip = true
+			}
+			m_nOutputField = 12
+		},
+		{
+			_class = "C_INIT_InitFloat"
+			m_InputValue = 
+			{
+				m_nType = "PF_TYPE_LITERAL"
+				m_flLiteralValue = 0.55
+			}
+			m_nOutputField = 1
+		},
+		{
+			_class = "C_INIT_RandomNamedModelSequence"
+			m_bModelFromRenderer = true
+			m_names = 
+			[
+				"spike_9frame",
+				"spike_15frame",
+			]
+			m_nFieldOutput = 13
+		},
+		{
+			_class = "C_INIT_RemapNamedModelSequenceToScalar"
+			m_bModelFromRenderer = true
+			m_names = 
+			[
+				"spike_9frame",
+				"spike_15frame",
+			]
+			m_values = [ 0.5, 1.0 ]
+			m_nFieldInput = 13
+			m_nFieldOutput = 10
+			m_nSetMethod = "PARTICLE_SET_SCALE_INITIAL_VALUE"
+		},
+	]
+	m_Operators = 
+	[
+		{
+			_class = "C_OP_Decay"
+		},
+		{
+			_class = "C_OP_InterpolateRadius"
+			m_flBias = 0.85
+			m_flStartScale = 0.0
+			m_flEndTime = 0.125
+		},
+		{
+			_class = "C_OP_InterpolateRadius"
+			m_flBias = 0.25
+			m_flEndScale = 0.0
+			m_flStartTime = 0.75
+		},
+		{
+			_class = "C_OP_OscillateScalar"
+			m_FrequencyMax = 0.5
+			m_FrequencyMin = 0.25
+			m_RateMax = 5.0
+			m_RateMin = -5.0
+			m_nField = 12
+		},
+		{
+			_class = "C_OP_Orient2DRelToCP"
+			m_flRotOffset = 270.0
+			m_nFieldOutput = 12
+		},
+	]
+	m_Renderers = 
+	[
+		{
+			_class = "C_OP_RenderModels"
+			m_ModelList = 
+			[
+				{
+					m_model = resource:"models/items/tidehunter/tide_fall20_immortal_back/tide_fall20_immortal_tentacle.vmdl"
+				},
+			]
+			m_bOrientZ = true
+			m_bAnimated = true
+			m_bScaleAnimationRate = true
+			m_bForceLoopingAnimation = true
+			m_nLOD = 1
+			m_modelInput = 
+			{
+			}
+			m_bDisableOperator = true
+		},
+	]
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/tidehunter/tide_2021_immortal/tide_2021_ravage_hit_2_warp.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/tidehunter/tide_2021_immortal/tide_2021_ravage_hit_2_foam.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/tidehunter/tide_2021_immortal/tide_2021_ravage_hit_2_spray.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/tidehunter/tide_2021_immortal/tide_2021_ravage_hit_2_burst.vpcf"
+		},
+	]
+}

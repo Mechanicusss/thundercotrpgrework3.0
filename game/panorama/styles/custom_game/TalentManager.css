@@ -1,0 +1,230 @@
+/* Prettified by Source 2 Viewer 11.1.0.0 - https://valveresourceformat.github.io */
+
+#TalentManagerContainer
+{
+    padding: 12px;
+    width: 700px;
+    margin-bottom: 230px;
+    horizontal-align: center;
+    flow-children: down-wrap;
+    border-radius: 4px;
+    transition-property: opacity;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-in-out;
+    z-index: 10;
+}
+
+#TalentManagerContainerHeader
+{
+    color: white;
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px black;
+    width: 676px;
+    padding: 12px;
+    border-radius: 4px 4px 0 0;
+    margin: 0;
+    text-align: center;
+    box-shadow: #000000f5 0px 0px 8px 0px;
+    z-index: 2;
+    background-image: url("file://{images}/custom_game/bg_scoreboard_psd.png");
+    background-position: top;
+}
+
+#TalentManagerContainerBody
+{
+    background-image: url("file://{images}/custom_game/bg_scoreboard_psd.png");
+    background-color: #000000da;
+    background-position: center;
+    flow-children: right-wrap;
+    box-shadow: 0 0 6px rgba(0,0,0,1);
+    margin: 0;
+    padding: 12px;
+    height: 500px;
+    z-index: 6;
+    width: 100%;
+}
+
+#TalentManagerContainerBody_Left
+{
+    flow-children: down-wrap;
+    height: 500px;
+}
+
+#TalentManagerContainerBody_Right
+{
+    flow-children: down-wrap;
+    height: 500px;
+}
+
+.TalentContainer
+{
+    flow-children: right-wrap;
+    background-color: rgba(0,0,0,0.5);
+    padding: 12px;
+    width: 326px;
+    border-bottom: 1px solid rgba(255,255,255,0.01);
+    height: 33%;
+}
+
+.TalentContainer:hover
+{
+    background-color: rgba(0,0,0,0.65);
+}
+
+.TalentContainer.faded
+{
+    opacity: 0.5;
+}
+
+.TalentContainer.unlearned
+{
+    opacity: 0.5;
+}
+
+.TalentContainer.unlearned:hover
+{
+    opacity: 1;
+}
+
+.TalentContainer.faded:hover
+{
+    opacity: 0.5;
+}
+
+.TalentContainer.faded:hover
+{
+    background-color: rgba(0,0,0,0.5);
+}
+
+.TalentContainer.selected
+{
+    background-color: rgba(0,0,0,0.65);
+}
+
+.TalentContainer.selected #TalentBodyDesc
+{
+    color: white;
+}
+
+.TalentContainer.selected #TalentBodyName
+{
+    color: #91ee91;
+}
+
+#TalentBodyContainer
+{
+    width: 85%;
+}
+
+#TalentImage
+{
+    border-radius: 4px;
+    height: 42px;
+    width: 42px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.5) inset;
+}
+
+#TalentBody
+{
+    flow-children: down;
+    padding: 0 12px;
+    width: 100%;
+}
+
+#TalentBodyName
+{
+    font-weight: bold;
+    color: #FFF;
+    font-size: 15px;
+    text-shadow: 1px 1px 1px black;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+}
+
+#TalentBodyDesc
+{
+    font-size: 15px;
+    width: 100%;
+    line-height: 1.5;
+    text-overflow: shrink;
+    overflow: squish;
+    height: 110px;
+}
+
+.TalentBorder
+{
+    border-right: 1px solid rgba(255,255,255,0.01);
+}
+
+#TalentManagerResetButton
+{
+    background-image: url("file://{images}/custom_game/relic_agi_button_psd.png");
+    padding: 6px 12px;
+    border-radius: 4px;
+    text-shadow: 1px 1px 1px black;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0 0 6px black;
+    horizontal-align: center;
+    text-transform: uppercase;
+}
+
+#TalentManagerResetButton:hover
+{
+    box-shadow: 0 0 4px lightgreen;
+}
+
+#TalentManagerResetButtonParent
+{
+    background-image: url("file://{images}/custom_game/bg_scoreboard_psd.png");
+    background-color: #000000da;
+    background-position: bottom;
+    width: 676px;
+    margin: 0;
+    padding: 12px;
+    box-shadow: #000000f5 0px 0px 8px 0px;
+    border-radius: 0 0 4px 4px;
+    z-index: 5;
+    flow-children: down-wrap;
+}
+
+#TalentLevelIndiciatorContainer
+{
+    layout-position: fixed;
+    height: 700px;
+    width: 100px;
+    background-color: red;
+}
+
+#TalentManagerToggleButton
+{
+    vertical-align: bottom;
+    margin-bottom: 26px;
+    margin-left: 0px;
+    margin-right: 4px;
+    z-index: 3;
+    tooltip-position: top;
+    tooltip-body-position: 50% 50%;
+    height: 62px;
+    width: 62px;
+}
+
+#TalentManagerToggleButtonIcon
+{
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#TalentManagerResetButtonInfo
+{
+    text-align: center;
+    width: 100%;
+    color: red;
+    font-size: 15px;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+

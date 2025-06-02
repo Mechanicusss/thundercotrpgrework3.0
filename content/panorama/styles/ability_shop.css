@@ -1,0 +1,17 @@
+/* Error: semicolons aren't allowed in the indented syntax.
+ *     ,
+ * 125 |         text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+ *     |                                                                                        ^
+ *     '
+ *   ability_shop.sass 125:82  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: semicolons aren't allowed in the indented syntax.\a     \2577 \a 125 \2502          text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;\a     \2502                                                                                         ^\a     \2575 \a   ability_shop.sass 125:82  root stylesheet";
+}

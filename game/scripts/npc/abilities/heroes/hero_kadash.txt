@@ -1,0 +1,333 @@
+"DOTAAbilities"
+{
+	"kadash_assasins_skills"
+	{
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"             		"heroes/hero_kadash/assasins_skills"
+		"AbilityTextureName"			"arena/kadash_assasins_skills"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"MaxLevel" 						"7"
+
+		"AbilityValues"
+		{
+				"all_damage_bonus_pct"	"1 3 5 7 9 12 15"
+				"crit_chance"		"10 12 14 16 18 20 22"
+				"crit_mult"			"150"
+		}
+
+		"precache"
+		{
+			"particle"				"particles/arena/units/heroes/hero_kadash/assasins_skills_weapon_blur_critical.vpcf"
+		}
+	}
+
+	"kadash_strike_from_shadows"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"arena/kadash_strike_from_shadows"
+		"MaxLevel" 						"7"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"AbilityCooldown"				"20"
+		"AbilityManaCost"				"50"
+		"AbilityUnitDamageSubType"	"DAMAGE_SUBTYPE_AIR"
+
+		"AbilityValues"
+		{
+				"duration"				"15 20 25 30 35 40 45"
+				"fade_time"				"0.2 0.2 0.2 0.2 0.2 0.15 0.1"
+				"armor_reduction"		"-5 -7 -9 -11 -13 -15 -17"
+				"armor_reduction_duration"	"5"
+				"bonus_attack_range"	"300"
+				"magical_damage_pct" 	"100"
+		}
+		"precache"
+		{
+			"soundfile"					"soundevents/game_sounds_heroes/game_sounds_bounty_hunter.vsndevts"
+			"particle"					"particles/units/heroes/hero_bounty_hunter/bounty_hunter_windwalk.vpcf"
+			"particle"					"particles/generic_hero_status/status_invisibility_start.vpcf"
+		}
+
+		"OnSpellStart"
+		{
+			"FireEffect"
+			{
+				"EffectName"			"particles/units/heroes/hero_bounty_hunter/bounty_hunter_windwalk.vpcf"
+				"Target"				"CASTER"
+				"EffectAttachType"		"attach_origin"
+			}
+			"FireSound"
+			{
+				"Target"				"CASTER"
+				"EffectName"			"Hero_BountyHunter.WindWalk"
+			}
+
+			"ApplyModifier"
+			{
+				"Target"				"CASTER"
+				"ModifierName"			"modifier_kadash_strike_from_shadows_fade"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_kadash_strike_from_shadows_fade"
+			{
+				"Duration"	"%fade_time"
+				"IsBuff"	"1"
+				"IsPurgable"	"0"
+				"EffectName"	"particles/generic_hero_status/status_invisibility_start.vpcf"
+				"EffectAttachType"	"follow_origin"
+
+				"OnDestroy"
+				{
+					"ApplyModifier"
+					{
+						"Target"	"CASTER"
+						"ModifierName"	"modifier_kadash_strike_from_shadows"
+					}
+					"ApplyModifier"
+					{
+						"Target"	"CASTER"
+						"ModifierName"	"modifier_invisible"
+					}
+				}
+			}
+			"modifier_kadash_strike_from_shadows"
+			{
+				"Duration"	"%duration"
+				"IsBuff"	"1"
+
+				"OnAbilityExecuted"
+				{
+					"RemoveModifier"
+					{
+						"Target"	"CASTER"
+						"ModifierName"	"modifier_kadash_strike_from_shadows"
+					}
+					"RemoveModifier"
+					{
+						"Target"	"CASTER"
+						"ModifierName"	"modifier_invisible"
+					}
+				}
+
+				"OnDestroy"
+				{
+					"RemoveModifier"
+					{
+						"Target"
+						{
+							"Center"	"CASTER"
+							"Flags"	"DOTA_UNIT_TARGET_FLAG_DEAD"
+						}
+						"ModifierName"	"modifier_invisible"
+					}
+				}
+
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_ATTACK_RANGE_BONUS"			"%bonus_attack_range"
+				}
+
+				"States"
+				{
+					"MODIFIER_STATE_INVISIBLE"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+			"modifier_kadash_strike_from_shadows_debuff"
+			{
+				"IsDebuff"			"1"
+				"Duration"			"%armor_reduction_duration"
+
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"			"%armor_reduction"
+				}
+			}
+		}
+	}
+
+	"kadash_survival_skills"
+	{
+		"BaseClass"             		"ability_datadriven"
+		"AbilityTextureName"			"arena/kadash_survival_skills"
+		"MaxLevel" 						"7"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		"AbilityValues"
+		{
+				"bonus_evasion"		"5.0 7.5 10.0 12.5 15.0 17.5 20.0"
+				"bonus_armor"		"2 4 6 8 10 12 14"
+				"bonus_magic_resist_pct"	"5.0 7.5 10.0 12.5 15.0 17.5 20.0"
+				"block_damage"		"10 18 26 34 42 50 58"
+		}
+
+		"Modifiers"
+		{
+			"modifier_kadash_survival_skills"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"		"%bonus_armor"
+				    "MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"%bonus_magic_resist_pct"
+				    "MODIFIER_PROPERTY_EVASION_CONSTANT"			"%bonus_evasion"
+				    "MODIFIER_PROPERTY_PHYSICAL_CONSTANT_BLOCK"		"%block_damage"
+				}
+			}
+		}
+	}
+
+	"kadash_immortality"
+	{
+		"BaseClass"				"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"FightRecapLevel"				"2"
+		"AbilityTextureName"			"arena/kadash_immortality"
+		"MaxLevel"						"7"
+		"HasScepterUpgrade"				"1"
+		"LevelsBetweenUpgrades" 		"7"
+
+		"AbilityValues"
+		{
+				"reincarnate_time"		"2.0"
+				"vision_radius"			"725"
+				"health_per_reincarnation_pct"	"55 50 45 40 35 30 25"
+				"health_per_reincarnation_pct_scepter"	"45 40 35 30 25 20 15"
+				"ghostform_duration_scepter"	"1.0"
+		}
+
+		"precache"
+		{
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_skeletonking.vsndevts"
+			"model"		"models/props_gameplay/tombstoneb01.vmdl"
+			"particle"	"particles/units/heroes/hero_skeletonking/wraith_king_reincarnate.vpcf"
+			"particle"	"particles/units/heroes/hero_skeletonking/skeleton_king_death.vpcf"
+			"particle"	"particles/units/heroes/hero_skeletonking/skeleton_king_death_bits.vpcf"
+			"particle"	"particles/units/heroes/hero_skeletonking/skeleton_king_death_dust.vpcf"
+			"particle"	"particles/units/heroes/hero_skeletonking/skeleton_king_death_dust_reincarnate.vpcf"
+			"particle"	"particles/status_fx/status_effect_ghost.vpcf"
+			"particle"	"particles/items_fx/ghost.vpcf"
+		}
+
+		"Modifiers"
+		{
+			"modifier_kadash_immortality"
+			{
+				"Passive"	"1"
+				"IsHidden"	"1"
+				"AllowIllusionDuplicate"     "0"
+				"ThinkInterval"  "0.03"
+				"OnIntervalThink"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"heroes/hero_kadash/immortality"
+						"Function"		"ThinkPenalty"
+					}
+				}
+
+				"OnTakeDamage"
+				{
+					"RunScript"
+					{
+						"ScriptFile"		"heroes/hero_kadash/immortality"
+						"Function"			"CheckDeath"
+					}
+				}
+			}
+			"modifier_kadash_immortality_health_penalty"
+			{
+				"IsPurgable"		"0"
+
+			}
+			"modifier_kadash_immortality_ghostform"
+			{
+				"IsPurgable"		"0"
+				"Duration"			"%ghostform_duration_scepter"
+
+				"IsBuff"					"1"
+				"IsDebuff"					"0"
+				"StatusEffectName" 			"particles/status_fx/status_effect_ghost.vpcf"
+				"StatusEffectPriority" 		"15"
+				"EffectName"            	"particles/items_fx/ghost.vpcf"
+				"EffectAttachType"      	"PATTACH_ABSORIGIN"
+
+				"States"
+				{
+					"MODIFIER_STATE_INVULNERABLE" 			"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_DISARMED"				"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+
+			"modifier_kadash_immortality_life_saver"
+			{
+				"IsHidden"	"1"
+				"Passive"	"1"
+				"IsPurgable"		"0"
+				"IsBuff"			"1"
+				"AllowIllusionDuplicate"     "0"
+
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MIN_HEALTH"		"1"
+				}
+			}
+
+			"modifier_kadash_immortality_reincarnation"
+			{
+				"IsPurgable"	"0"
+				"IsHidden"			"1"
+				"AllowIllusionDuplicate"     "0"
+				"Duration"					"%reincarnate_time"
+				"Attributes"				"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"ScriptFile"		"heroes/hero_kadash/immortality"
+						"Function"			"OnModCreated"
+						"Duration"			"%reincarnate_time"
+						"vision_radius"		"%vision_radius"
+					}
+				}
+
+				"OnDestroy"
+				{
+					"RunScript"
+					{
+						"ScriptFile"		"heroes/hero_kadash/immortality"
+						"Function"			"OnModDestroy"
+					}
+				}
+
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_DISABLE_HEALING"	"1"
+				}
+
+				"States"
+				{
+					"MODIFIER_STATE_STUNNED"				"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_UNSELECTABLE"			"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_INVULNERABLE"			"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NOT_ON_MINIMAP"			"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_HEALTH_BAR"			"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_ATTACK_IMMUNE"			"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_MAGIC_IMMUNE"			"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_UNIT_COLLISION"		"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_TEAM_MOVE_TO"		"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_TEAM_SELECT"			"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_COMMAND_RESTRICTED"		"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_UNSELECTABLE"			"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}
+	}
+}

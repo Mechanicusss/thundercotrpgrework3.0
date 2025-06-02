@@ -1,0 +1,156 @@
+"DOTAAbilities"
+{
+    "ghost_slow_frost_attack"
+    {
+        "BaseClass" "ability_lua"
+        "ScriptFile" "creeps/ghost_slow_frost_attack"
+        "AbilityTextureName" "ghost_frost_attack"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ALLIES_YES"
+        "AbilitySound"                  "Hero_WitchDoctor.Voodoo_Restoration"
+        "MaxLevel" "5"
+
+        "precache"
+        {
+            "particle" "particles/generic_gameplay/generic_slowed_cold.vpcf"
+        }
+
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "0.0"
+
+        // Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"               "0"       
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+                "slow"           "-5 -7 -8 -10 -12"
+                "degen"                    "-1 -2 -3 -4 -5"
+                "duration"                    "4"
+        }
+        "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_2"
+    }
+
+
+    "centaur_khan_endurance_aura_custom"
+    {
+        "BaseClass" "centaur_khan_endurance_aura"
+        "AbilityTextureName" "centaur_khan_endurance_aura"
+        "MaxLevel"              "1"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"     
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+                "bonus_attack_speed"    "20 40 80"
+                "radius"                "600"
+        }
+        "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_2"
+    }
+
+    "kobold_lucky_shot_custom"
+    {
+        "BaseClass" "pangolier_lucky_shot"
+        "AbilityTextureName" "kobold_disarm"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+        "MaxLevel" "3"
+        
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+                "chance_pct"            "17"
+                "duration"              "0.25"
+                "slow"          "0"
+                "armor"         "150 175 200"
+        }
+        
+        "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_3"
+    }
+
+    "doom_follower_infernal_blade"
+    {
+        "BaseClass" "doom_bringer_infernal_blade"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"   
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+        "AbilitySound"                  "Hero_DoomBringer.InfernalBlade.Target"
+        "MaxLevel" "5"
+        "HasShardUpgrade"               "1"
+
+        // Time     
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "6 4 2 1 0.5"
+        "AbilityManaCost"               "0"
+        "AbilityCastRange"              "200"
+        "AbilityCastPoint"              "0.0"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+                "burn_damage"           "2500 5000 7500 10000 12500"
+                "burn_damage_pct"       "3 4 5 6 7"
+                "CalculateSpellDamageTooltip"   "0"
+                "LinkedSpecialBonus"    "special_bonus_unique_doom_1"
+                "burn_duration"         "4.0"
+                "ministun_duration"     "0"
+                "shard_ministun_duration"       "0"
+                "RequiresShard"                 "1"
+                "shard_bonus_stun_duration"     "0"
+                "shard_bonus_damage"            "150"
+        }
+        "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_3"
+    }
+
+    "doom_follower_flaming_fists"
+    {
+        "BaseClass" "warlock_golem_flaming_fists"
+        "AbilityType"                   "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "MaxLevel"                      "5"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_PURE"  
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
+        
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+                "damage"                "500 1000 1500 2000 2500"
+                "radius"            "300"
+        }
+        "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_1"
+    }
+    
+    //=================================================================================================================
+    // Ability: Warlock's Golem Permanent Immolation
+    //=================================================================================================================
+    "doom_follower_permanent_immolation"
+    {
+        "BaseClass" "warlock_golem_permanent_immolation"
+        "AbilityType"                   "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "MaxLevel"                      "5"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"   
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+        
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+                "aura_radius"           "300"
+                "aura_damage"           "1050 2100 3150 4200 5250"
+        }
+        "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_2"
+    }
+}

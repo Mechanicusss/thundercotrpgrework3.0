@@ -1,0 +1,7 @@
+{
+    "Lua.diagnostics.disable": [
+        "lowercase-global",
+        "duplicate-set-field",
+        "empty-block"
+    ]
+}

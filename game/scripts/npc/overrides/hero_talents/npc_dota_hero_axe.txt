@@ -1,0 +1,5 @@
+"root"
+{
+    "talent_axe_1" "1"
+    "talent_axe_2" "1"
+}

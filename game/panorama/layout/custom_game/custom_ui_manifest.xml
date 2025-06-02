@@ -1,0 +1,38 @@
+<root> 
+  <scripts>
+    <include src="file://{resources}/scripts/custom_game/selection/selection.js" />
+    <include src="file://{resources}/scripts/custom_game/selection/selection_filter.js" />
+    <include src="s2r://panorama/scripts/custom_game/customuimanifest.js" />
+  </scripts>
+  <Panel>
+    <!--<CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/multiteam_top_scoreboard.xml" />-->
+    <CustomUIElement type="GameSetup" layoutfile="file://{resources}/layout/custom_game/kills.xml" />
+    <CustomUIElement type="GameSetup" layoutfile="file://{resources}/layout/custom_game/team_select.xml" />
+    <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/duel_timer.xml" />
+    <!--<CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/ingame_leaderboard.xml" />-->
+    <!--<CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/waves.xml" />-->
+    <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/ability_selection.xml" />
+    <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/AutoLoot.xml" />
+    <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/neutral_item_slot.xml" />
+    <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/gold_bank.xml" />
+    <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/custom_hero_selection.xml" />
+    <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/new_game_plus.xml" />
+    <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/RuneManager.xml" />
+    <!--CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/customherostats.xml" /-->
+    <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/ProgressionTalents.xml" />
+    <!--CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/TalentManager.xml" /-->
+    <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/WaveManagerModifierNotification.xml" />
+    <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/WaveManagerCounter.xml" />
+    <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/WaveManagerEndScreen.xml" />
+    <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/WaveManagerLeaderboard.xml" />
+    <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/WaveManagerLeaderboardParty.xml" />
+    <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/PlayerBuffSelection.xml" />
+    <!--CustomUIElement type="Hud" layoutfile="file://{resources}/panorama/layout/custom_game/ProgressionTalents.xml" /-->
+    <!--CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/ShortcutMenu.xml" /-->
+    <!--CustomUIElement type="Hud" layoutfile="s2r://panorama/layout/custom_game/CustomAbilityTooltips.xml" /-->
+    <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/dpsmanager.xml" />
+    <!--CustomUIElement type="Hud" layoutfile="s2r://panorama/layout/custom_game/CustomHeroStats.xml" /-->
+    <!--<CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/boss_health.xml" />-->
+    <CustomUIElement type="HeroSelection" layoutfile="file://{resources}/layout/custom_game/hero_pick.xml" />
+  </Panel>
+</root>

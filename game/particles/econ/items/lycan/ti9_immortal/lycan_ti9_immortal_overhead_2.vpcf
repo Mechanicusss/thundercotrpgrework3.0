@@ -1,0 +1,42 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:vpcf56:version{f07dae67-740b-4789-a729-6ddffc9f855e} -->
+{
+	_class = "CParticleSystemDefinition"
+	m_bShouldHitboxesFallbackToRenderBounds = false
+	m_nMaxParticles = 2
+	m_ConstantColor = [ 92, 74, 0, 5 ]
+	m_nConstantSequenceNumber1 = 10
+	m_Children = 
+	[
+		{
+			m_ChildRef = resource:"particles/econ/items/lycan/ti9_immortal/lycan_ti9_immortal_overhead_2_buff.vpcf"
+		},
+		{
+			m_ChildRef = resource:"particles/econ/items/lycan/ti9_immortal/lycan_ti9_immortal_overhead_2_model.vpcf"
+		},
+	]
+	m_nBehaviorVersion = 12
+	m_nFirstMultipleOverride_BackwardCompat = 5
+	m_controlPointConfigurations = 
+	[
+		{
+			m_name = "preview"
+			m_drivers = 
+			[
+				{
+					m_iAttachType = "PATTACH_WORLDORIGIN"
+					m_vecOffset = [ 0.0, 0.0, 0.0 ]
+					m_angOffset = [ 0.0, 0.0, 0.0 ]
+					m_entityName = "self"
+				},
+				{
+					m_iControlPoint = 1
+					m_iAttachType = "PATTACH_POINT_FOLLOW"
+					m_attachmentName = "attach_eye_l"
+					m_vecOffset = [ 1.0, 0.0, 0.0 ]
+					m_angOffset = [ 0.0, 0.0, 0.0 ]
+					m_entityName = "self"
+				},
+			]
+		},
+	]
+}

@@ -1,0 +1,5 @@
+"root"
+{
+    "talent_lone_druid_1" "1"
+    "talent_lone_druid_2" "1"
+}

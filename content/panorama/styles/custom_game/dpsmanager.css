@@ -1,0 +1,294 @@
+/* Prettified by Source 2 Viewer 11.1.0.0 - https://valveresourceformat.github.io */
+
+#DpsManagerContainer
+{
+    padding: 12px;
+    width: 300px;
+    padding: 24px 12px 12px 12px;
+    horizontal-align: left;
+    vertical-align: bottom;
+    flow-children: down-wrap;
+    border-radius: 4px;
+    transition-property: opacity;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-in-out;
+    z-index: 10;
+    margin-bottom: 275px;
+    background-color: gradient( linear, 100% 0%, 0% 0%, from( rgba(0,0,0,0) ), to( rgba(0,0,0,0.75) ) );
+    visibility: collapse;
+}
+
+#DpsManagerPlayer
+{
+    flow-children: down-wrap;
+    margin-bottom: 12px;
+    width: 100%;
+}
+
+#DpsManagerPlayerHeroImage
+{
+    height: 30px;
+    width: 60px;
+    border-radius: 4px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.5);
+}
+
+#DpsManagerPlayerBarContainer
+{
+    width: 100%;
+    margin-top: 6px;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( rgba(0,0,0,0.1) ), to( black ) );
+    border-radius: 4px;
+}
+
+#DpsManagerPlayerBar
+{
+    width: 0%;
+    height: 24px;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( #598307 ), to( #25301d ) );
+    border-radius: 4px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.5);
+}
+
+#DpsManagerPlayerBarLabel
+{
+    text-align: right;
+    horizontal-align: right;
+    font-family: RadianceM,Radiance,FZLanTingHei-R-GBK,TH Sarabun New,YDYGO 540,Gulim,MingLiU;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 13px;
+    text-shadow: 1px 1px 1px black;
+    padding: 4px 6px;
+}
+
+#DpsManagerPlayerHeroContainer
+{
+    flow-children: right-wrap;
+    width: 100%;
+}
+
+#DpsManagerPlayerHeroButton
+{
+    horizontal-align: right;
+    background-image: url("s2r://panorama/images/custom_game/settings_button_off_png.vtex");
+    background-size: 100% 100%;
+    font-family: RadianceM,Radiance,FZLanTingHei-R-GBK,TH Sarabun New,YDYGO 540,Gulim,MingLiU;
+    color: lightgray;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 4px;
+    padding: 6px 12px;
+    text-shadow: 1px 1px 1px black;
+    box-shadow: 0 0 6px rgba(0,0,0,0.5);
+}
+
+#DpsManagerPlayerHeroButton:active
+{
+    background-image: url("s2r://panorama/images/custom_game/settings_button_off_png.vtex");
+}
+
+#DpsManagerBreakdownContainer
+{
+    width: 500px;
+    background-image: url("s2r://panorama/images/custom_game/bg_scoreboard_psd_png.vtex");
+    background-position: 0% 25%;
+    horizontal-align: center;
+    padding: 24px 24px 12px;
+    flow-children: down;
+    margin-top: 10%;
+    max-height: 700px;
+    border-radius: 4px;
+    box-shadow: 0 0 6px black;
+    visibility: collapse;
+    opacity: 0;
+}
+
+#DpsManagerContainerTitle
+{
+    text-align: center;
+    width: 100%;
+    font-family: RadianceM,Radiance,FZLanTingHei-R-GBK,TH Sarabun New,YDYGO 540,Gulim,MingLiU;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 24px;
+    text-shadow: 1px 1px 1px black;
+}
+
+#DpsManagerBreakdownContainerTitle
+{
+    text-align: center;
+    width: 100%;
+    font-family: RadianceM,Radiance,FZLanTingHei-R-GBK,TH Sarabun New,YDYGO 540,Gulim,MingLiU;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 22px;
+    margin: -24px -24px 24px;
+    text-shadow: 1px 1px 1px black;
+    padding: 12px;
+    text-transform: uppercase;
+    background-image: url("s2r://panorama/images/custom_game/bg_scoreboard_psd_png.vtex");
+    box-shadow: #000000f5 0px 0px 8px 0px;
+    background-position: top;
+}
+
+#DpsManagerBreakdownItemContainer
+{
+    flow-children: down-wrap;
+    width: 452px;
+    margin-bottom: 12px;
+}
+
+#DpsManagerBreakdownItemTopContainer
+{
+    flow-children: right-wrap;
+}
+
+#DpsManagerBreakdownItemImage
+{
+    height: 30px;
+    width: 30px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.5);
+    border-radius: 4px;
+}
+
+#DpsManagerBreakdownItemName
+{
+    font-family: RadianceM,Radiance,FZLanTingHei-R-GBK,TH Sarabun New,YDYGO 540,Gulim,MingLiU;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 15px;
+    text-shadow: 1px 1px 1px black;
+    padding: 6px 12px;
+}
+
+#DpsManagerBreakdownItemBarContainer
+{
+    width: 100%;
+    margin-top: 6px;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( rgba(0,0,0,0.1) ), to( black ) );
+    border-radius: 4px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.5);
+}
+
+#DpsManagerBreakdownItemBar
+{
+    width: 0%;
+    height: 24px;
+    background-color: gradient( linear, 0% 0%, 0% 100%, from( silver ), to( gray ) );
+    border-radius: 4px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.5);
+    width: 100%;
+    padding: 0 6px;
+}
+
+#DpsManagerBreakdownItemBarLabel
+{
+    text-align: right;
+    horizontal-align: right;
+    font-family: monospace;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 13px;
+    text-shadow: 1px 1px 1px black;
+    padding: 5px 0px;
+}
+
+#DpsManagerBreakdownHeroContainer
+{
+    flow-children: right-wrap;
+    width: 452px;
+    border-bottom: 1px solid rgba(255,255,255,0.03);
+    padding-bottom: 12px;
+    margin-bottom: 12px;
+}
+
+#DpsManagerBreakdownHeroDisplayContainer
+{
+    flow-children: right-wrap;
+}
+
+#DpsManagerBreakdownHeroImage
+{
+    border-radius: 4px;
+    height: 30px;
+    width: 60px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.5);
+}
+
+#DpsManagerBreakdownHeroName
+{
+    text-align: right;
+    horizontal-align: right;
+    font-family: RadianceM,Radiance,FZLanTingHei-R-GBK,TH Sarabun New,YDYGO 540,Gulim,MingLiU;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 15px;
+    text-shadow: 1px 1px 1px black;
+    padding: 6px 12px 6px 6px;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+}
+
+#DpsManagerBreakdownHeroReset
+{
+    background-image: url("s2r://panorama/images/custom_game/settings_button_off_png.vtex");
+    background-size: 100% 100%;
+    padding: 6px 12px;
+    border-radius: 4px;
+    horizontal-align: right;
+    color: lightgray;
+    font-weight: bold;
+    font-size: 15px;
+    text-shadow: 1px 1px 1px black;
+    box-shadow: 0 0 3px black;
+}
+
+#DpsManagerBreakdownHeroReset:active
+{
+    background-image: url("s2r://panorama/images/custom_game/settings_button_off_png.vtex");
+}
+
+#DpsManagerBreakdownItemParentContainer
+{
+    flow-children: down;
+    overflow: scroll;
+}
+
+#DpsManagerContainerToggle
+{
+    background-color: #000000FF;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    horizontal-align: center;
+    vertical-align: top;
+    margin-top: 47px;
+    padding: 6px;
+    padding-left: 6px;
+    border: 2px solid #393939;
+    margin-left: 10px;
+    box-shadow: 0 0 6px black;
+    z-index: 99;
+}
+
+#DpsManagerContainerToggleLabel
+{
+    background-image: url("s2r://panorama/images/custom_game/meteor_png.vtex");
+    height: 18px;
+    width: 18px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    horizontal-align: center;
+    vertical-align: center;
+    wash-color: rgb(252, 191, 112);
+}
+
+#DpsManagerContainerToggle.toggle
+{
+    border: 2px solid rgb(252, 191, 112);
+    box-shadow: 0 0 3px rgb(252, 191, 112);
+}
+

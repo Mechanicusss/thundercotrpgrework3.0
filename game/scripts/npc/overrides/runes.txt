@@ -1,0 +1,962 @@
+"DOTAAbilities"
+{
+    "item_socket_rune_lesser_xp"
+    {    
+        "BaseClass"           "item_datadriven"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"                          "runes/rune_lesser_xp"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "100"
+        "ItemPermanent"         "0"
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"       "1"
+        "ItemShareability"        "ITEM_FULLY_SHAREABLE_STACKING"
+    }
+
+    "item_socket_rune_lesser_gold"
+    {    
+        "BaseClass"           "item_datadriven"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"                          "runes/rune_lesser_gold"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "100"
+        "ItemPermanent"         "0"
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"       "1"
+        "ItemShareability"        "ITEM_FULLY_SHAREABLE_STACKING"
+    }
+
+    "item_socket_rune_lesser_strength"
+    {    
+        "BaseClass"           "item_datadriven"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"                          "runes/rune_lesser_strength"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "100"
+        "ItemPermanent"         "0"
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"       "1"
+        "ItemShareability"        "ITEM_FULLY_SHAREABLE_STACKING"
+    }
+
+    "item_socket_rune_lesser_agility"
+    {    
+        "BaseClass"           "item_datadriven"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"                          "runes/rune_lesser_agility"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "100"
+        "ItemPermanent"         "0"
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"       "1"
+        "ItemShareability"        "ITEM_FULLY_SHAREABLE_STACKING"
+    }
+
+    "item_socket_rune_lesser_intellect"
+    {    
+        "BaseClass"           "item_datadriven"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"                          "runes/rune_lesser_intellect"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "100"
+        "ItemPermanent"         "0"
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"       "1"
+        "ItemShareability"        "ITEM_FULLY_SHAREABLE_STACKING"
+    }
+
+    "item_socket_rune_lesser_armor"
+    {    
+        "BaseClass"           "item_datadriven"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"                          "runes/rune_lesser_armor"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "100"
+        "ItemPermanent"         "0"
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"       "1"
+        "ItemShareability"        "ITEM_FULLY_SHAREABLE_STACKING"
+    }
+
+    "item_socket_rune_lesser_spellamp"
+    {    
+        "BaseClass"           "item_datadriven"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"                          "runes/rune_lesser_spellamp"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "100"
+        "ItemPermanent"         "0"
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"       "1"
+        "ItemShareability"        "ITEM_FULLY_SHAREABLE_STACKING"
+    }
+
+    "item_socket_rune_xp"
+    {    
+        "BaseClass"           "item_datadriven"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"                          "runes/rune_xp"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "1000"
+        "ItemPermanent"         "0"
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"       "1"
+        "ItemShareability"        "ITEM_FULLY_SHAREABLE_STACKING"
+    }
+
+    "item_socket_rune_gold"
+    {    
+        "BaseClass"           "item_datadriven"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"                          "runes/rune_gold"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "1000"
+        "ItemPermanent"         "0"
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"       "1"
+        "ItemShareability"        "ITEM_FULLY_SHAREABLE_STACKING"
+    }
+
+    "item_socket_rune_strength"
+    {    
+        "BaseClass"           "item_datadriven"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"                          "runes/rune_strength"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "1000"
+        "ItemPermanent"         "0"
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"       "1"
+        "ItemShareability"        "ITEM_FULLY_SHAREABLE_STACKING"
+    }
+
+    "item_socket_rune_agility"
+    {    
+        "BaseClass"           "item_datadriven"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"                          "runes/rune_agility"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "1000"
+        "ItemPermanent"         "0"
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"       "1"
+        "ItemShareability"        "ITEM_FULLY_SHAREABLE_STACKING"
+    }
+
+    "item_socket_rune_intellect"
+    {    
+        "BaseClass"           "item_datadriven"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"                          "runes/rune_intellect"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "1000"
+        "ItemPermanent"         "0"
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"       "1"
+        "ItemShareability"        "ITEM_FULLY_SHAREABLE_STACKING"
+    }
+
+    "item_socket_rune_armor"
+    {    
+        "BaseClass"           "item_datadriven"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"                          "runes/rune_armor"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "5000"
+        "ItemPermanent"         "0"
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"       "1"
+        "ItemShareability"        "ITEM_FULLY_SHAREABLE_STACKING"
+    }
+
+    "item_socket_rune_spellamp"
+    {    
+        "BaseClass"           "item_datadriven"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"                          "runes/rune_spellamp"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "5000"
+        "ItemPermanent"         "0"
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"       "1"
+        "ItemShareability"        "ITEM_FULLY_SHAREABLE_STACKING"
+    }
+
+    "item_socket_rune_cdr"
+    {    
+        "BaseClass"           "item_datadriven"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"                          "runes/rune_cdr"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "5000"
+        "ItemPermanent"         "0"
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"       "1"
+        "ItemShareability"        "ITEM_FULLY_SHAREABLE_STACKING"
+    }
+
+    "item_socket_rune_damage"
+    {    
+        "BaseClass"           "item_datadriven"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"                          "runes/rune_atkdamage"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "5000"
+        "ItemPermanent"         "0"
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"       "1"
+        "ItemShareability"        "ITEM_FULLY_SHAREABLE_STACKING"
+    }
+
+    "item_socket_rune_greater_xp"
+    {    
+        "BaseClass"           "item_datadriven"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"                          "runes/rune_greater_xp"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "99999"
+        "ItemPermanent"         "0"
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"       "1"
+        "ItemShareability"        "ITEM_FULLY_SHAREABLE_STACKING"
+    }
+
+    "item_socket_rune_greater_gold"
+    {    
+        "BaseClass"           "item_datadriven"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"                          "runes/rune_greater_gold"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "99999"
+        "ItemPermanent"         "0"
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"       "1"
+        "ItemShareability"        "ITEM_FULLY_SHAREABLE_STACKING"
+    }
+
+    "item_socket_rune_greater_agility"
+    {    
+        "BaseClass"           "item_datadriven"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"                          "runes/rune_greater_agility"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "99999"
+        "ItemPermanent"         "0"
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"       "1"
+        "ItemShareability"        "ITEM_FULLY_SHAREABLE_STACKING"
+    }
+
+    "item_socket_rune_greater_armor"
+    {    
+        "BaseClass"           "item_datadriven"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"                          "runes/rune_greater_armor"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "99999"
+        "ItemPermanent"         "0"
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"       "1"
+        "ItemShareability"        "ITEM_FULLY_SHAREABLE_STACKING"
+    }
+
+    "item_socket_rune_greater_armoramp"
+    {    
+        "BaseClass"           "item_datadriven"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"                          "runes/rune_greater_armor"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "99999"
+        "ItemPermanent"         "0"
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"       "1"
+        "ItemShareability"        "ITEM_FULLY_SHAREABLE_STACKING"
+    }
+
+    "item_socket_rune_greater_cdr"
+    {    
+        "BaseClass"           "item_datadriven"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"                          "runes/rune_greater_cdr"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "99999"
+        "ItemPermanent"         "0"
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"       "1"
+        "ItemShareability"        "ITEM_FULLY_SHAREABLE_STACKING"
+    }
+
+    "item_socket_rune_greater_damage"
+    {    
+        "BaseClass"           "item_datadriven"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"                          "runes/rune_greater_atkdamage"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "99999"
+        "ItemPermanent"         "0"
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"       "1"
+        "ItemShareability"        "ITEM_FULLY_SHAREABLE_STACKING"
+    }
+
+    "item_socket_rune_greater_damageamp"
+    {    
+        "BaseClass"           "item_datadriven"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"                          "runes/rune_greater_atkdamage"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "99999"
+        "ItemPermanent"         "0"
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"       "1"
+        "ItemShareability"        "ITEM_FULLY_SHAREABLE_STACKING"
+    }
+
+    "item_socket_rune_greater_damagereduction"
+    {    
+        "BaseClass"           "item_datadriven"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"                          "runes/rune_greater_damagereduction"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "99999"
+        "ItemPermanent"         "0"
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"       "1"
+        "ItemShareability"        "ITEM_FULLY_SHAREABLE_STACKING"
+    }
+
+    "item_socket_rune_greater_intellect"
+    {    
+        "BaseClass"           "item_datadriven"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"                          "runes/rune_greater_intellect"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "99999"
+        "ItemPermanent"         "0"
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"       "1"
+        "ItemShareability"        "ITEM_FULLY_SHAREABLE_STACKING"
+    }
+
+    "item_socket_rune_greater_magicres"
+    {    
+        "BaseClass"           "item_datadriven"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"                          "runes/rune_greater_magicres"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "99999"
+        "ItemPermanent"         "0"
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"       "1"
+        "ItemShareability"        "ITEM_FULLY_SHAREABLE_STACKING"
+    }
+
+    "item_socket_rune_greater_maxhpregen"
+    {    
+        "BaseClass"           "item_datadriven"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"                          "runes/rune_greater_maxhpregen"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "99999"
+        "ItemPermanent"         "0"
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"       "1"
+        "ItemShareability"        "ITEM_FULLY_SHAREABLE_STACKING"
+    }
+
+    "item_socket_rune_greater_spellamp"
+    {    
+        "BaseClass"           "item_datadriven"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"                          "runes/rune_greater_spellamp"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "99999"
+        "ItemPermanent"         "0"
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"       "1"
+        "ItemShareability"        "ITEM_FULLY_SHAREABLE_STACKING"
+    }
+
+    "item_socket_rune_greater_strength"
+    {    
+        "BaseClass"           "item_datadriven"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"                          "runes/rune_greater_strength"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "99999"
+        "ItemPermanent"         "0"
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"       "1"
+        "ItemShareability"        "ITEM_FULLY_SHAREABLE_STACKING"
+    }
+
+    "item_socket_rune_legendary_adrenaline" // drops from wolf
+    {    
+        "BaseClass"           "item_datadriven"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"                          "runes/rune_legendary_adrenaline"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "99999"
+        "ItemPermanent"         "0"
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"       "0"
+        "ItemShareability"        "ITEM_FULLY_SHAREABLE_STACKING"
+    }
+
+    "item_socket_rune_legendary_blood_rush" // drops from wolf
+    {    
+        "BaseClass"           "item_datadriven"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"                          "runes/rune_legendary_blood_rush"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "99999"
+        "ItemPermanent"         "0"
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"       "0"
+        "ItemShareability"        "ITEM_FULLY_SHAREABLE_STACKING"
+    }
+
+    "item_socket_rune_legendary_rejuvenation" // drops from wyvern
+    {    
+        "BaseClass"           "item_datadriven"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"                          "runes/rune_legendary_rejuvenation"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "99999"
+        "ItemPermanent"         "0"
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"       "0"
+        "ItemShareability"        "ITEM_FULLY_SHAREABLE_STACKING"
+    }
+
+    "item_socket_rune_legendary_exodus_shield" // drops from any lava creep
+    {    
+        "BaseClass"           "item_datadriven"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"                          "runes/rune_legendary_exodus_shield"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "99999"
+        "ItemPermanent"         "0"
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"       "0"
+        "ItemShareability"        "ITEM_FULLY_SHAREABLE_STACKING"
+    }
+
+    "item_socket_rune_legendary_evasive_architect" // drops from spider
+    {    
+        "BaseClass"           "item_datadriven"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"                          "runes/rune_legendary_evasive_architect"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "99999"
+        "ItemPermanent"         "0"
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"       "0"
+        "ItemShareability"        "ITEM_FULLY_SHAREABLE_STACKING"
+    }
+
+    "item_socket_rune_legendary_chronomancer" // drops from lake apparition
+    {    
+        "BaseClass"           "item_datadriven"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"                          "runes/rune_legendary_chronomancer"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "99999"
+        "ItemPermanent"         "0"
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"       "0"
+        "ItemShareability"        "ITEM_FULLY_SHAREABLE_STACKING"
+    }
+
+    "item_socket_rune_legendary_lifesteal" // drops from exploding spider, 2.5%
+    {    
+        "BaseClass"           "item_datadriven"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"                          "runes/rune_legendary_the_blood_matron"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "99999"
+        "ItemPermanent"         "0"
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"       "0"
+        "ItemShareability"        "ITEM_FULLY_SHAREABLE_STACKING"
+    }
+
+    "item_socket_rune_legendary_drow_ranger_multishot" 
+    {    
+        "BaseClass"           "item_datadriven"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"                          "runes/rune_hero"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "99999"
+        "ItemPermanent"         "0"
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"       "0"
+        "ItemShareability"        "ITEM_FULLY_SHAREABLE_STACKING"
+    }
+
+    "item_socket_rune_legendary_drow_ranger_marksmanship" 
+    {    
+        "BaseClass"           "item_datadriven"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"                          "runes/rune_hero"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "99999"
+        "ItemPermanent"         "0"
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"       "0"
+        "ItemShareability"        "ITEM_FULLY_SHAREABLE_STACKING"
+    }
+
+    "item_socket_rune_legendary_medusa_split_shot" 
+    {    
+        "BaseClass"           "item_datadriven"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"                          "runes/rune_hero"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "99999"
+        "ItemPermanent"         "0"
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"       "0"
+        "ItemShareability"        "ITEM_FULLY_SHAREABLE_STACKING"
+    }
+
+    "item_socket_rune_legendary_faceless_void_time_lock" 
+    {    
+        "BaseClass"           "item_datadriven"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"                          "runes/rune_hero"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "99999"
+        "ItemPermanent"         "0"
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"       "0"
+        "ItemShareability"        "ITEM_FULLY_SHAREABLE_STACKING"
+    }
+
+    "item_socket_rune_legendary_faceless_void_chronosphere" 
+    {    
+        "BaseClass"           "item_datadriven"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"                          "runes/rune_hero"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "99999"
+        "ItemPermanent"         "0"
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"       "0"
+        "ItemShareability"        "ITEM_FULLY_SHAREABLE_STACKING"
+    }
+
+    "item_socket_rune_legendary_lina_light_strike_array" 
+    {    
+        "BaseClass"           "item_datadriven"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"                          "runes/rune_hero"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "99999"
+        "ItemPermanent"         "0"
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"       "0"
+        "ItemShareability"        "ITEM_FULLY_SHAREABLE_STACKING"
+    }
+
+    "item_socket_rune_legendary_tidehunter_anchor_smash" 
+    {    
+        "BaseClass"           "item_datadriven"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"                          "runes/rune_hero"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "99999"
+        "ItemPermanent"         "0"
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"       "0"
+        "ItemShareability"        "ITEM_FULLY_SHAREABLE_STACKING"
+    }
+
+    "item_socket_rune_legendary_axe_counter_helix" 
+    {    
+        "BaseClass"           "item_datadriven"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"                          "runes/rune_hero"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "99999"
+        "ItemPermanent"         "0"
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"       "0"
+        "ItemShareability"        "ITEM_FULLY_SHAREABLE_STACKING"
+    }
+
+    "item_socket_rune_legendary_axe_culling_blade" 
+    {    
+        "BaseClass"           "item_datadriven"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"                          "runes/rune_hero"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "99999"
+        "ItemPermanent"         "0"
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"       "0"
+        "ItemShareability"        "ITEM_FULLY_SHAREABLE_STACKING"
+    }
+
+    "item_socket_rune_legendary_luna_moon_beam" 
+    {    
+        "BaseClass"           "item_datadriven"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"                          "runes/rune_hero"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "99999"
+        "ItemPermanent"         "0"
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"       "0"
+        "ItemShareability"        "ITEM_FULLY_SHAREABLE_STACKING"
+    }
+
+    "item_socket_rune_legendary_lone_druid_bear" 
+    {    
+        "BaseClass"           "item_datadriven"
+        "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityTextureName"                          "runes/rune_hero"
+
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost" "99999"
+        "ItemPermanent"         "0"
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"       "0"
+        "ItemShareability"        "ITEM_FULLY_SHAREABLE_STACKING"
+    }
+}

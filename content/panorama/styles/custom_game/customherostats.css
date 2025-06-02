@@ -1,0 +1,98 @@
+/* Prettified by Source 2 Viewer 11.1.0.0 - https://valveresourceformat.github.io */
+
+#CustomHeroStatsContainer
+{
+    background-image: url("s2r://panorama/images/custom_game/graybg_png.png");
+    background-size: 100% 100%;
+    flow-children: right-wrap;
+    border-radius: 6px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.5);
+    height: 245px;
+    vertical-align: bottom;
+    horizontal-align: center;
+    margin-bottom: 165px;
+    z-index: 33;
+    visibility: collapse;
+    opacity: 0;
+}
+
+#CustomHeroStatsButton
+{
+    background-image: url("s2r://panorama/images/custom_game/fall2015_button_2_png_png.png");
+    background-size: 100%;
+    padding: 6px 12px;
+    border-radius: 6px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.75);
+    margin: 6px;
+    z-index: 2;
+    horizontal-align: left;
+    opacity: 0.75;
+}
+
+#CustomHeroStatsButton:hover,#CustomHeroStatsButton:hover #CustomHeroStatsButtonText
+{
+    opacity: 1;
+    color: #FFF;
+}
+
+#CustomHeroStatsButtonText
+{
+    font-size: 14px;
+    font-family: RadianceM,Radiance,FZLanTingHei-R-GBK,TH Sarabun New,YDYGO 540,Gulim,MingLiU;
+    font-weight: bold;
+    color: silver;
+    text-shadow: 1px 1px 1px black;
+    text-transform: uppercase;
+}
+
+#CustomHeroStatsSection
+{
+    width: 250px;
+    flow-children: down-wrap;
+    border-right: 1px solid rgba(255,255,255,0.03);
+    padding: 12px 24px;
+    height: 100%;
+}
+
+#CustomHeroStatsSectionHeader
+{
+    font-family: RadianceM,Radiance,FZLanTingHei-R-GBK,TH Sarabun New,YDYGO 540,Gulim,MingLiU;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px black;
+    font-size: 18px;
+    margin-bottom: 12px;
+    width: 100%;
+}
+
+#CustomHeroStatsSectionAttributes
+{
+    flow-children: down-wrap;
+    width: 100%;
+}
+
+#CustomHeroStatsSectionAttributeItem
+{
+    flow-children: right-wrap;
+    width: 100%;
+}
+
+#CustomHeroStatsSectionAttributeItemName
+{
+    font-family: RadianceM,Radiance,FZLanTingHei-R-GBK,TH Sarabun New,YDYGO 540,Gulim,MingLiU;
+    color: silver;
+    font-size: 15px;
+    text-shadow: 1px 1px 1px black;
+}
+
+#CustomHeroStatsSectionAttributeItemValue
+{
+    font-family: RadianceM,Radiance,FZLanTingHei-R-GBK,TH Sarabun New,YDYGO 540,Gulim,MingLiU;
+    color: white;
+    font-size: 15px;
+    text-shadow: 1px 1px 1px black;
+    letter-spacing: -1px;
+    horizontal-align: right;
+}
+

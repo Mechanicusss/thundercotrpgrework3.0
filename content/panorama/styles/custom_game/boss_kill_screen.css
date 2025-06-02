@@ -1,0 +1,130 @@
+#BossKillScreen {
+    margin-top: 10%;
+    height: 100%;
+    horizontal-align: center;
+    z-index: -12;
+}
+
+.Hexagon {
+    flow-children: left-wrap;
+    horizontal-align: center;
+    margin-top: 45px;
+    animation-name: fadein;
+    animation-duration: 2.0s;
+    animation-timing-function: ease-in-out;
+    
+}
+
+#HexagonMid {
+    width: 104px;
+    height: 104px;
+    background-image: url("file://{images}/custom_game/butcher.png");
+    background-color: #1e1e1e;
+    background-size: cover;
+    border-radius: 50%;
+    margin-left: 12px;
+    box-shadow:0 4px 6px -1px rgba(0, 0, 0, 0.1),0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    blur: gaussian( 6, 6, 1 );
+}
+
+#BossIcon {
+    background-image: url("file://{images}/custom_game/butcher.png");
+    height: 72px;
+    width: 128px;
+    border-radius: 12px;
+    margin-left: 12px;
+    margin-top: 61px;
+    background-repeat: no-repeat;
+    horizontal-align: center;
+
+    animation-name: fadein;
+    animation-duration: 2.0s;
+    animation-timing-function: ease-in-out;
+    
+}
+
+#KillingTeam.angels {
+    color: lightgreen;
+    text-shadow: 0 0 4px 2.0 green;
+}
+
+#KillingTeam.demons {
+    color: red;
+    text-shadow: 0 0 4px 2.0 darkred;
+}
+
+#KillingTeam {
+    z-index: 2;
+    font-size: 30px;
+    font-weight: bold;
+    horizontal-align: center;
+    text-transform: uppercase;
+    
+    animation-name: fadein;
+    animation-duration: 1.0s;
+    animation-timing-function: ease-in-out;
+    
+}
+
+.BossNamePanel {
+    flow-children: down-wrap;
+    horizontal-align: center;
+}
+
+#BossName {
+    z-index: 2;
+    font-size: 18px;
+    font-weight: bold;
+    color: gold;
+    text-shadow: 0 0 1px 2.0 black;
+    vertical-align: bottom;
+    margin-top: 160px;
+
+    animation-name: fadein;
+    animation-duration: 3.5s;
+    animation-timing-function: ease-in-out;
+    
+}
+
+#BossLevel {
+    z-index: 2;
+    color: white;
+    horizontal-align: center;
+    text-shadow: 0 0 1px 2.0 black;
+    vertical-align: bottom;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.5;
+    font-size: 14px;
+
+    animation-name: fadein;
+    animation-duration: 4.5s;
+    animation-timing-function: ease-in-out;
+    
+}
+
+
+#BossCross {
+    background-image: url("file://{images}/custom_game/png-transparent-error-cross-red-cross-error-thumbnail.png");
+    height: 100%;
+    width: 100%;
+    background-size: 60%;
+    background-repeat: no-repeat;
+    horizontal-align: center;
+    background-position: center;
+    margin-left: 12px;
+    margin-bottom: 10px;
+
+    animation-name: fadein;
+    animation-duration: 2.5s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes 'fadein' {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+  }
